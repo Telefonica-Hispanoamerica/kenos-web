@@ -1,0 +1,14 @@
+dist
+dist-es
+reports
+doc
+scripts
+examples
+codemods
+__tests__
+__acceptance_tests__
+__screenshot_tests__
+__type_tests__
+.git
+.github
+.vscode

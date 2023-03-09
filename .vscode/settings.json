@@ -1,0 +1,14 @@
+{
+    "javascript.validate.enable": true,
+    // `enableProjectDiagnostics` causes high CPU usage, eslint goes crazy
+    // if you have a powerful PC, you can enable this on your user configuration
+    "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/.yarn": true
+    },
+    // required by Markdown TOC extension
+    "files.eol": "\n",
+    "task.allowAutomaticTasks": "on"
+}

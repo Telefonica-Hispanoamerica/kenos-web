@@ -1,0 +1,22 @@
+{
+    "env": {
+        "coreJs": 3.27,
+        "targets": {
+            "chrome": "51",
+            "firefox": "78",
+            "safari": "13",
+            "ios": "13"
+        }
+    },
+    "jsc": {
+        "parser": {
+            "syntax": "typescript",
+            "tsx": true
+        },
+        "transform": {
+            "react": {
+                "runtime": "automatic"
+            }
+        }
+    }
+}
