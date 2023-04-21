@@ -1,6 +1,6 @@
 import {globalStyle, style} from '@vanilla-extract/css';
 import {mq, skinVars} from '../src';
-import {sprinkles} from '../src/sprinkles.css';
+import {sprinkles} from '../src/utils/sprinkles.css';
 
 export const controls = style([
     sprinkles({

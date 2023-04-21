@@ -1,6 +1,5 @@
 import * as themes from '../.storybook/themes';
-
-import type {ThemeConfig} from '../src/theme';
+import type {ThemeConfig} from '../src/utils/theme';
 
 const common: Partial<ThemeConfig> = {
     enableTabFocus: true,

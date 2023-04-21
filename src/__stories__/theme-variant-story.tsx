@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {ThemeVariant, skinVars, Text2, useIsInverseVariant, Stack} from '..';
 import {useCheckbox} from './helpers';
-import {ButtonPrimary} from '../button';
+import {ButtonPrimary} from '@components/Buttons/Button/button';
 
 export default {
     title: 'Utilities/ThemeVariant',

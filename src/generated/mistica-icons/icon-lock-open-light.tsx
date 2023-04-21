@@ -5,11 +5,11 @@
  */
 
 import * as React from 'react';
-import {useTheme} from '../../hooks';
-import {useIsInverseVariant} from '../../theme-variant-context';
-import {vars} from '../../skins/skin-contract.css';
+import {useTheme} from '@hooks/hooks';
+import {useIsInverseVariant} from '@utils/theme-variant-context';
+import {vars} from '@skins/skin-contract.css';
 
-import type {IconProps} from '../../utils/types';
+import type {IconProps} from '@utils/types';
 
 const IconLockOpenLight = ({color, size = 24, ...rest}: IconProps): JSX.Element => {
     const isInverse = useIsInverseVariant();

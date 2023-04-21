@@ -1,0 +1,1 @@
+export { confirm, alert, dialog } from './dialog';

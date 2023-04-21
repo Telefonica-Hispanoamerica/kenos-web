@@ -14,7 +14,7 @@ import {
     Text2,
     Checkbox,
 } from '..';
-import {getCvvLength} from '../utils/credit-card';
+import {getCvvLength} from '@utils/credit-card';
 
 export default {
     title: 'Patterns/Forms/Form with manual state management',

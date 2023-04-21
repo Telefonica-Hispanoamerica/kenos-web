@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Stack, MediaCard, ButtonPrimary, ButtonLink, Inline, Text2, Video, Image, Tag, TagType} from '..';
-import ResponsiveLayout from '../responsive-layout';
-import {Placeholder} from '../placeholder';
+import ResponsiveLayout from '@layout/ResponsiveLayout/responsive-layout';
+import {Placeholder} from '@components/Primitives/Placeholder/placeholder';
 
 export default {
     title: 'Components/Cards/Media card',

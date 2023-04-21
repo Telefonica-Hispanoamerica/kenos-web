@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {GridLayout, ResponsiveLayout} from '..';
-import {Placeholder} from '../placeholder';
+import {Placeholder} from '@components/Primitives/Placeholder/placeholder';
 
 export default {
     title: 'Layout/Grid layout',

@@ -11,7 +11,7 @@ import {
     Box,
     Text4,
 } from '..';
-import {Placeholder} from '../placeholder';
+import {Placeholder} from '@components/Primitives/Placeholder/placeholder';
 
 export default {
     title: 'Components/Cards/Snap card',

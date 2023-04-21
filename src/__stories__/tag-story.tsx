@@ -12,7 +12,7 @@ import {
     IconAlertRegular,
     Inline,
 } from '..';
-import {ThemeVariant} from '../theme-variant-context';
+import {ThemeVariant} from '@utils/theme-variant-context';
 
 type Args = {
     label: string;

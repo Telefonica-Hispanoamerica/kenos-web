@@ -87,6 +87,17 @@ module.exports = {
         '@storybook/addon-controls',
     ],
     webpackFinal: async (config) => {
+        config.resolve.alias = {
+            ...config.resolve.alias,
+            '@components': path.resolve(__dirname, '../src/components'),
+            '@hooks': path.resolve(__dirname, '../src/hooks'),
+            '@layout': path.resolve(__dirname, '../src/layout'),
+            '@patterns': path.resolve(__dirname, '../src/patterns'),
+            '@skins': path.resolve(__dirname, '../src/skins'),
+            '@utils': path.resolve(__dirname, '../src/utils'),
+            '@icons': path.resolve(__dirname, '../src/icons'),
+            '@iconsgenerated': path.resolve(__dirname, '../src/generated'),
+        };
         config.watchOptions = {
             ...config.watchOptions,
             ignored: [

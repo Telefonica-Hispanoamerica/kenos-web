@@ -1,12 +1,12 @@
 import * as React from 'react';
-import {ButtonDanger, ButtonLink, ButtonPrimary, ButtonSecondary} from '../button';
+import {ButtonDanger, ButtonLink, ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button/button';
 import {render, screen} from '@testing-library/react';
-import ThemeContextProvider from '../theme-context-provider';
+import ThemeContextProvider from '@utils/theme-context-provider';
 import {makeTheme} from './test-utils';
 import userEvent from '@testing-library/user-event';
-import IconPhotoCameraRegular from '../generated/mistica-icons/icon-photo-camera-regular';
+import IconPhotoCameraRegular from '@iconsgenerated/mistica-icons/icon-photo-camera-regular';
 
-import type {TouchableElement} from '../touchable';
+import type {TouchableElement} from '@components/Primitives/Touchable/touchable';
 
 test('button is accesible', () => {
     render(

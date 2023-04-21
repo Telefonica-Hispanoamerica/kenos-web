@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Stack, Text2, skinVars} from '..';
-import {useIsInverseVariant} from '../theme-variant-context';
+import {useIsInverseVariant} from '@utils/theme-variant-context';
 
 export default {
     title: 'Utilities/skinVars',

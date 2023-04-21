@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useModalState, Stack, Text2, alert} from '..';
-import {ButtonPrimary} from '../button';
+import {ButtonPrimary} from '@components/Buttons/Button/button';
 
 export default {
     title: 'Hooks/useModalState',

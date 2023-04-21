@@ -8,7 +8,7 @@ import {
     IconCloseRegular,
     Text2,
 } from '..';
-import {vars} from '../skins/skin-contract.css';
+import {vars} from '@skins/skin-contract.css';
 
 export default {
     title: 'Components/Navigation bars/Funnel navigation bar',

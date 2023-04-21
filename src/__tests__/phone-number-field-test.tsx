@@ -2,7 +2,7 @@ import * as React from 'react';
 import {PhoneNumberField} from '..';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import ThemeContextProvider from '../theme-context-provider';
+import ThemeContextProvider from '@utils/theme-context-provider';
 import {makeTheme} from './test-utils';
 
 test.each`

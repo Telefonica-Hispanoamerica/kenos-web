@@ -1,5 +1,5 @@
 import {style, createVar} from '@vanilla-extract/css';
-import {sprinkles} from '../sprinkles.css';
+import {sprinkles} from './sprinkles.css';
 
 const aspectRatio = createVar();
 

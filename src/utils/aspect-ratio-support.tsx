@@ -1,7 +1,7 @@
 import {assignInlineVars} from '@vanilla-extract/dynamic';
 import classNames from 'classnames';
 import * as React from 'react';
-import {useIsomorphicLayoutEffect} from '../hooks';
+import {useIsomorphicLayoutEffect} from '../hooks/hooks';
 import * as styles from './aspect-ratio-support.css';
 
 const AspectRatioSupport = React.createContext<boolean>(true);

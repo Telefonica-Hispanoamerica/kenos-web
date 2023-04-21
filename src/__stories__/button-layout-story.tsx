@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {ButtonPrimary, ButtonSecondary, ButtonLink, Text2, ButtonLayout, Stack} from '..';
-import {Title1} from '../title';
+import {Title1} from '@components/Title/title';
 import {StorySection} from './helpers';
 
 export default {

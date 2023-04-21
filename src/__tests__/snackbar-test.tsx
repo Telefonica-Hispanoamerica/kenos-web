@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Snackbar from '../snackbar';
+import Snackbar from '@components/Snackbar/snackbar';
 import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import ThemeContextProvider from '../theme-context-provider';
+import ThemeContextProvider from '@utils/theme-context-provider';
 import {makeTheme} from './test-utils';
 import * as bridge from '@tef-novum/webview-bridge';
 

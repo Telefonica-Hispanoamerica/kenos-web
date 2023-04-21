@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Inline, Text2, skinVars} from '..';
-import {Placeholder} from '../placeholder';
+import {Placeholder} from '@components/Primitives/Placeholder/placeholder';
 import {StorySection, useSelect} from './helpers';
 
 export default {

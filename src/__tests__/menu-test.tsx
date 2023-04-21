@@ -2,7 +2,7 @@ import * as React from 'react';
 import userEvent from '@testing-library/user-event';
 import {render, screen} from '@testing-library/react';
 import {ThemeContextProvider, Touchable, Text3} from '..';
-import Menu from '../menu';
+import Menu from '@components/Menu/menu';
 import {makeTheme} from './test-utils';
 
 const options = [
