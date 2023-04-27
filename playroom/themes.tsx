@@ -17,4 +17,3 @@ export const Telefonica: ThemeConfig = {...themes.Telefonica, ...common};
 
 export const Movistar_iOS: ThemeConfig = {...Movistar, platformOverrides: {platform: 'ios'}};
 export const Telefonica_iOS: ThemeConfig = {...Telefonica, platformOverrides: {platform: 'ios'}};
-// no existe exportacion de Movistar_Prominent para ios
