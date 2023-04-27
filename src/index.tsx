@@ -143,7 +143,6 @@ export {getMovistarLegacySkin} from './skins/movistar-legacy';
 export {getTelefonicaSkin} from './skins/telefonica';
 export {palette as movistarPalette} from './skins/movistar';
 export {palette as telefonicaPalette} from './skins/telefonica';
-export {palette as movistarLegacyPallete} from './skins/movistar-legacy';
 
 export type {Locale} from './utils/locale';
 export type {TrackingEvent, IconProps} from './utils/types';
