@@ -95,35 +95,15 @@ root.render(
 );
 ```
 
-// hasta aqui llegue (LUCHO)
+El prop `theme` en `ThemeContextProvider` es **obligatorio**, y podes usarlo para configurar algunos aspectos de
+la biblioteca. Hay múltiples configuraciones, pero los únicos dos campos obligatorios son `skin` e `i18n`. Leer el [theme config doc](doc/theme-config.md) para más información.
 
-The `theme` prop in `ThemeContextProvider` is **mandatory**, and you can use it to configure some aspects of
-the library. There are multiple settings but the only two mandatory fields are `skin` and `i18n`. Read the
-[theme config doc](https://github.com/Telefonica/mistica-web/blob/master/doc/theme-config.md) for more info.
+:advertencia: Por lo general, el objeto `tema` es constante y no necesitará cambiar dinámicamente en su aplicación, en
+ese caso recomendamos extraerlo a una variable `const` externa fuera del componente, de esta manera el
+la referencia del objeto será la misma en cada renderizado. Si por alguna razón el `tema` debe ser dinámico en su
+app, considera memorizarla (por ejemplo, con el gancho `React.useMemo`).
 
-:warning: Usually, the `theme` object is constant and won't need to change dynamically in your application, in
-that case we recommend to extract it to an external `const` variable outside of the component, this way the
-object reference will be the same in every re-render. If for some reason the `theme` must be dynamic in your
-app, consider to memoize it (for example, with `React.useMemo` hook).
 
-## Components
-
-Explore the components in [Mistica storybook](https://mistica-web.vercel.app)
-
-Start prototyping interfaces with Mistica components in the
-[Mistica playroom](https://mistica-web.vercel.app/playroom)
-
-## More docs
-
-- [Examples](https://github.com/Telefonica/mistica-web/tree/master/examples)
-- [Understanding Mistica's layout components](https://github.com/Telefonica/mistica-web/blob/master/doc/layout.md)
-- [Working with forms](https://github.com/Telefonica/mistica-web/blob/master/doc/forms.md)
-- [Theme config options](https://github.com/Telefonica/mistica-web/blob/master/doc/theme-config.md)
-- [Customize default texts](https://github.com/Telefonica/mistica-web/blob/master/doc/texts.md)
-- [Analytics](https://github.com/Telefonica/mistica-web/blob/master/doc/analytics.md)
-- [Style your components](https://github.com/Telefonica/mistica-web/blob/master/doc/styles.md)
-- [Fonts](https://github.com/Telefonica/mistica-web/blob/master/doc/fonts.md)
-- [Testing notes](https://github.com/Telefonica/mistica-web/blob/master/doc/testing.md)
 
 ## Development
 
@@ -135,16 +115,3 @@ Start prototyping interfaces with Mistica components in the
 - `yarn build`: build package
 - `yarn storybook`: starts storybook
 - `yarn playroom`: starts playroom
-
-## More about Mistica
-
-- [Mistica, the Telefonica Design System](https://github.com/Telefonica/mistica)
-
-### Mistica in other platforms
-
-- [Android](https://github.com/Telefonica/mistica-android)
-- [iOS](https://github.com/Telefonica/mistica-ios)
-
-## Contributing
-
-See [CONTRIBUTING.md](https://github.com/Telefonica/mistica-web/blob/master/CONTRIBUTING.md)
