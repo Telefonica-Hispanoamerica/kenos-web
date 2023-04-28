@@ -1,28 +1,45 @@
-![Mistica for Web](img/mistica-web-light.svg#gh-light-mode-only)
-![Mistica for Web](img/mistica-web-dark.svg#gh-dark-mode-only)
+![Mistica for Web](img/mistica-web-light-kenos.svg#gh-light-mode-only)
+![Mistica for Web](img/mistica-web-dark-kenos.svg#gh-dark-mode-only)
 
-React components library for Telefonica Design System ([Mistica](https://github.com/Telefonica/mistica))
+React components library for Telefonica Kenos Design System ([Mistica](https://github.com/TelefonicaAR/kenos-ui))
 
 ![Node.js CI](https://github.com/Telefonica/mistica-web/workflows/Node.js%20CI/badge.svg)
 
-## Getting started
+## Que es Kenos
+Esta es una colección de componentes gráficos para React que te permiten construir aplicaciones web modernas y atractivas con facilidad destinados para  [Telefonica Hispam](https://www.linkedin.com/company/movistar-telefonica-hispam/about/) . Desde botones hasta gráficos y tablas, la librería Kenos ofrece una amplia variedad de componentes altamente personalizables y fáciles de usar que te ayudarán a mejorar la usabilidad y el atractivo visual de tus proyectos de React.
 
+![Mistica for Web](img/mapaHispam.png)
+
+## Para empezar a trabajar
+Solamente con los comandos de instalación en tu proyecto react podrás utilizar esta librería.
 ### Install
 
 ```terminal
 yarn add @telefonica/mistica
 ```
 
-or
+or si utilizas npm 
 
 ```terminal
 npm install @telefonica/mistica
 ```
 
-### Start using `@telefonica/mistica`
+## Para utilizar el storybook 
+Para visitar todos los componentes kenos tiene un storybook para mostrarte sus diferentes formas y comportamientos.
+### Install
 
-Before using any of our components you have to add `<ThemeContextProvider>` in the root of your React app.
-Here is a complete example of a form with two text fields and a submit button:
+```terminal
+> yarn install
+```
+
+```terminal
+> yarn storybook
+```
+
+## Para inyectar componente 
+
+Antes de usar cualquiera de nuestros componentes, debes agregar `<ThemeContextProvider>` en la raíz de su aplicación React.
+Aquí hay un ejemplo completo de un formulario con dos campos de texto y un botón de envío:
 
 ```javascript
 import {createRoot} from 'react-dom/client';
@@ -77,6 +94,8 @@ root.render(
   </ThemeContextProvider>
 );
 ```
+
+// hasta aqui llegue (LUCHO)
 
 The `theme` prop in `ThemeContextProvider` is **mandatory**, and you can use it to configure some aspects of
 the library. There are multiple settings but the only two mandatory fields are `skin` and `i18n`. Read the
