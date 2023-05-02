@@ -115,3 +115,17 @@ app, considera memorizarla (por ejemplo, con el gancho `React.useMemo`).
 - `yarn build`: build package
 - `yarn storybook`: starts storybook
 - `yarn playroom`: starts playroom
+
+
+## GitFlow
+
+PENDIENTE - Aqui se detallarán los pasos que se deben seguir para crear/modificar/borrar un componente de esta liberia 
+## Buenas Prácticas
+
+PENDIENTE - Aqui se detallarán las buenas practicas que se deben llevar a cabo 
+
+## Sistema de Iconos
+
+Los iconos se manejan por separados en el repositorio de Kenos-Iconos.
+
+PENDIENTE - Aqui se puede detallar los pasos a seguir para crear un nuevo icono. 
