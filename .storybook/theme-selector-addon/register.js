@@ -25,7 +25,6 @@ const ThemeSelectorAddon = ({api}) => {
     React.useEffect(() => {
         const notifySkin = () => {
             channel.emit('skin-selected', currentSkin);
-            console.log();
         };
 
         channel.on('story-mounted', notifySkin);
