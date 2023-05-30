@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {ThemeVariant, skinVars} from '..';
-import {SkeletonText} from '@components/Skeletons/skeletons';
+import {SkeletonText} from '@components/Skeletons';
 
 export default {
     title: 'Components/Skeletons/Skeleton Text',

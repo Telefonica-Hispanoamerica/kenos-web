@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import TextField from '@components/Input/TextFields/TextField/text-field';
+import TextField from '@components/Input/TextFields/TextField';
 import ThemeContextProvider from '@utils/theme-context-provider';
 import {makeTheme} from './test-utils';
-import {ButtonPrimary} from '@components/Buttons/Button/button';
+import {ButtonPrimary} from '@components/Buttons/Button';
 import Form from '@patterns/Forms/form';
 
 test('TextField uncontrolled', async () => {

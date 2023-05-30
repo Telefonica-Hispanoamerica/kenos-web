@@ -2,7 +2,7 @@ import * as React from 'react';
 import Form from '@patterns/Forms/form';
 import Box from '@layout/Box/box';
 import Stack from '@layout/Stack/stack';
-import {Select} from '@components/Select';
+import Select from '@components/Select';
 import {ButtonPrimary, ButtonLayout} from '@components/Buttons';
 import {TextField, 
         EmailField, 

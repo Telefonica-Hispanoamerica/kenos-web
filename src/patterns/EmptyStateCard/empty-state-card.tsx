@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Box from '@layout/Box/box';
-import {Boxed} from '@components/Primitives/Boxed/boxed';
-import {ButtonLink, ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button/button';
+import {Boxed} from '@components/Primitives/Boxed';
+import {ButtonLink, ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button';
 import {useScreenSize} from '@hooks/hooks';
 import Stack from '@layout/Stack/stack';
-import {Text2, Text4} from '@components/Text/text';
-import ButtonGroup from '@components/Buttons/ButtonGroup/button-group';
+import {Text2, Text4} from '@components/Text';
+import ButtonGroup from '@components/Buttons/ButtonGroup';
 import * as styles from './empty-state-card.css';
 import {vars} from '@skins/skin-contract.css';
 import type {DataAttributes, RendersNullableElement} from '@utils/types';

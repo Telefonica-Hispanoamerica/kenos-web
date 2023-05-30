@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {MemoryRouter, Route, Routes, Link as ReactRouterLink} from 'react-router-dom';
-import Touchable from '@components/Primitives/Touchable/touchable';
+import Touchable from '@components/Primitives/Touchable';
 import {waitFor, fireEvent, render, screen} from '@testing-library/react';
 import ThemeContextProvider from '@utils/theme-context-provider';
 import {makeTheme} from './test-utils';

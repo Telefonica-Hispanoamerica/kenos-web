@@ -1,5 +1,5 @@
 import * as React from 'react';
-import RadioButton, {RadioGroup} from '@components/RadioButton/radio-button';
+import RadioButton, {RadioGroup} from '@components/RadioButton';
 import {render, screen, within, fireEvent, waitFor} from '@testing-library/react';
 import {ButtonPrimary, Form, ThemeContextProvider, Title1} from '..';
 import userEvent from '@testing-library/user-event';

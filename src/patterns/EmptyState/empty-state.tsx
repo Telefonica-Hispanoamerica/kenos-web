@@ -2,17 +2,17 @@ import * as React from 'react';
 import {assignInlineVars} from '@vanilla-extract/dynamic';
 import classnames from 'classnames';
 import {useIsInverseVariant} from '@utils/theme-variant-context';
-import {ButtonPrimary, ButtonSecondary, ButtonLink} from '@components/Buttons/Button/button';
+import {ButtonPrimary, ButtonSecondary, ButtonLink} from '@components/Buttons/Button';
 import {useTheme} from '@hooks/hooks';
 import Stack from '@layout/Stack/stack';
-import {Text3, Text6} from '@components/Text/text';
-import ButtonGroup from '@components/Buttons/ButtonGroup/button-group';
+import {Text3, Text6} from '@components/Text';
+import ButtonGroup from '@components/Buttons/ButtonGroup';
 import * as styles from './empty-state.css';
 import {vars} from '@skins/skin-contract.css';
 import {AspectRatioElement} from '@utils/aspect-ratio-support';
 import {getPrefixedDataAttributes} from '@utils/dom';
 import {sprinkles} from '@utils/sprinkles.css';
-import type {ButtonGroupProps} from '@components/Buttons/ButtonGroup/button-group';
+import type {ButtonGroupProps} from '@components/Buttons/ButtonGroup';
 import type {DataAttributes, RendersNullableElement} from '@utils/types';
 
 interface BaseProps {

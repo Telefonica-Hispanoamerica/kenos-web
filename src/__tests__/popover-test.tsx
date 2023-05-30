@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {fireEvent, render, waitFor, screen} from '@testing-library/react';
-import Popover from '@components/Popover/popover';
+import Popover from '@components/Popover';
 import {ThemeContextProvider} from '..';
 import {makeTheme} from './test-utils';
 

@@ -1,3 +1,3 @@
-export { ButtonPrimary, ButtonSecondary, ButtonDanger, ButtonLink } from './Button/button';
-export { default as ButtonLayout } from './ButtonLayout/button-layout';
-export { default as IconButton } from './IconButton/icon-button';
+export { ButtonPrimary, ButtonSecondary, ButtonDanger, ButtonLink } from './Button';
+export { default as ButtonLayout } from './ButtonLayout';
+export { default as IconButton } from './IconButton'; 

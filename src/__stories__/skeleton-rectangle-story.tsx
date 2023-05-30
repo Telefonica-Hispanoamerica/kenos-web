@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {SkeletonRectangle} from '@components/Skeletons/skeletons';
+import {SkeletonRectangle} from '@components/Skeletons';
 import {ThemeVariant, skinVars} from '..';
 
 export default {

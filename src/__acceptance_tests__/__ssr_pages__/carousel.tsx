@@ -3,7 +3,7 @@ import {ButtonPrimary, ButtonLink} from '@components/Buttons';
 import {Carousel} from '@components/Carousels';
 import {MediaCard} from '@components/Cards';
 import {Image} from '@components/Primitives';
-import {Tag} from '@components/Tag';
+import Tag from '@components/Tag';
 import ResponsiveLayout from '@layout/ResponsiveLayout/responsive-layout';
 
 const CarouselTest = (): JSX.Element => (

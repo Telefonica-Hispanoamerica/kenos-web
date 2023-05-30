@@ -14,17 +14,17 @@ import {
 } from '@tef-novum/webview-bridge';
 import {isRunningAcceptanceTest} from '@utils/platform';
 import {Theme} from '@utils/theme';
-import {Text6, Text2, Text3} from '@components/Text/text';
+import {Text6, Text2, Text3} from '@components/Text';
 import Box from '@layout/Box/box';
-import {Boxed} from '@components/Primitives/Boxed/boxed';
+import {Boxed} from '@components/Primitives/Boxed';
 import ResponsiveLayout from '@layout/ResponsiveLayout/responsive-layout';
 import Stack from '@layout/Stack/stack';
 import classnames from 'classnames';
-import ButtonGroup from '@components/Buttons/ButtonGroup/button-group';
+import ButtonGroup from '@components/Buttons/ButtonGroup';
 import {vars} from '@skins/skin-contract.css';
 import * as styles from './feedback.css';
 import type {DataAttributes} from '@utils/types';
-import type {ButtonGroupProps} from '@components/Buttons/ButtonGroup/button-group';
+import type {ButtonGroupProps} from '@components/Buttons/ButtonGroup';
 
 const areAnimationsSupported = (platformOverrides: Theme['platformOverrides']) =>
     !isRunningAcceptanceTest(platformOverrides);

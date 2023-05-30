@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {assignInlineVars} from '@vanilla-extract/dynamic';
-import DialogRoot from '@components/Dialog/dialog';
+import DialogRoot from '@components/Dialog';
 import ScreenSizeContextProvider from '@hooks/ScreenSizeContext/screen-size-context-provider';
 import AriaIdGetterContext from '@hooks/AriaIdContext/aria-id-getter-context';
 import {AnchorLink, dimensions, getTexts, NAVBAR_HEIGHT_MOBILE} from './theme';

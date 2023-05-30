@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {RowList, Row} from '@components/Lists/list';
-import {RadioGroup} from '@components/RadioButton/radio-button';
+import {RowList, Row} from '@components/Lists';
+import {RadioGroup} from '@components/RadioButton';
 import {screen, fireEvent, render, waitFor} from '@testing-library/react';
 import {ButtonPrimary, Form, ThemeContextProvider} from '..';
 import {makeTheme} from './test-utils';

@@ -1,15 +1,15 @@
 import * as React from 'react';
 import Box from '@layout/Box/box';
-import CreditCardExpirationField from '@components/Input/CreditCardExpirationField/credit-card-expiration-field';
-import CvvField from '@components/Input/CvvField/cvv-field';
-import DateField from '@components/Input/DateField/date-field';
-import DecimalField from '@components/Input/DecimalField/decimal-field';
-import EmailField from '@components/Input/EmailField/email-field';
-import IntegerField from '@components/Input/IntegerField/integer-field';
-import PasswordField from '@components/Input/PasswordField/password-field';
-import PhoneNumberField from '@components/Input/PhoneNumberField/phone-number-field';
-import Select from '@components/Select/select';
-import TextField from '@components/Input/TextFields/TextField/text-field';
+import CreditCardExpirationField from '@components/Input/CreditCardExpirationField';
+import CvvField from '@components/Input/CvvField';
+import DateField from '@components/Input/DateField';
+import DecimalField from '@components/Input/DecimalField';
+import EmailField from '@components/Input/EmailField';
+import IntegerField from '@components/Input/IntegerField';
+import PasswordField from '@components/Input/PasswordField';
+import PhoneNumberField from '@components/Input/PhoneNumberField';
+import Select from '@components/Select';
+import TextField from '@components/Input/TextFields/TextField';
 import * as styles from './double-field.css';
 
 import type {RendersElement} from '@utils/types';

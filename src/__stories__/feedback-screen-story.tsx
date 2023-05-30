@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {FeedbackScreen} from '@patterns/Feedback/feedback';
-import {ButtonLink, ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button/button';
+import {ButtonLink, ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button';
 import Stack from '@layout/Stack/stack';
 import {ThemeVariant, useIsInverseVariant} from '@utils/theme-variant-context';
 import {Box, FixedToTop, Text3, Text2, skinVars} from '..';

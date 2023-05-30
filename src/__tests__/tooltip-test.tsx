@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {render, fireEvent, screen, waitForElementToBeRemoved} from '@testing-library/react';
-import Tooltip from '@components/Tooltip/tooltip';
+import Tooltip from '@components/Tooltip';
 import {ThemeContextProvider} from '..';
 import {makeTheme} from './test-utils';
 

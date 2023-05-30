@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button/button';
-import ButtonLayout from '@components/Buttons/ButtonLayout/button-layout';
+import {ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button';
+import ButtonLayout from '@components/Buttons/ButtonLayout';
 import {render, screen} from '@testing-library/react';
 import {ThemeContextProvider} from '..';
 import {makeTheme} from './test-utils';

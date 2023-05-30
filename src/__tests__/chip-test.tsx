@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {render, screen} from '@testing-library/react';
-import Chip from '@components/Chip/chip';
+import Chip from '@components/Chip';
 import userEvent from '@testing-library/user-event';
 import ThemeContextProvider from '@utils/theme-context-provider';
 import {makeTheme} from './test-utils';

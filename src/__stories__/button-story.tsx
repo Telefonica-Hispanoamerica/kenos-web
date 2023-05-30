@@ -16,7 +16,7 @@ import {
     IconPhotoCameraRegular,
 } from '..';
 import DoubleField from '@layout/DoubleField/double-field';
-import {Title1} from '@components/Title/title';
+import {Title1} from '@components/Title';
 
 export default {
     title: 'Components/Buttons',

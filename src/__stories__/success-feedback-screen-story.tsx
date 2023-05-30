@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {SuccessFeedbackScreen} from '@patterns/Feedback/feedback';
-import {ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button/button';
+import {ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button';
 
 export default {
     title: 'Patterns/Feedback/SuccessFeedbackScreen',

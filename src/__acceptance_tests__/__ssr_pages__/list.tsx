@@ -3,7 +3,7 @@ import {RowList, Row, BoxedRowList, BoxedRow} from '@components/Lists';
 import ResponsiveLayout from '@layout/ResponsiveLayout/responsive-layout';
 import NegativeBox from '@utils/negative-box';
 import {Title1} from '@components/Title';
-import {Avatar} from '@components/Avatar';
+import Avatar from '@components/Avatar';
 
 const ListTest = (): JSX.Element => (
     <ResponsiveLayout>

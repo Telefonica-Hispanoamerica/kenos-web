@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TextLink from '@components/TextLink/text-link';
+import TextLink from '@components/TextLink';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import ThemeContextProvider from '@utils/theme-context-provider';

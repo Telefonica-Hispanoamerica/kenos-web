@@ -1,5 +1,5 @@
 import * as React from 'react';
-import IconButton from '@components/Buttons/IconButton/icon-button';
+import IconButton from '@components/Buttons/IconButton';
 import IcnCloseRegular from '@iconsgenerated/mistica-icons/icon-close-regular';
 import {StorySection} from './helpers';
 

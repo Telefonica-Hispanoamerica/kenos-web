@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {render, waitFor, screen, act, waitForElementToBeRemoved} from '@testing-library/react';
-import {alert, confirm, dialog} from '@components/Dialog/dialog';
+import {alert, confirm, dialog} from '@components/Dialog';
 import ThemeContextProvider from '@utils/theme-context-provider';
 import {makeTheme} from './test-utils';
 import * as webviewBridge from '@tef-novum/webview-bridge';

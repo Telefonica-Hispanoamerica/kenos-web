@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {ButtonLink, Title1, Stack} from '..';
-import {ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button/button';
-import ButtonGroup from '@components/Buttons/ButtonGroup/button-group';
+import {ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button';
+import ButtonGroup from '@components/Buttons/ButtonGroup';
 
 export default {
     title: 'Components/Buttons/Button group',

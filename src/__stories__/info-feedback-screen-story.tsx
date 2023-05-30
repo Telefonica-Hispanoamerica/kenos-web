@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {InfoFeedbackScreen} from '@patterns/Feedback/feedback';
-import {ButtonPrimary} from '@components/Buttons/Button/button';
+import {ButtonPrimary} from '@components/Buttons/Button';
 
 export default {
     title: 'Patterns/Feedback/InfoFeedbackScreen',

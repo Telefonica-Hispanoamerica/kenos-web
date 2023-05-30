@@ -1,7 +1,7 @@
 import * as React from 'react';
 import IconCloseRegular from '@iconsgenerated/mistica-icons/icon-close-regular';
 import {useTheme} from '@hooks/hooks';
-import IconButton from '@components/Buttons/IconButton/icon-button';
+import IconButton from '@components/Buttons/IconButton';
 import {vars} from '@skins/skin-contract.css';
 import * as styles from './maybe-dismissable.css';
 

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {SuccessFeedback} from '@patterns/Feedback/feedback';
-import {ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button/button';
+import {ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button';
 import Stack from '@layout/Stack/stack';
 import ResponsiveLayout from '@layout/ResponsiveLayout/responsive-layout';
-import {Placeholder} from '@components/Primitives/Placeholder/placeholder';
+import {Placeholder} from '@components/Primitives/Placeholder';
 import {useScreenSize} from '@hooks/hooks';
 
 export default {

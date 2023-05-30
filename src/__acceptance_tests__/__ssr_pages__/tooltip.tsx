@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Tooltip} from '@components/Tooltip';
+import Tooltip from '@components/Tooltip';
 
 const TooltipTest = (): JSX.Element => (
     <Tooltip

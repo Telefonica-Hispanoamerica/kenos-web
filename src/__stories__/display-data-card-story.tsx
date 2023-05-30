@@ -16,7 +16,7 @@ import {
     Text2,
     Inline,
 } from '..';
-import {Placeholder} from '@components/Primitives/Placeholder/placeholder';
+import {Placeholder} from '@components/Primitives/Placeholder';
 
 export default {
     title: 'Components/Cards/Display data card',
