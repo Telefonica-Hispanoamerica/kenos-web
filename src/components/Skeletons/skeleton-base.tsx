@@ -1,0 +1,44 @@
+import * as React from 'react';
+import classnames from 'classnames';
+import { sprinkles } from '@utils/sprinkles.css';
+import { vars } from '@skins/skin-contract.css';
+import { useIsInverseVariant } from '@utils/theme-variant-context';
+
+type SkeletonBaseProps = {
+    width?: string | number;
+    height?: string | number;
+    radius?: string | number;
+    className?: string;
+    noBorderRadius?: boolean;
+};
+
+const SkeletonBase = ({
+    width = '100%',
+    height = 8,
+    radius = 8,
+    className,
+    noBorderRadius = false,
+}: SkeletonBaseProps): JSX.Element => {
+    const isInverse = useIsInverseVariant();
+
+    return (
+        <div
+            className={classnames(
+                className,
+                sprinkles({
+                    background: isInverse
+                        ? vars.colors.backgroundSkeletonInverse
+                        : vars.colors.backgroundSkeleton,
+                })
+            )}
+            style={{
+                borderRadius: noBorderRadius ? 0 : radius,
+                width,
+                height,
+            }}
+            aria-hidden
+        />
+    );
+};
+
+export default SkeletonBase;

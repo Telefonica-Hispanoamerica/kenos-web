@@ -23,7 +23,7 @@ import * as styles from './preview-tools.css';
 import type {ThemeConfig, ColorScheme, SkinName} from '../src';
 
 export * from '../src';
-export {default as ButtonGroup} from '../src/button-group';
+export {default as ButtonGroup} from '../src/components/Buttons/ButtonGroup/button-group';
 
 const themesMap: {[skinName: string]: {themeConfig: ThemeConfig; text: string}} = {
     Movistar: {

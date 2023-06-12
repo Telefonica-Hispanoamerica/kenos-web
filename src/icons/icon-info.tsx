@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useTheme} from '../hooks';
+import {useTheme} from '../hooks/hooks';
 import {O2_SKIN, O2_CLASSIC_SKIN} from '../skins/constants';
 import {vars} from '../skins/skin-contract.css';
 

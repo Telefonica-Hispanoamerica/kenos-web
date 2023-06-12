@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Image, Stack, Text3, Title1, skinVars} from '..';
-import {isRunningAcceptanceTest} from '../utils/platform';
+import {isRunningAcceptanceTest} from '@utils/platform';
 
 export default {
     title: 'Components/Primitives/Image',

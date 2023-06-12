@@ -5,7 +5,10 @@ import path from 'path';
 import webpack from 'webpack';
 import http from 'http';
 import fs from 'fs';
-import {ThemeContextProvider, MOVISTAR_SKIN, getSkinByName, type KnownSkinName} from '../..';
+import ThemeContextProvider from '@utils/theme-context-provider';
+import {MOVISTAR_SKIN} from '@skins/constants'
+import {getSkinByName} from '@skins/utils';
+import {KnownSkinName} from '@skins/types';
 import {execSync} from 'child_process';
 
 const createWebpackEntries = (): {[entryName: string]: string} => {

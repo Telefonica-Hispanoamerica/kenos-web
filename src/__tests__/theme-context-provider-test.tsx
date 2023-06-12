@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {render, screen} from '@testing-library/react';
 import {CreditCardFields} from '..';
-import {getMovistarSkin} from '../skins/movistar';
-import ThemeContextProvider from '../theme-context-provider';
+import {getMovistarSkin} from '@skins/movistar';
+import ThemeContextProvider from '@utils/theme-context-provider';
 
 test('ThemeContextProvider with es-ES locale', () => {
     render(

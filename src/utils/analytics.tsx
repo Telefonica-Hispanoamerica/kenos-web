@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import type {EventFormat} from '../theme';
+import type {EventFormat} from 'src/utils/theme';
 
 // Universal Analytics (legacy)
 export const eventCategories = {userInteraction: 'user_interaction'} as const;

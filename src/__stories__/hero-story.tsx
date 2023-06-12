@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Hero, ButtonPrimary, ButtonLink, Tag, TagType, Image, Placeholder} from '..';
 
-import type {AspectRatio} from '../image';
+import type {AspectRatio} from '@components/Primitives/Image';
 
 export default {
     title: 'Components/Hero/Component',

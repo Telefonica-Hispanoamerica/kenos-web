@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {ResponsiveLayout, skinVars} from '..';
-import {Placeholder} from '../placeholder';
+import {Placeholder} from '@components/Primitives/Placeholder';
 
 export default {
     title: 'Layout/Responsive layout',

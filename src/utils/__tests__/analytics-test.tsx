@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ThemeContextProvider from '../../theme-context-provider';
+import ThemeContextProvider from '../theme-context-provider';
 import {render, screen} from '@testing-library/react';
 import {makeTheme} from '../../__tests__/test-utils';
 import {TrackingConfig, useTrackingConfig} from '../analytics';

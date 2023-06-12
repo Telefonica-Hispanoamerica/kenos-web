@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {SnapCard} from '../card';
+import {SnapCard} from '@components/Cards/';
 
 <SnapCard title="title" />;
 <SnapCard title="title" href="/" />;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {RowList, BoxedRowList, BoxedRow, Row} from '../list';
+import {RowList, BoxedRowList, BoxedRow, Row} from '../components/Lists';
 
 const v = true;
 
