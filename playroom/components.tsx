@@ -12,7 +12,7 @@ import {
     ThemeContextProvider,
     skinVars,
 } from '../src';
-import {Movistar, Vivo, O2, Telefonica, Blau} from './themes';
+import {Movistar, Telefonica} from './themes';
 import {useOverrideTheme} from './frame-component';
 import IconSun from './icons/icon-sun';
 import IconMoon from './icons/icon-moon';
@@ -30,21 +30,9 @@ const themesMap: {[skinName: string]: {themeConfig: ThemeConfig; text: string}} 
         text: 'Movistar',
         themeConfig: Movistar,
     },
-    Vivo: {
-        text: 'Vivo',
-        themeConfig: Vivo,
-    },
-    O2: {
-        text: 'O2',
-        themeConfig: O2,
-    },
     Telefonica: {
         text: 'Telefónica',
         themeConfig: Telefonica,
-    },
-    Blau: {
-        text: 'Blau',
-        themeConfig: Blau,
     },
 };
 
