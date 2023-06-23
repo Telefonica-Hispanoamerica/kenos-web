@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {OverscrollColorProvider} from '../overscroll-color-context';
+import {OverscrollColorProvider} from '@utils/overscroll-color-context';
 import {render} from '@testing-library/react';
-import ThemeContextProvider from '../theme-context-provider';
+import ThemeContextProvider from '@utils/theme-context-provider';
 import {makeTheme} from './test-utils';
 
 const resizeWindow = (x: number, y: number) => {

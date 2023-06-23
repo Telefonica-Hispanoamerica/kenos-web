@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {ErrorFeedbackScreen, ButtonPrimary} from '../../..';
+import {ErrorFeedbackScreen} from '@patterns/Feedback/feedback';
+import {ButtonPrimary} from '@components/Buttons';
 
 const ErrorFeedbackScreenTest = (): JSX.Element => (
     <ErrorFeedbackScreen

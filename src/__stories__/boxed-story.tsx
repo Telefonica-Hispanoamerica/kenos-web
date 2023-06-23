@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Box, Boxed, Stack, Text8, skinVars} from '..';
-import {ThemeVariant} from '../theme-variant-context';
+import {ThemeVariant} from '@utils/theme-variant-context';
 import {useCheckbox} from './helpers';
 
 export default {

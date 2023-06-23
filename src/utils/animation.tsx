@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {isRunningAcceptanceTest} from './platform';
 
-import type {Theme} from '../theme';
+import type {Theme} from 'src/utils/theme';
 
 const areAnimationsSupported = (platformOverrides: Theme['platformOverrides']) =>
     !isRunningAcceptanceTest(platformOverrides);

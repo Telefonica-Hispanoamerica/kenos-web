@@ -1,72 +1,72 @@
 import {PACKAGE_VERSION} from './package-version';
 
 export {vars as skinVars} from './skins/skin-contract.css';
-export * as mq from './media-queries.css';
-export {default as ThemeContext} from './theme-context';
-export {default as ThemeContextProvider} from './theme-context-provider';
-export {default as ScreenReaderOnly} from './screen-reader-only';
-export {default as Touchable} from './touchable';
-export type {TouchableElement} from './touchable';
-export {default as Spinner} from './spinner';
-export {default as FadeIn} from './fade-in';
-export {ButtonPrimary, ButtonSecondary, ButtonDanger, ButtonLink} from './button';
-export {default as ButtonLayout} from './button-layout';
-export {default as FixedFooterLayout} from './fixed-footer-layout';
-export {default as ButtonFixedFooterLayout} from './button-fixed-footer-layout';
-export {default as Snackbar} from './snackbar';
-export {Portal} from './portal';
-export {default as LoadingBar} from './loading-bar';
-export {default as FixedToTop, TopDistanceContext} from './fixed-to-top';
-export {default as createNestableContext} from './nestable-context';
-export type {NestableContext} from './nestable-context';
-export {default as OverscrollColor, OverscrollColorProvider} from './overscroll-color-context';
+export * as mq from './layout/MediaQueries/media-queries.css';
+export {default as ThemeContext} from './utils/theme-context';
+export {default as ThemeContextProvider} from './utils/theme-context-provider';
+export {default as ScreenReaderOnly} from './utils/screen-reader-only';
+export {default as Touchable} from './components/Primitives/Touchable';
+export type {TouchableElement} from './components/Primitives/Touchable';
+export {default as Spinner} from './components/Spinner';
+export {default as FadeIn} from './utils/fade-in';
+export {ButtonPrimary, ButtonSecondary, ButtonDanger, ButtonLink} from './components/Buttons/Button';
+export {default as ButtonLayout} from './components/Buttons/ButtonLayout';
+export {default as FixedFooterLayout} from './layout/FixedFooterLayout/fixed-footer-layout';
+export {default as ButtonFixedFooterLayout} from './layout/FixedFooterLayout/button-fixed-footer-layout';
+export {default as Snackbar} from './components/Snackbar';
+export {Portal} from './utils/portal';
+export {default as LoadingBar} from './components/LoadingBar';
+export {default as FixedToTop, TopDistanceContext} from './utils/fixed-to-top';
+export {default as createNestableContext} from './utils/nestable-context';
+export type {NestableContext} from './utils/nestable-context';
+export {default as OverscrollColor, OverscrollColorProvider} from './utils/overscroll-color-context';
 export {
     FeedbackScreen,
     ErrorFeedbackScreen,
     InfoFeedbackScreen,
     SuccessFeedbackScreen,
     SuccessFeedback,
-} from './feedback';
-export {default as IconButton} from './icon-button';
-export {default as Popover} from './popover';
-export {default as FocusTrap} from './focus-trap';
-export {confirm, alert, dialog} from './dialog';
-export {default as Badge} from './badge';
-export {default as TextLink} from './text-link';
-export {default as Overlay} from './overlay';
-export {default as Tooltip} from './tooltip';
-export {default as Stack} from './stack';
-export {default as Box} from './box';
-export {Boxed} from './boxed';
-export {Header, HeaderLayout, MainSectionHeader, MainSectionHeaderLayout} from './header';
-export {default as GridLayout} from './grid-layout';
-export {default as ResponsiveLayout} from './responsive-layout';
-export {default as MasterDetailLayout} from './master-detail-layout';
-export {default as NavigationBreadcrumbs} from './navigation-breadcrumbs';
-export {default as Text, Text1, Text2, Text3, Text4, Text5, Text6, Text7, Text8, Text9, Text10} from './text';
-export {default as Tag} from './tag';
-export type {TagType} from './tag';
-export {Placeholder} from './placeholder';
-export {Title1, Title2} from './title';
-export {RowList, Row, BoxedRowList, BoxedRow} from './list';
-export {default as Switch} from './switch-component';
-export {default as Checkbox} from './checkbox';
-export {default as RadioButton, RadioGroup} from './radio-button';
-export {default as NegativeBox} from './negative-box';
-export {default as Tabs} from './tabs';
-export {default as Inline} from './inline';
-export {default as HighlightedCard} from './highlighted-card';
-export {default as Stepper} from './stepper';
-export {default as ProgressBar} from './progress-bar';
-export {MediaCard, DataCard, SnapCard, DisplayDataCard, DisplayMediaCard} from './card';
-export {default as Hero} from './hero';
-export {default as Divider} from './divider';
-export {default as Menu} from './menu';
-export {default as EmptyState} from './empty-state';
-export {default as EmptyStateCard} from './empty-state-card';
-export {default as Callout} from './callout';
-export {default as Avatar} from './avatar';
-export {useModalState} from './modal-context-provider';
+} from './patterns/Feedback/feedback';
+export {default as IconButton} from './components/Buttons/IconButton';
+export {default as Popover} from './components/Popover';
+export {default as FocusTrap} from './utils/focus-trap';
+export {confirm, alert, dialog} from './components/Dialog';
+export {default as Badge} from './components/Badge';
+export {default as TextLink} from './components/TextLink';
+export {default as Overlay} from './components/Overlay';
+export {default as Tooltip} from './components/Tooltip';
+export {default as Stack} from './layout/Stack/stack';
+export {default as Box} from './layout/Box/box';
+export {Boxed} from './components/Primitives/Boxed';
+export {Header, HeaderLayout, MainSectionHeader, MainSectionHeaderLayout} from './components/Headers';
+export {default as GridLayout} from './layout/GridLayout/grid-layout';
+export {default as ResponsiveLayout} from './layout/ResponsiveLayout/responsive-layout';
+export {default as MasterDetailLayout} from './layout/MasterDetailLayout/master-detail-layout';
+export {default as NavigationBreadcrumbs} from './components/Breadcrumbs';
+export {default as Text, Text1, Text2, Text3, Text4, Text5, Text6, Text7, Text8, Text9, Text10} from './components/Text';
+export {default as Tag} from './components/Tag';
+export type {TagType} from './components/Tag';
+export {Placeholder} from './components/Primitives/Placeholder';
+export {Title1, Title2} from './components/Title';
+export {RowList, Row, BoxedRowList, BoxedRow} from './components/Lists';
+export {default as Switch} from './components/Switch';
+export {default as Checkbox} from './components/Checkbox';
+export {default as RadioButton, RadioGroup} from './components/RadioButton';
+export {default as NegativeBox} from './utils/negative-box';
+export {default as Tabs} from './components/Tabs';
+export {default as Inline} from './layout/Inline/inline';
+export {default as HighlightedCard} from './components/Cards/HighlightedCard';
+export {default as Stepper} from './components/Stepper';
+export {default as ProgressBar} from './components/ProgressBar';
+export {MediaCard, DataCard, SnapCard, DisplayDataCard, DisplayMediaCard} from './components/Cards/Card';
+export {default as Hero} from './components/Hero';
+export {default as Divider} from './components/Divider';
+export {default as Menu} from './components/Menu';
+export {default as EmptyState} from './patterns/EmptyState/empty-state';
+export {default as EmptyStateCard} from './patterns/EmptyStateCard/empty-state-card';
+export {default as Callout} from './components/Callout';
+export {default as Avatar} from './components/Avatar';
+export {useModalState} from './utils/modal-context-provider';
 export {
     NavigationBar,
     MainNavigationBar,
@@ -74,33 +74,33 @@ export {
     NavigationBarActionGroup,
     NavigationBarAction,
     NavigationBarLogo,
-} from './navigation-bar';
-export {default as Image} from './image';
-export {default as Chip} from './chip';
-export {default as Video} from './video';
-export {Carousel, CenteredCarousel, Slideshow, PageBullets} from './carousel';
+} from './components/NavigationBar';
+export {default as Image} from './components/Primitives/Image';
+export {default as Chip} from './components/Chip';
+export {default as Video} from './components/Primitives/Video';
+export {Carousel, CenteredCarousel, Slideshow, PageBullets} from './components/Carousels';
 
 // Forms
-export {default as Form} from './form';
-export {default as Select} from './select';
-export {default as TextField} from './text-field';
-export {TextFieldBase} from './text-field-base';
-export {default as SearchField} from './search-field';
-export {default as EmailField} from './email-field';
-export {default as PhoneNumberField} from './phone-number-field';
-export {default as CreditCardNumberField} from './credit-card-number-field';
-export {default as CreditCardExpirationField} from './credit-card-expiration-field';
-export {default as CreditCardFields} from './credit-card-fields';
-export {default as CvvField} from './cvv-field';
-export {default as DateField} from './date-field';
-export {default as MonthField} from './month-field';
-export {default as DateTimeField} from './date-time-field';
-export {default as IntegerField} from './integer-field';
-export {default as DecimalField} from './decimal-field';
-export {default as PasswordField} from './password-field';
-export {default as DoubleField} from './double-field';
-export {default as IbanField} from './iban-field';
-export {useForm, useFieldProps} from './form-context';
+export {default as Form} from './patterns/Forms/form';
+export {default as Select} from './components/Select';
+export {default as TextField} from './components/Input/TextFields/TextField';
+export {TextFieldBase} from './components/Input/TextFields/TextFieldBase';
+export {default as SearchField} from './components/Input/SearchField';
+export {default as EmailField} from './components/Input/EmailField';
+export {default as PhoneNumberField} from './components/Input/PhoneNumberField';
+export {default as CreditCardNumberField} from './components/Input/CreditCardNumberField';
+export {default as CreditCardExpirationField} from './components/Input/CreditCardExpirationField';
+export {default as CreditCardFields} from './components/Input/CreditCardField';
+export {default as CvvField} from './components/Input/CvvField';
+export {default as DateField} from './components/Input/DateField';
+export {default as MonthField} from './components/Input/MonthField';
+export {default as DateTimeField} from './components/Input/DateTimeField';
+export {default as IntegerField} from './components/Input/IntegerField';
+export {default as DecimalField} from './components/Input/DecimalField';
+export {default as PasswordField} from './components/Input/PasswordField';
+export {default as DoubleField} from './layout/DoubleField/double-field';
+export {default as IbanField} from './components/Input/IbanField';
+export {useForm, useFieldProps} from './patterns/Forms/form-context';
 
 // Icons
 export {default as IconInfo} from './icons/icon-info';
@@ -109,9 +109,9 @@ export {default as IconError} from './icons/icon-error';
 export {default as IconSuccess} from './icons/icon-success';
 export {default as IconSuccessVivo} from './icons/icon-success-vivo';
 
-export {SkeletonCircle, SkeletonRow, SkeletonLine, SkeletonRectangle, SkeletonText} from './skeletons';
+export {SkeletonCircle, SkeletonRow, SkeletonLine, SkeletonRectangle, SkeletonText} from './components/Skeletons';
 
-export {default as Circle} from './circle';
+export {default as Circle} from './components/Primitives/Circle';
 
 export {
     useTheme,
@@ -122,8 +122,8 @@ export {
     useWindowHeight,
     useWindowWidth,
     useIsInViewport,
-} from './hooks';
-export type {ThemeConfig, ColorScheme, EventFormat} from './theme';
+} from './hooks/hooks';
+export type {ThemeConfig, ColorScheme, EventFormat} from './utils/theme';
 
 export {pxToRem} from './utils/css';
 
@@ -133,31 +133,16 @@ export {TrackingConfig, useTrackingConfig} from './utils/analytics';
 
 export {useDocumentVisibility} from './utils/document-visibility';
 
-export {ThemeVariant, useIsInverseVariant} from './theme-variant-context';
+export {ThemeVariant, useIsInverseVariant} from './utils/theme-variant-context';
 
 export type {Skin, KnownSkinName, SkinName} from './skins/types';
-export {
-    VIVO_SKIN,
-    O2_CLASSIC_SKIN,
-    O2_SKIN,
-    MOVISTAR_SKIN,
-    TELEFONICA_SKIN,
-    BLAU_SKIN,
-} from './skins/constants';
+export {MOVISTAR_SKIN, TELEFONICA_SKIN} from './skins/constants';
 export {getSkinByName} from './skins/utils';
-export {getVivoSkin} from './skins/vivo';
 export {getMovistarSkin} from './skins/movistar';
 export {getMovistarLegacySkin} from './skins/movistar-legacy';
-export {getO2Skin} from './skins/o2';
-export {getO2ClassicSkin} from './skins/o2-classic';
 export {getTelefonicaSkin} from './skins/telefonica';
-export {getBlauSkin} from './skins/blau';
-export {palette as vivoPalette} from './skins/vivo';
 export {palette as movistarPalette} from './skins/movistar';
-export {palette as o2Palette} from './skins/o2';
-export {palette as o2ClassicPalette} from './skins/o2-classic';
 export {palette as telefonicaPalette} from './skins/telefonica';
-export {palette as blauPalette} from './skins/blau';
 
 export type {Locale} from './utils/locale';
 export type {TrackingEvent, IconProps} from './utils/types';

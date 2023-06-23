@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {ErrorFeedbackScreen} from '../feedback';
-import {ButtonLink, ButtonPrimary} from '../button';
+import {ErrorFeedbackScreen} from '@patterns/Feedback/feedback';
+import {ButtonLink, ButtonPrimary} from '@components/Buttons/Button';
 
 export default {
     title: 'Patterns/Feedback/ErrorFeedbackScreen',

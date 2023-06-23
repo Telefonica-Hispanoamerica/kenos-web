@@ -1,6 +1,6 @@
 import {isWebViewBridgeAvailable} from '@tef-novum/webview-bridge';
 
-import type {Theme} from '../theme';
+import type {Theme} from './theme';
 
 const getUserAgent = (platformOverrides: Theme['platformOverrides'] = {}): string => {
     if (typeof self === 'undefined') {

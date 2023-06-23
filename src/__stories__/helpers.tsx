@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useAriaId, useIsInverseVariant, Select, TextField, Checkbox} from '..';
-import {isRunningAcceptanceTest} from '../utils/platform';
+import {isRunningAcceptanceTest} from '@utils/platform';
 
 type Props = {
     title: string;

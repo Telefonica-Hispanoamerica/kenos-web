@@ -123,8 +123,6 @@ const getIconJsx = (svgFilename) => {
 /** lower number means higher priority (more generic) */
 const SKIN_PRIORITY = {
     telefonica: 1,
-    o2: 2,
-    blau: 3,
 };
 
 /**
@@ -176,10 +174,10 @@ const createIconComponentSource = async (name, componentName, svgIconsInfo) => {
 
     import * as React from 'react';
     ${hasVariants ? "import {useTheme} from '../../hooks';" : ''}
-    import {useIsInverseVariant} from '../../theme-variant-context';
-    import {vars} from '../../skins/skin-contract.css';
+    import {useIsInverseVariant} from '@utils/theme-variant-context';
+    import {vars} from '@skins/skin-contract.css';
 
-    import type {IconProps} from '../../utils/types';
+    import type {IconProps} from '@utils/types';
 
     const ${componentName} = ({color, size = 24, ...rest}: IconProps): JSX.Element => {
         const isInverse = useIsInverseVariant();

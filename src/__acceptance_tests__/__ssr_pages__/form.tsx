@@ -1,24 +1,22 @@
 import * as React from 'react';
-import {
-    Form,
-    Box,
-    Stack,
-    TextField,
-    EmailField,
-    ButtonLayout,
-    ButtonPrimary,
-    PhoneNumberField,
-    IbanField,
-    CreditCardFields,
-    DateField,
-    DecimalField,
-    IntegerField,
-    PasswordField,
-    CreditCardExpirationField,
-    CvvField,
-    SearchField,
-    Select,
-} from '../../..';
+import Form from '@patterns/Forms/form';
+import Box from '@layout/Box/box';
+import Stack from '@layout/Stack/stack';
+import Select from '@components/Select';
+import {ButtonPrimary, ButtonLayout} from '@components/Buttons';
+import {TextField, 
+        EmailField, 
+        PhoneNumberField, 
+        IbanField, 
+        CreditCardFields, 
+        PasswordField, 
+        CreditCardExpirationField, 
+        CvvField, 
+        DateField,
+        DecimalField,
+        IntegerField,
+        SearchField
+    } from '@components/Input';
 
 const FormTest = (): JSX.Element => (
     <Form onSubmit={() => {}}>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import createContext from '../nestable-context';
+import createContext from '@utils/nestable-context';
 import {render, fireEvent, screen} from '@testing-library/react';
 
 test('happy case', () => {

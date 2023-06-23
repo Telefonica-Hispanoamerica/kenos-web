@@ -1,10 +1,10 @@
 import * as React from 'react';
-import {SuccessFeedback} from '../feedback';
-import {ButtonPrimary, ButtonSecondary} from '../button';
-import Stack from '../stack';
-import ResponsiveLayout from '../responsive-layout';
-import {Placeholder} from '../placeholder';
-import {useScreenSize} from '../hooks';
+import {SuccessFeedback} from '@patterns/Feedback/feedback';
+import {ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button';
+import Stack from '@layout/Stack/stack';
+import ResponsiveLayout from '@layout/ResponsiveLayout/responsive-layout';
+import {Placeholder} from '@components/Primitives/Placeholder';
+import {useScreenSize} from '@hooks/hooks';
 
 export default {
     title: 'Patterns/Feedback/SuccessFeedback',

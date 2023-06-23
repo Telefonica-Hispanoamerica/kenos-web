@@ -6,8 +6,8 @@ import {
     getAnimateHopInProps,
     mergeProperties,
 } from '../utils/animation';
-import {useTheme} from '../hooks';
-import {useIsInverseVariant} from '../theme-variant-context';
+import {useTheme} from '../hooks/hooks';
+import {useIsInverseVariant} from '../utils/theme-variant-context';
 import {vars} from '../skins/skin-contract.css';
 
 type Props = {
