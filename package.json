@@ -21,6 +21,7 @@
         "prettier-check": "prettier --check \"**/*.js\" \"**/*.tsx\" \"**/*.ts\" \"**/*.json\"",
         "lint": "eslint --report-unused-disable-directives .",
         "ts-check": "tsc --project tsconfig.json --noEmit",
+        "tokens": "node tokens.js",
         "build": "yarn clean && node scripts/build.js",
         "compile": "node scripts/compile.js",
         "clean": "rimraf dist && rimraf dist-es && rimraf dist-ts && rimraf node_modules/.cache",

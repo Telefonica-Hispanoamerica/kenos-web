@@ -1,13 +1,17 @@
 import {applyAlpha} from '../utils/color';
 import {MOVISTAR_SKIN} from './constants';
+import paletteTokens from './lib/palette-tokens';
 
 import type {GetKnownSkin, KnownSkin} from './types';
 
 // https://github.com/Telefonica/mistica-design/blob/production/tokens/movistar-skin-schema.json
 // https://github.com/Telefonica/mistica-design/blob/production/tokens/movistar-constants.json
 
+// console.log(paletteTokens.Kénos.Buttons.buttonPrimaryBackground.value)
+
 export const palette = {
-    movistarBlue: '#019DF4',
+    // movistarBlue: '#019DF4',
+    movistarBlue: paletteTokens.Buttons.buttonPrimaryBackground.value || '#019DF4',
     movistarBlue10: '#E6F5FD',
     movistarBlue20: '#B3E1FB',
     movistarBlue30: '#80CEF9',
@@ -99,6 +103,7 @@ export const getMovistarSkin: GetKnownSkin = () => {
             buttonLinkBackgroundSelected: palette.movistarBlue10,
             buttonLinkBackgroundInverseSelected: applyAlpha(palette.white, 0.2),
 
+            // buttonPrimaryBackground: paletteTokens.Kénos.Buttons.buttonPrimaryBackground.value || palette.movistarBlue,
             buttonPrimaryBackground: palette.movistarBlue,
             buttonPrimaryBackgroundInverse: palette.white,
             buttonPrimaryBackgroundSelected: palette.movistarBlue55,
