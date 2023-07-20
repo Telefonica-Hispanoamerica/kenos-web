@@ -2,15 +2,15 @@ import * as React from 'react';
 import * as styles from './index.css';
 import type Moment from 'moment';
 import Datetime from 'react-datetime';
-import { useElementDimensions, useTheme } from '@hooks/hooks';
-import IconCloseRegular from '@iconsgenerated/mistica-icons/icon-close-regular';
-import IconCalendarRegular from '@iconsgenerated/mistica-icons/icon-calendar-regular';
+import {useElementDimensions, useTheme} from '@hooks/hooks';
+import IconCloseRegular from '../../../generated/mistica-icons/icon-close-regular';
+import IconCalendarRegular from '../../../generated/mistica-icons/icon-calendar-regular';
 import Overlay from '@components/Overlay';
-import { IconButton } from '@components/Buttons';
-import { TextFieldBaseAutosuggest } from '@components/Input/TextFields/TextFieldBase';
-import type { CommonFormFieldProps } from '@components/Input/TextFields/TextFieldBase';
-import { DEFAULT_WIDTH } from '@components/Input/TextFields/TextFieldComponent/index.css';
-import { cancelEvent, createChangeEvent } from '@utils/dom';
+import {IconButton} from '@components/Buttons';
+import {TextFieldBaseAutosuggest} from '@components/Input/TextFields/TextFieldBase';
+import type {CommonFormFieldProps} from '@components/Input/TextFields/TextFieldBase';
+import {DEFAULT_WIDTH} from '@components/Input/TextFields/TextFieldComponent/index.css';
+import {cancelEvent, createChangeEvent} from '@utils/dom';
 
 /**
  * Do not use this component!
