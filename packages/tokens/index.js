@@ -4,7 +4,6 @@ const {execSync} = require('child_process');
 const {join} = require('path');
 const rimraf = require('rimraf');
 const util = require('util');
-const fse = require('fs-extra');
 
 const PATH_REPO_ROOT = join(__dirname, '..', '..');
 const PATH_CACHE = join(__dirname, 'node_modules', '.cache');
@@ -47,8 +46,8 @@ const checkoutKenosDesignRepo = () => {
 checkoutKenosDesignRepo();
 
 const dataTokens = fs.readFileSync(PATH_KENOS_DESIGN_TOKENS_JSON, 'utf-8');
+
 const dataTokensParsed = JSON.parse(dataTokens);
-const dataKeys = Object.keys(dataTokensParsed);
 
 rimraf.sync(PATH_OUTPUT);
 mkdirp.sync(PATH_OUTPUT);
@@ -56,7 +55,7 @@ mkdirp.sync(PATH_OUTPUT);
 const key = 'App Mi Movistar';
 const OUT_PATH = join(PATH_OUTPUT, `app-mi-movistar.ts`);
 const dataStringify = util.inspect(dataTokensParsed[key], false, 5, false);
-// console.log(util.inspect(dataTokensParsed[key], false, 5, false))
+
 const content = `const appMiMovistarTokens = 
         ${dataStringify}
 
@@ -64,13 +63,6 @@ const content = `const appMiMovistarTokens =
 export default appMiMovistarTokens
 `;
 
-// fse.outputJsonSync(OUT_PATH, content);
-
 fs.writeFileSync(OUT_PATH, content, {flag: 'w'});
 
-// const content = Object.keys(dataTokensParsed[key])
-
-// content.forEach(elem => {
-//     fs.writeFileSync(OUT_PATH, `${elem}\n`, {flag: 'a'})
-// })
 console.log(`File with key: ${key} created`);
