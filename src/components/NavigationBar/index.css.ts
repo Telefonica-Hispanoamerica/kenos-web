@@ -1,8 +1,8 @@
 import * as mq from '@layout/MediaQueries/media-queries.css';
-import { vars as colorVars } from '@skins/skin-contract.css';
-import { style, styleVariants } from '@vanilla-extract/css';
-import { sprinkles } from '@utils/sprinkles.css';
-import { NAVBAR_HEIGHT_DESKTOP, NAVBAR_HEIGHT_MOBILE } from '@utils/theme';
+import {vars as colorVars} from '@skins/skin-contract.css';
+import {style, styleVariants} from '@vanilla-extract/css';
+import {sprinkles} from '@utils/sprinkles.css';
+import {NAVBAR_HEIGHT_DESKTOP, NAVBAR_HEIGHT_MOBILE} from '@utils/theme';
 
 const NAVBAR_ZINDEX = 25;
 const BURGER_ZINDEX = 26;

@@ -257,6 +257,9 @@ export const MainNavigationBar: React.FC<MainNavigationBarProps> = ({
                                             menuTransitionState !== 'closed'
                                                 ? `6px 0 4px -4px rgba(0, 0, 0, ${shadowAlpha})`
                                                 : 'none',
+                                        background: 'white',
+                                        fontFamily: 'sans-serif',
+                                        fontWeight: 500,
                                     }}
                                     id={menuId}
                                     onClick={() => {
