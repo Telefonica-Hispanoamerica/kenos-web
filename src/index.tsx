@@ -43,7 +43,19 @@ export {default as GridLayout} from './layout/GridLayout/grid-layout';
 export {default as ResponsiveLayout} from './layout/ResponsiveLayout/responsive-layout';
 export {default as MasterDetailLayout} from './layout/MasterDetailLayout/master-detail-layout';
 export {default as NavigationBreadcrumbs} from './components/Breadcrumbs';
-export {default as Text, Text1, Text2, Text3, Text4, Text5, Text6, Text7, Text8, Text9, Text10} from './components/Text';
+export {
+    default as Text,
+    Text1,
+    Text2,
+    Text3,
+    Text4,
+    Text5,
+    Text6,
+    Text7,
+    Text8,
+    Text9,
+    Text10,
+} from './components/Text';
 export {default as Tag} from './components/Tag';
 export type {TagType} from './components/Tag';
 export {Placeholder} from './components/Primitives/Placeholder';
@@ -109,7 +121,13 @@ export {default as IconError} from './icons/icon-error';
 export {default as IconSuccess} from './icons/icon-success';
 export {default as IconSuccessVivo} from './icons/icon-success-vivo';
 
-export {SkeletonCircle, SkeletonRow, SkeletonLine, SkeletonRectangle, SkeletonText} from './components/Skeletons';
+export {
+    SkeletonCircle,
+    SkeletonRow,
+    SkeletonLine,
+    SkeletonRectangle,
+    SkeletonText,
+} from './components/Skeletons';
 
 export {default as Circle} from './components/Primitives/Circle';
 
@@ -136,11 +154,13 @@ export {useDocumentVisibility} from './utils/document-visibility';
 export {ThemeVariant, useIsInverseVariant} from './utils/theme-variant-context';
 
 export type {Skin, KnownSkinName, SkinName} from './skins/types';
-export {MOVISTAR_SKIN, TELEFONICA_SKIN} from './skins/constants';
+export {MOVISTAR_SKIN, TELEFONICA_SKIN, MI_MOVISTAR_SKIN} from './skins/constants';
 export {getSkinByName} from './skins/utils';
 export {getMovistarSkin} from './skins/movistar';
 export {getMovistarLegacySkin} from './skins/movistar-legacy';
 export {getTelefonicaSkin} from './skins/telefonica';
+export {getMiMovistarSkin} from './skins/mimovistar-skin';
+export {palette as mimovistarPalette} from './skins/mimovistar-skin';
 export {palette as movistarPalette} from './skins/movistar';
 export {palette as telefonicaPalette} from './skins/telefonica';
 
