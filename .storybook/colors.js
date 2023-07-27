@@ -3,7 +3,7 @@
 // This module replaces the required parts from ./src/skins
 
 /**
- * @param {'Movistar' | 'Telefonica'} skin
+ * @param {'Movistar' | 'Telefonica' | 'AppMiMovistar'} skin
  */
 export const getColors = (skin) => {
     switch (skin) {
@@ -20,6 +20,13 @@ export const getColors = (skin) => {
                 textPrimary: '#031A34',
                 textPrimaryInverse: '#FFFFFF',
                 textSecondary: '#6E7894',
+            };
+        case 'AppMiMovistar':
+            return {
+                primary: '#019df4', // TODO: REF = movistarBlue
+                textPrimary: '#313235', // TODO: REF = grey6
+                textPrimaryInverse: '#FFFFFF', // TODO: REF = white
+                textSecondary: '#86888c', // TODO: REF = grey5
             };
         default:
             throw Error('Unexpected skin: ' + skin);
