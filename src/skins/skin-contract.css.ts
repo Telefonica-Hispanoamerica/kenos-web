@@ -3,6 +3,7 @@ import {createThemeContract} from '@vanilla-extract/css';
 import type {Colors} from './types';
 
 const colors: Colors = {
+    // BACKGROUNDS
     appBarBackground: '',
     background: '',
     backgroundContainer: '',
