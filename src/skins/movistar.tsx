@@ -99,7 +99,6 @@ export const getMovistarSkin: GetKnownSkin = () => {
             buttonLinkBackgroundSelected: palette.movistarBlue10,
             buttonLinkBackgroundInverseSelected: applyAlpha(palette.white, 0.2),
 
-            // buttonPrimaryBackground: paletteTokens.Kénos.Buttons.buttonPrimaryBackground.value || palette.movistarBlue,
             buttonPrimaryBackground: palette.movistarBlue,
             buttonPrimaryBackgroundInverse: palette.white,
             buttonPrimaryBackgroundSelected: palette.movistarBlue55,
