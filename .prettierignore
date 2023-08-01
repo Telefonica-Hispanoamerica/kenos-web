@@ -15,3 +15,6 @@ examples/next/out/
 
 # create-react-app
 examples/create-react-app/build
+
+# tokens 
+packages/tokens/lib/functions.js

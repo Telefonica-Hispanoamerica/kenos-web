@@ -1,34 +1,12 @@
-const mkdirp = require('mkdirp');
-const fs = require('fs');
+require('dotenv').config();
 
-const {join} = require('path');
-const rimraf = require('rimraf');
-const util = require('util');
-
-const {PATH_KENOS_DESIGN_TOKENS_JSON, PATH_OUTPUT} = require('./lib/const');
-
-const {checkoutKenosDesignRepo} = require('./lib/functions');
+const {checkoutKenosDesignRepo, createSkinFile} = require('./lib/functions');
+const {environment} = require('./lib/environment');
 
 checkoutKenosDesignRepo();
 
-const dataTokens = fs.readFileSync(PATH_KENOS_DESIGN_TOKENS_JSON, 'utf-8');
+createSkinFile();
 
-const dataTokensParsed = JSON.parse(dataTokens);
-
-rimraf.sync(PATH_OUTPUT);
-mkdirp.sync(PATH_OUTPUT);
-
-const key = 'App Mi Movistar';
-const OUT_PATH = join(PATH_OUTPUT, `app-mi-movistar.ts`);
-const dataStringify = util.inspect(dataTokensParsed[key], false, 5, false);
-
-const content = `const appMiMovistarTokens = 
-        ${dataStringify}
-
-
-export default appMiMovistarTokens
-`;
-
-fs.writeFileSync(OUT_PATH, content, {flag: 'w'});
-
-console.log(`File with key: ${key} created`);
+console.log(` `);
+console.log(`Step 2 - DONE:`);
+console.log(`File: ${environment.FILE_NAME} was successfully created`);
