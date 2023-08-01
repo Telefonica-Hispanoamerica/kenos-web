@@ -19,6 +19,7 @@ storybook-static/
 src/generated/mistica-icons/index.tsx.txt
 reports
 css/mistica.css
+.env
 
 .yarn/*
 .yarn/cache
