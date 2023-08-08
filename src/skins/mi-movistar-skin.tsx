@@ -1,6 +1,6 @@
-import {MI_MOVISTAR_SKIN} from '@skins/constants';
+import { MI_MOVISTAR_SKIN } from "@skins/constants";
 
-import type {GetKnownSkin, KnownSkin} from '@skins/types';
+import type { GetKnownSkin,  KnownSkin } from "@skins/types" 
 
 const palette = {
     egg: '#f28d15',
@@ -11,7 +11,7 @@ const palette = {
     grey3: '#dddddd',
     grey4: '#999999',
     grey5: '#86888c',
-    grey6: '#31323599',
+    grey6: '#313235',
     movistarBlue: '#5bc500',
     movistarBlue10: '#e6f5fd',
     movistarBlue20: '#b3e1fb',
@@ -121,22 +121,22 @@ export const getAppMiMovistarSkin: GetKnownSkin = () => {
 
             // Missing properties
 
-            borderLow: '',
-            borderHigh: '',
-            buttonLinkBackgroundInverseSelected: '',
-            buttonPrimaryBackgroundInverseSelected: '',
-            buttonSecondaryBorder: '',
-            buttonSecondaryBorderSelected: '',
-            buttonSecondaryBorderInverseSelected: '',
-            buttonSecondaryBackgroundHover: '',
-            buttonSecondaryBackgroundInverseHover: '',
-            buttonSecondaryBackgroundInverseSelected: '',
-            neutralMediumInverse: '',
-            successHighInverse: '',
-            warningHighInverse: '',
-            errorHighInverse: '',
-            promoHighInverse: '',
+            borderLow: "",
+            borderHigh: "",
+            buttonLinkBackgroundInverseSelected: "",
+            buttonPrimaryBackgroundInverseSelected: "",
+            buttonSecondaryBorder: "",
+            buttonSecondaryBorderSelected: "",
+            buttonSecondaryBorderInverseSelected: "",
+            buttonSecondaryBackgroundHover: "",
+            buttonSecondaryBackgroundInverseHover: "",
+            buttonSecondaryBackgroundInverseSelected: "",
+            neutralMediumInverse: "",
+            successHighInverse: "",
+            warningHighInverse: "",
+            errorHighInverse: "",
+            promoHighInverse: ""
         },
-    };
+    }
     return skin;
 };

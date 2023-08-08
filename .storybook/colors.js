@@ -23,10 +23,10 @@ export const getColors = (skin) => {
             };
         case 'AppMiMovistar':
             return {
-                primary: '#019df4', // TODO: REF = movistarBlue
-                textPrimary: '#313235', // TODO: REF = grey6
-                textPrimaryInverse: '#FFFFFF', // TODO: REF = white
-                textSecondary: '#86888c', // TODO: REF = grey5
+                primary: '#5bc500',
+                textPrimary: '#313235', 
+                textPrimaryInverse: '#FFFFFF', 
+                textSecondary: '#86888c',
             };
         default:
             throw Error('Unexpected skin: ' + skin);
