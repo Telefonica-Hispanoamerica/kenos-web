@@ -3,14 +3,14 @@ import * as styles from './index.css';
 import Box from '@layout/Box/box';
 import Stack from '@layout/Stack/stack';
 import Inline from '@layout/Inline/inline';
-import { vars } from '@skins/skin-contract.css';
-import { useTheme, useScreenSize } from '@hooks/hooks';
-import { Text3, Text2 } from '@components/Text';
-import { IconButton } from '@components/Buttons';
-import { sprinkles } from '@utils/sprinkles.css';
-import { getPrefixedDataAttributes } from '@utils/dom';
-import type { TrackingEvent, DataAttributes } from '@utils/types';
-import IconCloseRegular from '@iconsgenerated/mistica-icons/icon-close-regular';
+import {vars} from '@skins/skin-contract.css';
+import {useTheme, useScreenSize} from '@hooks/hooks';
+import {Text3, Text2} from '@components/Text';
+import {IconButton} from '@components/Buttons';
+import {sprinkles} from '@utils/sprinkles.css';
+import {getPrefixedDataAttributes} from '@utils/dom';
+import type {TrackingEvent, DataAttributes} from '@utils/types';
+import IconCloseRegular from '../../generated/mistica-icons/icon-close-regular';
 
 // Zeplin definition:
 // https://app.zeplin.io/project/5c9b6f097168bc065782b5c3/screen/5d15d87e46571573089f2863

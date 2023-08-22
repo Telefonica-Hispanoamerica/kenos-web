@@ -21,4 +21,15 @@ export default defineConfig({
         },
         outDir: 'dist-es',
     },
+    resolve: {
+        alias: {
+            '@utils': path.resolve(__dirname, 'src', 'utils'),
+            '@hooks': path.resolve(__dirname, 'src', 'hooks'),
+            '@components': path.resolve(__dirname, 'src', 'components'),
+            '@layout': path.resolve(__dirname, 'src', 'layout'),
+            '@patterns': path.resolve(__dirname, 'src', 'patterns'),
+            '@skins': path.resolve(__dirname, 'src', 'skins'),
+            '@icons': path.resolve(__dirname, 'src', 'icons'),
+        },
+    },
 });
