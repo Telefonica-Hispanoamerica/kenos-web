@@ -28,7 +28,7 @@ export const Welcome = () => {
                             en el catálogo de Kénos y ver ejemplos de uso para cada componente.
                         </Paragraph>
                         <Paragraph>
-                            ¿Buscas un componente especifico? Puedes usar la barra de búsqueda o simplemente presionar '/' y comenzar a escribir.
+                            ¿Buscas un componente específico? Puedes usar la barra de búsqueda o simplemente presionar '/' y comenzar a escribir.
                         </Paragraph>
                         <Paragraph>
                             Kénos viene con soporte integrado para los diferentes esquemas de color de la marca Telefónica Hispam.
@@ -38,7 +38,7 @@ export const Welcome = () => {
                             Para crear prototipos rápidamente utilizando componentes de Kénos, utilice <TextLink href="/playroom">Kénos Playroom</TextLink>. 
                             Usando Playroom puedes diseñar simultáneamente en una variedad de temas y tamaños de pantalla,
                             impulsado por la biblioteca de componentes JSX y Kénos.
-                            Es la herramienta perfecta para crear maquetas rápidas y prototipos interactivos con código real.
+                            Es la herramienta perfecta para generar maquetas rápidas y prototipos interactivos con código real.
                             También te permite compartir tu trabajo con otros simplemente copiando la URL.
                         </Paragraph>
                     </Stack>
