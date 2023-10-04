@@ -16,9 +16,9 @@ __diff_output__
 storybook-static/
 /public
 .vercel
-src/generated/mistica-icons/index.tsx.txt
+src/generated/kenos-icons/index.tsx.txt
 reports
-css/mistica.css
+css/kenos.css
 
 .yarn/*
 .yarn/cache/

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import IconSearch from '@icons/icon-search';
-import IconCloseRegular from '../../../generated/mistica-icons/icon-close-regular';
+import IconCloseRegular from '../../../generated/kenos-icons/icon-close-regular';
 import {useFieldProps} from '@patterns/Forms/form-context';
 import {IconButton} from '@components/Buttons';
 import {TextFieldBaseAutosuggest} from '@components/Input/TextFields/TextFieldBase';

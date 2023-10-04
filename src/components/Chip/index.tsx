@@ -6,7 +6,7 @@ import {useTheme} from '@hooks/hooks';
 import {vars} from '@skins/skin-contract.css';
 import {Text2} from '@components/Text';
 import {IconButton} from '@components/Buttons';
-import IconCloseRegular from '../../generated/mistica-icons/icon-close-regular';
+import IconCloseRegular from '../../generated/kenos-icons/icon-close-regular';
 import {pxToRem} from '@utils/css';
 import {getPrefixedDataAttributes} from '@utils/dom';
 import type {ExclusifyUnion} from '@utils/utility-types';

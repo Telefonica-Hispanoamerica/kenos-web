@@ -29,7 +29,7 @@ You can build complex forms with automatic state handling using the components p
 Let's see a quick example to see how it works
 
 ```js
-import {Form, TextField, ButtonPrimary} from '@telefonica/mistica';
+import {Form, TextField, ButtonPrimary} from '@telefonica/kenos';
 
 const validateName = (name) => (/^\w+$/.test(name) ? '' : 'bad username');
 

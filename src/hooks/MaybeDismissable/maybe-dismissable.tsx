@@ -1,5 +1,5 @@
 import * as React from 'react';
-import IconCloseRegular from '../../generated/mistica-icons/icon-close-regular';
+import IconCloseRegular from '../../generated/kenos-icons/icon-close-regular';
 import {useTheme} from '@hooks/hooks';
 import IconButton from '@components/Buttons/IconButton';
 import {vars} from '@skins/skin-contract.css';

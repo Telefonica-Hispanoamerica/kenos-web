@@ -2,9 +2,6 @@ import {MI_MOVISTAR_SKIN} from './constants';
 
 import type {GetKnownSkin, KnownSkin} from '@skins/types';
 
-// https://github.com/Telefonica/mistica-design/blob/production/tokens/telefonica-skin-schema.json
-// https://github.com/Telefonica/mistica-design/blob/production/tokens/telefonica-constants.json
-
 export const palette = {
     egg: '#f28d15',
     egg10: '#fef4e8',

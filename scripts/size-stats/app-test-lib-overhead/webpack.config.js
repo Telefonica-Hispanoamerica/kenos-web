@@ -8,7 +8,7 @@ const config = {
         filename: 'bundle.js',
     },
     resolve: {
-        alias: {'@telefonica/mistica': path.resolve(__dirname, '../../..')},
+        alias: {'@telefonica/kenos': path.resolve(__dirname, '../../..')},
     },
 };
 

@@ -8,7 +8,7 @@ export const mediaQueriesConfig: {
     desktopMinWidth: 1024,
     largeDesktopMinWidth: 1368,
     desktopOrTabletMinHeight: 550,
-    ...(process.env.MISTICA_MEDIA_QUERIES_CONFIG ? JSON.parse(process.env.MISTICA_MEDIA_QUERIES_CONFIG) : {}),
+    ...(process.env.KENOS_MEDIA_QUERIES_CONFIG ? JSON.parse(process.env.KENOS_MEDIA_QUERIES_CONFIG) : {}),
 };
 
 export const mobile =

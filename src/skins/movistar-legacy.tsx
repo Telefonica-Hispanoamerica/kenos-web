@@ -3,9 +3,6 @@ import {MOVISTAR_SKIN} from './constants';
 
 import type {GetKnownSkin, KnownSkin} from './types';
 
-// https://github.com/Telefonica/mistica-design/blob/production/tokens/movistar-skin-schema.json
-// https://github.com/Telefonica/mistica-design/blob/production/tokens/movistar-constants.json
-
 export const palette = {
     movistarBlue: '#019DF4',
     movistarBlue10: '#E6F5FD',

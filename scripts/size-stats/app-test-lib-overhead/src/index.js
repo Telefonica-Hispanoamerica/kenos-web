@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {createRoot} from 'react-dom/client';
-import {ThemeContextProvider, IconTruckFilled, getMovistarSkin} from '@telefonica/mistica';
+import {ThemeContextProvider, IconTruckFilled, getMovistarSkin} from '@telefonica/kenos';
 
 /*
 Using React.createElement so we don't need to compile JSX

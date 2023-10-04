@@ -4,7 +4,7 @@ if (!process.env.CI) {
         'Cannot publish from this machine',
         '',
         'To publish, use the  Github Release action workflow:',
-        'https://github.com/Telefonica/mistica-web/actions?query=workflow%3ARelease',
+        'https://github.com/Telefonica/kenos-web/actions?query=workflow%3ARelease',
         '',
     ];
     console.error(lines.join('\n'));

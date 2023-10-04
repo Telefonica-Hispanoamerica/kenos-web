@@ -219,7 +219,7 @@ export const iconButtonVariants = styleVariants({
 });
 
 export const lineHeightFix = style({
-    // This fixes vertical alignment issues with icons in the secondary navigation, because mistica icons
+    // This fixes vertical alignment issues with icons in the secondary navigation, because kenos icons
     // use display inline and other components like Badge use inline-block.
     lineHeight: 0,
 });

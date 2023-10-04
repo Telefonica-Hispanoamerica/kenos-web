@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useTheme} from '@hooks/hooks';
 import {useFieldProps} from '@patterns/Forms/form-context';
-import IconCalendarRegular from '../../../generated/mistica-icons/icon-calendar-regular';
+import IconCalendarRegular from '../../../generated/kenos-icons/icon-calendar-regular';
 import {TextFieldBaseAutosuggest} from '@components/Input/TextFields/TextFieldBase';
 import type {CommonFormFieldProps} from '@components/Input/TextFields/TextFieldBase';
 import {isFirefox} from '@utils/platform';
