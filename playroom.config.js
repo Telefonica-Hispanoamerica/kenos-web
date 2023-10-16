@@ -131,7 +131,7 @@ const config = {
         },
         plugins: [
             new webpack.DefinePlugin({
-                'process.env.MISTICA_MEDIA_QUERIES_CONFIG': JSON.stringify(
+                'process.env.KENOS_MEDIA_QUERIES_CONFIG': JSON.stringify(
                     JSON.stringify(getMediaQueriesConfig())
                 ),
             }),

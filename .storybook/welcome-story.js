@@ -1,5 +1,5 @@
 import {Text2, Text6, Stack, Box, ResponsiveLayout, skinVars, ButtonLink, TextLink, Inline} from '../src';
-import logo from '../img/mistica-react-logo.svg';
+import logo from '../img/kenos-react-logo.svg';
 
 export default {
     title: 'Welcome',
@@ -20,7 +20,7 @@ export const Welcome = () => {
                 <Stack space={24}>
                     <Stack space={16}>
                         <Text6 as="h2">Bienvenido a Kenos Storybook</Text6>
-                        <img src={logo} alt="Mistica loves react" />
+                        <img src={logo} alt="Kenos loves react" />
                     </Stack>
                     <Stack space={16}>
                         <Paragraph>
@@ -44,10 +44,10 @@ export const Welcome = () => {
                     </Stack>
                     <nav style={{margin: '0 -8px'}}>
                         <Inline space={8}>
-                            <ButtonLink href="https://github.com/Telefonica/mistica">
+                            <ButtonLink href="https://github.com/Telefonica-Hispanoamerica/kenos-web">
                                 Acerca de Kénos
                             </ButtonLink>
-                            <ButtonLink href="https://github.com/Telefonica/mistica-web#getting-started">
+                            <ButtonLink href="https://github.com/Telefonica-Hispanoamerica/kenos-web#getting-started">
                                 Empezando
                             </ButtonLink>
                             <ButtonLink href="/playroom">Playroom</ButtonLink>

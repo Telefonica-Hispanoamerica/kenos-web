@@ -3,7 +3,7 @@ import {MediaCard, DataCard} from '@components/Cards';
 import Inline from '@layout/Inline/inline';
 import {Image} from '@components/Primitives';
 import {ButtonPrimary, ButtonLink} from '@components/Buttons';
-import IconAcademicLight from '../../generated/mistica-icons/icon-academic-light';
+import IconAcademicLight from '../../generated/kenos-icons/icon-academic-light';
 
 const CardsTest = (): JSX.Element => (
     <Inline space={16}>

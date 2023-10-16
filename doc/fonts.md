@@ -13,7 +13,7 @@
 
 ## Font family
 
-Mistica components are optimized to work with iOS/Android system fonts (Roboto and San Francisco), but it can
+Kenos components are optimized to work with iOS/Android system fonts (Roboto and San Francisco), but it can
 also work fine with other font families.
 
 ### System Fonts (Roboto / San Francisco)
@@ -65,7 +65,7 @@ web server. The important part here is to serve different font weights for 300 (
 
 ### OnAir or Telefonica fonts
 
-Mistica works fine too with other fonts like OnAir or Telefonica fonts, but these fonts don't have a medium
+Kenos works fine too with other fonts like OnAir or Telefonica fonts, but these fonts don't have a medium
 weight (only light, regular and bold). In these cases, we recomend to use the regular font weight for the 500
 `font-weight`. Something like this:
 
@@ -136,7 +136,7 @@ We use to recomend option 3.
 
 ## Dynamic font sizes
 
-Mistica components support scalling font sizes automatically based on OS or browser accesibility settings. If
+Kenos components support scalling font sizes automatically based on OS or browser accesibility settings. If
 you want your web to properly work with dynamic font sizes, we recommend to setup a base font size of 16px or
 100% (which is the same as 16px in most browsers):
 

@@ -64,7 +64,7 @@ const defaultTextPresetsConfig: TextPresetsConfig = {
 const sanitizeDimensions = (dimensions: ThemeConfig['dimensions']): Partial<Theme['dimensions']> => {
     return {
         headerMobileHeight:
-            dimensions?.headerMobileHeight === 'mistica'
+            dimensions?.headerMobileHeight === 'kenos'
                 ? NAVBAR_HEIGHT_MOBILE
                 : dimensions?.headerMobileHeight,
     };

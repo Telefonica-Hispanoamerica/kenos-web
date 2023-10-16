@@ -1,6 +1,6 @@
 /**
- * In mistica 8.0.0 we renamed all the <Text> components. This codemod helps you upgrade your codebase if you
- * were using Text components from previous mistica versions.
+ * In kenos 8.0.0 we renamed all the <Text> components. This codemod helps you upgrade your codebase if you
+ * were using Text components from previous kenos versions.
  *
  * To apply this codemod you need to install jscodeshift: https://github.com/facebook/jscodeshift
  *

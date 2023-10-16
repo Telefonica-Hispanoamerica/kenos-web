@@ -1,7 +1,7 @@
 // https://www.figma.com/file/U4ipIXOk64bdM5tSvaqPKS/%5BREADY%5D--Avatar?node-id=2%3A61
 import * as React from 'react';
 import * as classes from '@components/Avatar/index.css';
-import IconUserAccountRegular from '../../generated/mistica-icons/icon-user-account-regular';
+import IconUserAccountRegular from '../../generated/kenos-icons/icon-user-account-regular';
 import Badge from '@components/Badge';
 import {vars} from '@skins/skin-contract.css';
 import {getPrefixedDataAttributes} from '@utils/dom';

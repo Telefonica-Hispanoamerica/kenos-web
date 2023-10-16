@@ -224,7 +224,7 @@ export type ThemeConfig = Readonly<{
         logEvent: (trackingEvent: TrackingEvent) => Promise<void>;
         eventFormat?: EventFormat;
     }>;
-    dimensions?: Readonly<{headerMobileHeight: number | 'mistica'}>;
+    dimensions?: Readonly<{headerMobileHeight: number | 'kenos'}>;
     Link?: LinkComponent;
     useHrefDecorator?: () => (href: string) => string;
     useId?: () => string;

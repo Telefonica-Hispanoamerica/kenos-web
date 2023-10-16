@@ -17,7 +17,7 @@ import {isRunningAcceptanceTest} from '@utils/platform';
 import type {RendersNullableElement} from '@utils/types';
 import type {ExclusifyUnion} from '@utils/utility-types';
 import {useSetModalState} from '@utils/modal-context-provider';
-import IcnCloseRegular from '../../generated/mistica-icons/icon-close-regular';
+import IcnCloseRegular from '../../generated/kenos-icons/icon-close-regular';
 import {isWebViewBridgeAvailable, nativeConfirm, nativeAlert} from '@tef-novum/webview-bridge';
 
 const animationsSupported = (platformOverrides: Theme['platformOverrides']) =>
@@ -237,7 +237,7 @@ const ModalDialog = (props: ModalDialogProps) => {
 
     if (!context) {
         throw Error(
-            `To use @telefonica/mistica components you must instantiate <ThemeContextProvider> as their parent.`
+            `To use @telefonica/kenos components you must instantiate <ThemeContextProvider> as their parent.`
         );
     }
     const renderNative = !props.forceWeb && isWebViewBridgeAvailable();

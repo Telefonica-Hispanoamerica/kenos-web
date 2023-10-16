@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Tooltip, Text2, Text1, Stack, skinVars, Placeholder} from '..';
 import {StorySection} from './helpers';
-import IconCloseRegular from '../generated/mistica-icons/icon-close-regular';
+import IconCloseRegular from '../generated/kenos-icons/icon-close-regular';
 import IcnInfo from '@icons/icon-info-cvv';
 import IconVisa from '@icons/icon-visa';
 import IconMastercard from '@icons/icon-mastercard';

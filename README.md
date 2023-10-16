@@ -43,7 +43,7 @@ AquÃ­ hay un ejemplo completo de un formulario con dos campos de texto y un botÃ
 ```javascript
 import {createRoot} from 'react-dom/client';
 // Import Kenos styles. Depending on the bundler you use, you may need to import it in a different way.
-import '@telefonica/mistica/css/mistica.css';
+import '@telefonica/kenos/css/kenos.css';
 
 // Use kenos components
 import {
@@ -57,7 +57,7 @@ import {
   ButtonPrimary,
   alert,
   getMovistarSkin,
-} from '@telefonica/mistica';
+} from '@telefonica/kenos';
 
 const App = () => (
   <Form
@@ -80,7 +80,7 @@ const App = () => (
   </Form>
 );
 
-const misticaTheme = {
+const kenosTheme = {
   skin: getMovistarSkin(),
   i18n: {locale: 'es-ES', phoneNumberFormattingRegionCode: 'ES'},
 };
@@ -88,7 +88,7 @@ const misticaTheme = {
 const container = document.getElementById('app');
 const root = createRoot(container);
 root.render(
-  <ThemeContextProvider theme={misticaTheme}>
+  <ThemeContextProvider theme={kenosTheme}>
     <App />
   </ThemeContextProvider>
 );

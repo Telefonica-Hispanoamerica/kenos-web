@@ -10,7 +10,7 @@ import {Text2, Text3} from '@components/Text';
 import IconButton from '@components/Buttons/IconButton';
 import ButtonGroup from '@components/Buttons/ButtonGroup';
 import {ButtonLink, ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button';
-import IconCloseRegular from '../../generated/mistica-icons/icon-close-regular';
+import IconCloseRegular from '../../generated/kenos-icons/icon-close-regular';
 import {sprinkles} from '@utils/sprinkles.css';
 import {getPrefixedDataAttributes} from '@utils/dom';
 import type {DataAttributes, RendersNullableElement} from '@utils/types';

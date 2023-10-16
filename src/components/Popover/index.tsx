@@ -10,7 +10,7 @@ import {IconButton} from '@components/Buttons';
 import {sprinkles} from '@utils/sprinkles.css';
 import {getPrefixedDataAttributes} from '@utils/dom';
 import type {TrackingEvent, DataAttributes} from '@utils/types';
-import IconCloseRegular from '../../generated/mistica-icons/icon-close-regular';
+import IconCloseRegular from '../../generated/kenos-icons/icon-close-regular';
 
 // Zeplin definition:
 // https://app.zeplin.io/project/5c9b6f097168bc065782b5c3/screen/5d15d87e46571573089f2863

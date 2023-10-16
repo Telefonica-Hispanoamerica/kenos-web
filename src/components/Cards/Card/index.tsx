@@ -15,7 +15,7 @@ import Image, {MediaBorderRadiusProvider} from '@components/Primitives/Image';
 import {ButtonLink, ButtonPrimary, ButtonSecondary} from '@components/Buttons';
 import {useTheme} from '@hooks/hooks';
 import MaybeDismissable, {useIsDismissable} from '@hooks/MaybeDismissable/maybe-dismissable';
-import IconCloseRegular from '../../../generated/mistica-icons/icon-close-regular';
+import IconCloseRegular from '../../../generated/kenos-icons/icon-close-regular';
 import {sprinkles} from '@utils/sprinkles.css';
 import type {ExclusifyUnion} from '@utils/utility-types';
 import type {
@@ -231,7 +231,7 @@ export const MediaCard = React.forwardRef<HTMLDivElement, MediaCardProps>(
 
 interface DataCardProps {
     /**
-     * Typically a mistica-icons component element
+     * Typically a kenos-icons component element
      */
     icon?: React.ReactElement;
     headline?: string | RendersNullableElement<typeof Tag>;
@@ -515,7 +515,7 @@ const MaybeWithActions = ({
 
 interface CommonDisplayCardProps {
     /**
-     * Typically a mistica-icons component element
+     * Typically a kenos-icons component element
      */
     icon?: React.ReactElement;
     actions?: Array<CardAction>;

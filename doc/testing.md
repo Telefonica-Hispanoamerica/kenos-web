@@ -33,4 +33,4 @@ await page.setUserAgent(`${currentUserAgent} acceptance-test`);
 ## Questions?
 
 Don't hesistate to ask at
-[Mistica Teams Channel](https://teams.microsoft.com/l/channel/19%3ad2e3607a32ec411b8bf492f43cd0fe0c%40thread.tacv2/General?groupId=e265fe99-929f-45d1-8154-699649674a40&tenantId=9744600e-3e04-492e-baa1-25ec245c6f10)
+[Kenos Teams Channel]()

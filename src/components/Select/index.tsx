@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import {useAriaId, useTheme} from '@hooks/hooks';
 import {useForm} from '@patterns/Forms/form-context';
 import {assignInlineVars} from '@vanilla-extract/dynamic';
-import ChevronDownRegular from '../../generated/mistica-icons/icon-chevron-down-regular';
+import ChevronDownRegular from '../../generated/kenos-icons/icon-chevron-down-regular';
 import {Text3} from '@components/Text';
 import Overlay from '@components/Overlay';
 import {TextFieldBaseAutosuggest} from '@components/Input/TextFields/TextFieldBase';
