@@ -1,5 +1,5 @@
 import {Text2, Text6, Stack, Box, ResponsiveLayout, skinVars, ButtonLink, TextLink, Inline} from '../src';
-import logo from '../img/kenos-react-logo.svg';
+import logo from '../img/logo-uxhispam.svg';
 
 export default {
     title: 'Welcome',
@@ -20,7 +20,7 @@ export const Welcome = () => {
                 <Stack space={24}>
                     <Stack space={16}>
                         <Text6 as="h2">Bienvenido a Kenos Storybook</Text6>
-                        <img src={logo} alt="Kenos loves react" />
+                        <img src={logo} alt="Kenos loves react" style={{ width: '300px', height: 'auto' }} />
                     </Stack>
                     <Stack space={16}>
                         <Paragraph>
