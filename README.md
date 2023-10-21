@@ -7,7 +7,7 @@ Esta es una colección de componentes gráficos para React que te permiten const
 ## ¿Qué puedes encontrar en Kénos?
 Desde botones hasta gráficos y tablas, la librería Kénos ofrece una amplia variedad de componentes altamente personalizables y fáciles de usar que te ayudarán a mejorar la usabilidad y el atractivo visual de tus proyectos de React.
 
-![Telefónica Hispam](img/mapaHispam.png)
+![Telefónica Hispam](img/mapa-hispam.png)
 
 ## Para comenzar a trabajar
 Solamente con los comandos de instalación en tu proyecto React podrás utilizar esta librería.
@@ -115,16 +115,6 @@ app, considera memorizarla (por ejemplo, con el hook `React.useMemo`).
 - `yarn storybook`: starts storybook
 - `yarn playroom`: starts playroom
 
+### Kénos en plataformas nativas
 
-## GitFlow
-
-PENDIENTE - Aqui se detallarán los pasos que se deben seguir para crear/modificar/borrar un componente de esta liberia 
-## Buenas Prácticas
-
-PENDIENTE - Aqui se detallarán las buenas practicas que se deben llevar a cabo 
-
-## Sistema de Iconos
-
-Los iconos se manejan por separados en el repositorio de ([kenos-icons](https://github.com/TelefonicaAR/kenos-icons)).
-
-PENDIENTE - Aqui se puede detallar los pasos a seguir para crear un nuevo icono. 
+- [Kénos Native](https://github.com/Telefonica-Hispanoamerica/kenos-native)

@@ -1,6 +1,6 @@
 import {create} from '@storybook/theming/create';
 import {getColors} from './colors';
-import logo from '../img/kenos-logo.svg';
+import logo from '../img/logo-uxhispam.svg';
 
 /**
  * @param {import('../src').SkinName} skinName
