@@ -7,7 +7,7 @@ Esta es una colección de componentes gráficos para React que te permiten const
 ## ¿Qué puedes encontrar en Kénos?
 Desde botones hasta gráficos y tablas, la librería Kénos ofrece una amplia variedad de componentes altamente personalizables y fáciles de usar que te ayudarán a mejorar la usabilidad y el atractivo visual de tus proyectos de React.
 
-![Telefónica Hispam](img/mapaHispam.png)
+![Telefónica Hispam](img/mapa-hispam.png)
 
 ## Para comenzar a trabajar
 Solamente con los comandos de instalación en tu proyecto React podrás utilizar esta librería.
