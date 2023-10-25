@@ -1,7 +1,9 @@
 import * as React from 'react';
+import { mockMatchMedia } from '@utils/match-media'
 import ScreenSizeContext from './screen-size-context';
 import {useIsomorphicLayoutEffect} from '@hooks/hooks';
 import * as mq from '@layout/MediaQueries/media-queries.css';
+
 
 type Props = {
     children: React.ReactNode;
@@ -18,6 +20,8 @@ const ScreenSizeContextProvider: React.FC<Props> = ({children}) => {
     useIsomorphicLayoutEffect(() => {
         setIsServerSide(false);
     }, []);
+
+    mockMatchMedia();
 
     const [isMobile, setIsMobile] = React.useState(
         () => !isServerSide && window.matchMedia(mq.mobile).matches
@@ -50,7 +54,9 @@ const ScreenSizeContextProvider: React.FC<Props> = ({children}) => {
         ];
 
         const cleanupFunctions = entries.map(([query, setState]) => {
+            console.log('query: ', query);
             const mq = window.matchMedia(query);
+            console.log('mq: ', mq);
             const listener = () => {
                 setState(mq.matches);
             };

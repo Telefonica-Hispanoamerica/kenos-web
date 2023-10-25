@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { mockMatchMedia } from '@utils/match-media'
 import * as key from '@utils/key-codes';
 import * as styles from './index.css';
 import classnames from 'classnames';
@@ -25,6 +26,8 @@ const defaultShowTooltipDelayMs = 500;
 const noOp = () => {};
 
 type Position = 'top' | 'bottom' | 'left' | 'right';
+
+mockMatchMedia();
 
 const getWidthDesktop = (customWidth?: number) => (customWidth ? customWidth : defaultWidthDesktop);
 
