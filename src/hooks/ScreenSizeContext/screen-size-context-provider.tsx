@@ -54,9 +54,7 @@ const ScreenSizeContextProvider: React.FC<Props> = ({children}) => {
         ];
 
         const cleanupFunctions = entries.map(([query, setState]) => {
-            console.log('query: ', query);
             const mq = window.matchMedia(query);
-            console.log('mq: ', mq);
             const listener = () => {
                 setState(mq.matches);
             };
