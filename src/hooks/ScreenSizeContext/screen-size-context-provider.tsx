@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { mockMatchMedia } from '@utils/match-media'
 import ScreenSizeContext from './screen-size-context';
 import {useIsomorphicLayoutEffect} from '@hooks/hooks';
 import * as mq from '@layout/MediaQueries/media-queries.css';
@@ -21,7 +20,6 @@ const ScreenSizeContextProvider: React.FC<Props> = ({children}) => {
         setIsServerSide(false);
     }, []);
 
-    mockMatchMedia();
 
     const [isMobile, setIsMobile] = React.useState(
         () => !isServerSide && window.matchMedia(mq.mobile).matches

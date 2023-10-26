@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { mockMatchMedia } from '@utils/match-media'
 import {assignInlineVars} from '@vanilla-extract/dynamic';
 import DialogRoot from '@components/Dialog';
 import ScreenSizeContextProvider from '@hooks/ScreenSizeContext/screen-size-context-provider';
@@ -21,7 +20,6 @@ import type {Theme, ThemeConfig} from './theme';
 const darkModeMedia = '(prefers-color-scheme: dark)';
 export const useIsOsDarkModeEnabled = (): boolean => {
     const [isDarkMode, setIsDarkMode] = React.useState(false);
-    mockMatchMedia();
     useIsomorphicLayoutEffect(() => {
         if (!window.matchMedia) {
             return;
