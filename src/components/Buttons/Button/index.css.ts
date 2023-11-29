@@ -1,8 +1,8 @@
 import * as mq from '@layout/MediaQueries/media-queries.css';
-import { vars } from '@skins/skin-contract.css';
-import { sprinkles } from '@utils/sprinkles.css';
-import { style, globalStyle, styleVariants } from '@vanilla-extract/css';
-import type { ComplexStyleRule } from '@vanilla-extract/css';
+import {vars} from '@skins/skin-contract.css';
+import {sprinkles} from '@utils/sprinkles.css';
+import {style, globalStyle, styleVariants} from '@vanilla-extract/css';
+import type {ComplexStyleRule} from '@vanilla-extract/css';
 
 const transitionTiming = '0.3s cubic-bezier(0.77, 0, 0.175, 1)';
 
@@ -162,13 +162,13 @@ const lightPrimaryInverse: ComplexStyleRule = [
     {
         selectors: {
             '&:enabled:active': {
-                backgroundColor: vars.colors.buttonPrimaryBackgroundInverseSelected,
+                backgroundColor: vars.colors.buttonPrimaryBackgroundSelectedInverse,
                 color: vars.colors.textButtonPrimaryInverseSelected,
             },
 
             '&:hover:not([disabled])': {
                 color: vars.colors.textButtonPrimaryInverseSelected,
-                backgroundColor: vars.colors.buttonPrimaryBackgroundInverseSelected,
+                backgroundColor: vars.colors.buttonPrimaryBackgroundSelectedInverse,
 
                 '@media': {
                     [mq.touchableOnly]: {
@@ -225,13 +225,13 @@ const lightSecondaryInverse: ComplexStyleRule = [
 
         selectors: {
             '&:enabled:active': {
-                borderColor: vars.colors.buttonSecondaryBorderInverseSelected,
+                borderColor: vars.colors.buttonSecondaryBorderSelectedInverse,
                 color: vars.colors.textButtonSecondaryInverseSelected,
                 backgroundColor: vars.colors.buttonSecondaryBackgroundInverseSelected,
             },
 
             '&:hover:not([disabled])': {
-                borderColor: vars.colors.buttonSecondaryBorderInverseSelected,
+                borderColor: vars.colors.buttonSecondaryBorderSelectedInverse,
                 color: vars.colors.textButtonSecondaryInverseSelected,
                 backgroundColor: vars.colors.buttonSecondaryBackgroundInverseHover,
 
@@ -315,11 +315,11 @@ export const inverseLink = style([
     {
         selectors: {
             '&:enabled:active': {
-                backgroundColor: vars.colors.buttonLinkBackgroundInverseSelected,
+                backgroundColor: vars.colors.buttonLinkBackgroundSelectedInverse,
             },
 
             '&:hover:not([disabled])': {
-                backgroundColor: vars.colors.buttonLinkBackgroundInverseSelected,
+                backgroundColor: vars.colors.buttonLinkBackgroundSelectedInverse,
 
                 '@media': {
                     [mq.touchableOnly]: {

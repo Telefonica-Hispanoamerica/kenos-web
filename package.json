@@ -39,7 +39,7 @@
         "audit-accessibility": "node .github/actions/audit-accessibility/main.js",
         "circular-dependencies": "yarn dpdm src/index.tsx --tree=false --warning=false --exit-code circular:1",
         "prepare": "husky install",
-        "prebuild": "node packages/tokens/index.js"
+        "import-tokens": "node packages/tokens/index.js"
     },
     "browserslist": [
         "chrome >= 51",
