@@ -65,8 +65,8 @@ Vertically distributes its children using the given `space` separation
 Horizontally distributes its children using the given `space` separation. This component can be considered as
 an horizontal `Stack`
 
-:information_source: Items can be aligned vertically. Check `Inline` component in
-[Storybook]() to learn more about it.
+:information_source: Items can be aligned vertically. Check `Inline` component in [Storybook]() to learn more
+about it.
 
 ### numeric space
 
@@ -339,8 +339,7 @@ This is how a page layout could look like:
 
 <img src="./images/layout/vertical-rhythm.png">
 
-:pencil2:
-[View this example in playroom]()
+:pencil2: [View this example in playroom]()
 
 ## Doubts?
 

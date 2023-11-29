@@ -6,7 +6,7 @@ import webpack from 'webpack';
 import http from 'http';
 import fs from 'fs';
 import ThemeContextProvider from '@utils/theme-context-provider';
-import {MOVISTAR_SKIN} from '@skins/constants'
+import {MOVISTAR_SKIN} from '@skins/constants';
 import {getSkinByName} from '@skins/utils';
 import {KnownSkinName} from '@skins/types';
 import {execSync} from 'child_process';

@@ -5,7 +5,7 @@ import {WithTooltip, IconButton, TooltipLinkList} from '@storybook/components';
 import {getColors} from '../colors';
 import {createStorybookTheme} from '../storybook-manager-theme';
 
-const AVAILABLE_SKINS = ['Movistar', 'Telefonica'];
+const AVAILABLE_SKINS = ['Movistar', 'Telefonica', 'AppMiMovistar'];
 
 const renderPrimaryColorDot = (skinName) => (
     <div

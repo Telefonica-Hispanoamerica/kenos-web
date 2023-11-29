@@ -19,6 +19,7 @@ storybook-static/
 src/generated/kenos-icons/index.tsx.txt
 reports
 css/kenos.css
+.env
 
 .yarn/*
 .yarn/cache/

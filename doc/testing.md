@@ -32,5 +32,4 @@ await page.setUserAgent(`${currentUserAgent} acceptance-test`);
 
 ## Questions?
 
-Don't hesistate to ask at
-[Kenos Teams Channel]()
+Don't hesistate to ask at [Kenos Teams Channel]()

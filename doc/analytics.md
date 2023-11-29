@@ -33,8 +33,8 @@ And here is an axample of a button with a tracking event:
 </ButtonPrimary>
 ```
 
-By default `@telefonica/kenos` won't do anything with that `trackingEvent`, but you setup the lib to call
-your analytics system by setting up the `analytics` field in the [`theme` prop](./theme-config.md):
+By default `@telefonica/kenos` won't do anything with that `trackingEvent`, but you setup the lib to call your
+analytics system by setting up the `analytics` field in the [`theme` prop](./theme-config.md):
 
 ```js
 <ThemeContextProvider

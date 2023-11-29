@@ -1,8 +1,8 @@
 ## Migration Guide from kenos 12.x to kenos 13.x
 
 - First of all, we recommend to run the [`theme-colors-codemod.js`](../codemods/theme-colors-codemod.js). This
-  codemod will replace all the usages of kenos colors from `Theme` (`useTheme`) with the css variables
-  defined in `skinVars.colors`.
+  codemod will replace all the usages of kenos colors from `Theme` (`useTheme`) with the css variables defined
+  in `skinVars.colors`.
   - If you aren't familiar with codemods, take a look at
     [jscodeshift doc](https://github.com/facebook/jscodeshift)
   - To run the codemod execute:
@@ -21,8 +21,7 @@
   to install `jss` and `react-jss` as dependencies of your app.
   - Keep in mind that the `jss` that kenos was using in versions 12 and below had some plugins that you may
     still need in your app if you have decided to keep using `jss`. In that case, take a look at kenos
-    [`jss` setup in v12]() because
-    you may need some similar setup.
+    [`jss` setup in v12]() because you may need some similar setup.
 - From version 13, kenos ships with a css file that your app must serve. You can find it in
   `@telefonica/kenos/css/kenos.css`. The way of serve this css may be different depending on your bundler
   setup, but the most common way is importing it like this:
