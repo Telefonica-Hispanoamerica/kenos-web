@@ -2,6 +2,7 @@
 // En caso de cambiar el archivo mencionado, debe modificarse este objecto colors
 
 const colors = {
+    // BACKGROUNDS
     appBarBackground: '',
     background: '',
     backgroundContainer: '',
@@ -21,22 +22,25 @@ const colors = {
     borderLow: '',
     borderHigh: '',
     borderSelected: '',
+    borderLight: '', // ?
+    borderDark: '', // ?
 
     // BUTTONS
     buttonDangerBackground: '',
     buttonDangerBackgroundSelected: '',
     buttonDangerBackgroundHover: '',
     buttonLinkBackgroundSelected: '',
-    buttonLinkBackgroundInverseSelected: '',
+    buttonLinkBackgroundSelectedInverse: '', // IS -> SI
     buttonPrimaryBackground: '',
     buttonPrimaryBackgroundInverse: '',
     buttonPrimaryBackgroundSelected: '',
-    buttonPrimaryBackgroundInverseSelected: '',
+    buttonPrimaryBackgroundSelectedInverse: '', // IS -> SI
     buttonPrimaryBackgroundHover: '',
     buttonSecondaryBorder: '',
     buttonSecondaryBorderSelected: '',
     buttonSecondaryBorderInverse: '',
-    buttonSecondaryBorderInverseSelected: '',
+    buttonSecondaryBorderSelectedInverse: '',
+    buttonSecondaryBackground: '', // +
     buttonSecondaryBackgroundHover: '',
     buttonSecondaryBackgroundSelected: '',
     buttonSecondaryBackgroundInverseHover: '',
@@ -48,6 +52,7 @@ const colors = {
     controlError: '',
     loadingBar: '',
     loadingBarBackground: '',
+    ProgressBarBackground: '', // +
 
     toggleAndroidInactive: '',
     toggleAndroidBackgroundActive: '',

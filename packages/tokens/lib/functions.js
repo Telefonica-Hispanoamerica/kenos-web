@@ -202,19 +202,17 @@ const createColorsObject = (OUT_PATH) => {
 
             borderLow: "",
             borderHigh: "",
-            buttonLinkBackgroundInverseSelected: "",
-            buttonPrimaryBackgroundInverseSelected: "",
             buttonSecondaryBorder: "",
             buttonSecondaryBorderSelected: "",
-            buttonSecondaryBorderInverseSelected: "",
+            buttonSecondaryBorderSelectedInverse: "",
             buttonSecondaryBackgroundHover: "",
             buttonSecondaryBackgroundInverseHover: "",
-            buttonSecondaryBackgroundInverseSelected: "",
             neutralMediumInverse: "",
             successHighInverse: "",
             warningHighInverse: "",
             errorHighInverse: "",
-            promoHighInverse: ""
+            promoHighInverse: "",
+            ProgressBarBackground: "",
         },`;
     fs.writeFileSync(OUT_PATH, firstLineObject, {flag: 'a'});
 
