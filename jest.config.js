@@ -13,6 +13,5 @@ module.exports = {
         '^@skins/(.*)$': '<rootDir>./src/skins/$1',
         '^@utils/(.*)$': '<rootDir>./src/utils/$1',
         '^@icons/(.*)$': '<rootDir>./src/icons/$1',
-        '^@iconsgenerated/(.*)$': '<rootDir>./src/generated/$1',
-      },
+    },
 };

@@ -36,7 +36,7 @@ const getTheme = (selectedSkin: string, platform: Platform, colorScheme: ColorSc
     };
 };
 
-const MisticaThemeProvider = ({Story, context}): React.ReactElement => {
+const KenosThemeProvider = ({Story, context}): React.ReactElement => {
     const searchParams = new URLSearchParams(location.search);
     const [skin, setSkin] = React.useState(getSkin(searchParams));
     const [platform, setPlatform] = React.useState<Platform>(getPlatform(searchParams));
@@ -64,7 +64,7 @@ const MisticaThemeProvider = ({Story, context}): React.ReactElement => {
 };
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-const withMisticaThemeProvider = (Story, context) => <MisticaThemeProvider Story={Story} context={context} />;
+const withKenosThemeProvider = (Story, context) => <KenosThemeProvider Story={Story} context={context} />;
 
 const Styles = () => {
     const [fontSize, setFontSize] = React.useState(16);
@@ -99,7 +99,7 @@ const withLayoutDecorator = (Story, context): React.ReactElement => {
     );
 };
 
-export const decorators = [withLayoutDecorator, withMisticaThemeProvider];
+export const decorators = [withLayoutDecorator, withKenosThemeProvider];
 
 export const parameters = {
     // https://storybook.js.org/docs/react/configure/story-layout

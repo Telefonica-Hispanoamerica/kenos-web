@@ -3,21 +3,21 @@ import * as styles from './index.css';
 import Box from '@layout/Box/box';
 import Stack from '@layout/Stack/stack';
 import Inline from '@layout/Inline/inline';
-import { vars } from '@skins/skin-contract.css';
+import {vars} from '@skins/skin-contract.css';
 import Tag from '@components/Tag';
-import { Video } from '@components/Primitives';
-import { Text2, Text3, Text, Text6 } from '@components/Text';
-import { IconButton } from '@components/Buttons';
+import {Video} from '@components/Primitives';
+import {Text2, Text3, Text, Text6} from '@components/Text';
+import {IconButton} from '@components/Buttons';
 import ButtonGroup from '@components/Buttons/ButtonGroup';
-import { Boxed, InternalBoxed } from '@components/Primitives/Boxed';
-import { BaseTouchable } from '@components/Primitives/Touchable';
-import Image, { MediaBorderRadiusProvider } from '@components/Primitives/Image';
-import { ButtonLink, ButtonPrimary, ButtonSecondary } from '@components/Buttons';
-import { useTheme } from '@hooks/hooks';
-import MaybeDismissable, { useIsDismissable } from '@hooks/MaybeDismissable/maybe-dismissable';
-import IconCloseRegular from '@iconsgenerated/mistica-icons/icon-close-regular';
-import { sprinkles } from '@utils/sprinkles.css';
-import type { ExclusifyUnion } from '@utils/utility-types';
+import {Boxed, InternalBoxed} from '@components/Primitives/Boxed';
+import {BaseTouchable} from '@components/Primitives/Touchable';
+import Image, {MediaBorderRadiusProvider} from '@components/Primitives/Image';
+import {ButtonLink, ButtonPrimary, ButtonSecondary} from '@components/Buttons';
+import {useTheme} from '@hooks/hooks';
+import MaybeDismissable, {useIsDismissable} from '@hooks/MaybeDismissable/maybe-dismissable';
+import IconCloseRegular from '../../../generated/kenos-icons/icon-close-regular';
+import {sprinkles} from '@utils/sprinkles.css';
+import type {ExclusifyUnion} from '@utils/utility-types';
 import type {
     DataAttributes,
     IconProps,
@@ -231,7 +231,7 @@ export const MediaCard = React.forwardRef<HTMLDivElement, MediaCardProps>(
 
 interface DataCardProps {
     /**
-     * Typically a mistica-icons component element
+     * Typically a kenos-icons component element
      */
     icon?: React.ReactElement;
     headline?: string | RendersNullableElement<typeof Tag>;
@@ -515,7 +515,7 @@ const MaybeWithActions = ({
 
 interface CommonDisplayCardProps {
     /**
-     * Typically a mistica-icons component element
+     * Typically a kenos-icons component element
      */
     icon?: React.ReactElement;
     actions?: Array<CardAction>;

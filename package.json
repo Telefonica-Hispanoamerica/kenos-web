@@ -1,12 +1,12 @@
 {
-    "name": "@telefonica/mistica",
-    "version": "14.2.0",
+    "name": "@sergiorubilar/kenos",
+    "version": "0.0.0",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Telefonica/mistica-web"
+        "url": "https://github.com/Telefonica-Hispam/kenos-ui"
     },
-    "homepage": "https://github.com/Telefonica/mistica-web",
+    "homepage": "https://github.com/Telefonica-Hispam/kenos-ui",
     "main": "dist/index.js",
     "module": "dist-es/index.js",
     "files": [
@@ -25,7 +25,6 @@
         "build": "yarn clean && node scripts/build.js",
         "compile": "node scripts/compile.js",
         "clean": "rimraf dist && rimraf dist-es && rimraf dist-ts && rimraf node_modules/.cache",
-        "prepublishOnly": "node scripts/prepublish-only.js",
         "prepack": "yarn build",
         "storybook": "start-storybook -p 6006",
         "storybook-for-acceptance-tests": "cross-env NODE_ENV=production yarn storybook --ci 2>&1",

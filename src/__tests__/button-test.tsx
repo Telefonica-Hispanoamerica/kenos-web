@@ -4,7 +4,7 @@ import {render, screen} from '@testing-library/react';
 import ThemeContextProvider from '@utils/theme-context-provider';
 import {makeTheme} from './test-utils';
 import userEvent from '@testing-library/user-event';
-import IconPhotoCameraRegular from '@iconsgenerated/mistica-icons/icon-photo-camera-regular';
+import IconPhotoCameraRegular from '../generated/kenos-icons/icon-photo-camera-regular';
 
 import type {TouchableElement} from '@components/Primitives/Touchable';
 

@@ -33,18 +33,18 @@ const calcStats = () => {
     buildApp();
     const appInitial = 139844; // precalculated - see webpack.config.js
     const appInitialGzip = 45086;
-    const appWithMistica = getTotalSize(glob.sync(join(PATH_APP_BUILD, '**/*.js')));
-    const appWithMisticaGzip = getTotalSize(glob.sync(join(PATH_APP_BUILD, '**/*.js')), {gzip: true});
+    const appWithKenos = getTotalSize(glob.sync(join(PATH_APP_BUILD, '**/*.js')));
+    const appWithKenosGzip = getTotalSize(glob.sync(join(PATH_APP_BUILD, '**/*.js')), {gzip: true});
 
     const distEsJsFilenames = glob.sync(join(PATH_DIST_ES, '**/*.js'));
 
     return {
         totalJs: getTotalSize(distEsJsFilenames),
         jsWithoutIcons: getTotalSize(distEsJsFilenames, {
-            exclude: [/\/generated\/mistica-icons\/.*/, /\/dist-es\/index.js$/],
+            exclude: [/\/generated\/kenos-icons\/.*/, /\/dist-es\/index.js$/],
         }),
-        libOverhead: appWithMistica - appInitial,
-        libOverheadGzip: appWithMisticaGzip - appInitialGzip,
+        libOverhead: appWithKenos - appInitial,
+        libOverheadGzip: appWithKenosGzip - appInitialGzip,
     };
 };
 

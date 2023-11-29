@@ -1,5 +1,5 @@
 import {Text2, Text6, Stack, Box, ResponsiveLayout, skinVars, ButtonLink, TextLink, Inline} from '../src';
-import logo from '../img/mistica-react-logo.svg';
+import logo from '../img/logo-uxhispam.svg';
 
 export default {
     title: 'Welcome',
@@ -19,41 +19,43 @@ export const Welcome = () => {
             <Box paddingY={32}>
                 <Stack space={24}>
                     <Stack space={16}>
-                        <Text6 as="h2">Welcome to Mistica Storybook</Text6>
-                        <img src={logo} alt="Mistica loves react" />
+                        <Text6 as="h2">Bienvenido a Kenos Storybook</Text6>
+                        <img src={logo} alt="Kenos loves react" style={{width: '300px', height: 'auto'}} />
                     </Stack>
                     <Stack space={16}>
                         <Paragraph>
-                            Browse the stories in the sidebar menu to know the different React components in
-                            the Mistica catalog and see usage examples for every component.
+                            Explore las historias en el menú de la barra lateral para conocer los diferentes
+                            componentes de React en el catálogo de Kénos y ver ejemplos de uso para cada
+                            componente.
                         </Paragraph>
                         <Paragraph>
-                            Looking for a specific component? You can use the search bar or just press '/' and
-                            start typing.
+                            ¿Buscas un componente específico? Puedes usar la barra de búsqueda o simplemente
+                            presionar '/' y comenzar a escribir.
                         </Paragraph>
                         <Paragraph>
-                            Mistica comes with builtin support for the different Telefonica brand color
-                            schemes. Use the theme selector in the toolbar above to switch between the
-                            supported themes (Telefónica, Movistar, O2, Blau and Vivo)
+                            Kénos viene con soporte integrado para los diferentes esquemas de color de la
+                            marca Telefónica Hispam. Utilice el selector de temas en la barra de herramientas
+                            en la parte superior para cambiar entre los temas soportados (Telefónica y
+                            Movistar)
                         </Paragraph>
                         <Paragraph>
-                            For quick prototyping using Mistica components, use the{' '}
-                            <TextLink href="/playroom">Mistica Playroom</TextLink>. Using the Playroom you can
-                            simultaneously design across a variety of themes and screen sizes, powered by JSX
-                            and Mistica components library. It's the perfect tool to create quick mock-ups and
-                            interactive prototypes with real code. It also allows you to share your work with
-                            others by simply copying the URL.
+                            Para crear prototipos rápidamente utilizando componentes de Kénos, utilice{' '}
+                            <TextLink href="/playroom">Kénos Playroom</TextLink>. Usando Playroom puedes
+                            diseñar simultáneamente en una variedad de temas y tamaños de pantalla, impulsado
+                            por la biblioteca de componentes JSX y Kénos. Es la herramienta perfecta para
+                            generar maquetas rápidas y prototipos interactivos con código real. También te
+                            permite compartir tu trabajo con otros simplemente copiando la URL.
                         </Paragraph>
                     </Stack>
                     <nav style={{margin: '0 -8px'}}>
                         <Inline space={8}>
-                            <ButtonLink href="https://github.com/Telefonica/mistica">
-                                About Mistica
+                            <ButtonLink href="https://github.com/Telefonica-Hispanoamerica/kenos-web">
+                                Acerca de Kénos
                             </ButtonLink>
-                            <ButtonLink href="https://github.com/Telefonica/mistica-web#getting-started">
-                                Getting started
+                            <ButtonLink href="https://github.com/Telefonica-Hispanoamerica/kenos-web#getting-started">
+                                Empezando
                             </ButtonLink>
-                            <ButtonLink href="/playroom">Go to playroom</ButtonLink>
+                            <ButtonLink href="/playroom">Playroom</ButtonLink>
                         </Inline>
                     </nav>
                 </Stack>

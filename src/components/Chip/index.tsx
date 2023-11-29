@@ -2,15 +2,15 @@ import * as React from 'react';
 import * as styles from './index.css';
 import classnames from 'classnames';
 import Box from '@layout/Box/box';
-import { useTheme } from '@hooks/hooks';
-import { vars } from '@skins/skin-contract.css';
-import { Text2 } from '@components/Text';
-import { IconButton } from '@components/Buttons';
-import IconCloseRegular from '@iconsgenerated/mistica-icons/icon-close-regular';
-import { pxToRem } from '@utils/css';
-import { getPrefixedDataAttributes } from '@utils/dom';
-import type { ExclusifyUnion } from '@utils/utility-types';
-import type { DataAttributes, IconProps } from '@utils/types';
+import {useTheme} from '@hooks/hooks';
+import {vars} from '@skins/skin-contract.css';
+import {Text2} from '@components/Text';
+import {IconButton} from '@components/Buttons';
+import IconCloseRegular from '../../generated/kenos-icons/icon-close-regular';
+import {pxToRem} from '@utils/css';
+import {getPrefixedDataAttributes} from '@utils/dom';
+import type {ExclusifyUnion} from '@utils/utility-types';
+import type {DataAttributes, IconProps} from '@utils/types';
 
 interface SimpleChipProps {
     children: string;

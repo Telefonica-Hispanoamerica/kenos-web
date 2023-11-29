@@ -1,13 +1,13 @@
 import * as React from 'react';
 import IconSearch from '@icons/icon-search';
-import IconCloseRegular from '@iconsgenerated/mistica-icons/icon-close-regular';
-import { useFieldProps } from '@patterns/Forms/form-context';
-import { IconButton } from '@components/Buttons';
-import { TextFieldBaseAutosuggest } from '@components/Input/TextFields/TextFieldBase';
-import type { CommonFormFieldProps } from '@components/Input/TextFields/TextFieldBase';
-import { useTheme } from '@hooks/hooks';
-import { combineRefs } from '@utils/common';
-import { createChangeEvent } from '@utils/dom';
+import IconCloseRegular from '../../../generated/kenos-icons/icon-close-regular';
+import {useFieldProps} from '@patterns/Forms/form-context';
+import {IconButton} from '@components/Buttons';
+import {TextFieldBaseAutosuggest} from '@components/Input/TextFields/TextFieldBase';
+import type {CommonFormFieldProps} from '@components/Input/TextFields/TextFieldBase';
+import {useTheme} from '@hooks/hooks';
+import {combineRefs} from '@utils/common';
+import {createChangeEvent} from '@utils/dom';
 
 export interface SearchFieldProps extends CommonFormFieldProps {
     onChangeValue?: (value: string, rawValue: string) => void;

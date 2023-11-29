@@ -1,25 +1,21 @@
 import * as React from 'react';
 import * as styles from './index.css';
 import classNames from 'classnames';
-import { assignInlineVars } from '@vanilla-extract/dynamic';
+import {assignInlineVars} from '@vanilla-extract/dynamic';
 import Stack from '@layout/Stack/stack';
 import Inline from '@layout/Inline/inline';
-import IconChevronLeftRegular from '@iconsgenerated/mistica-icons/icon-chevron-left-regular';
-import IconChevronRightRegular from '@iconsgenerated/mistica-icons/icon-chevron-right-regular';
-import { useIsInViewport, useIsomorphicLayoutEffect, useScreenSize, useTheme } from '@hooks/hooks';
-import { BaseTouchable } from '@components/Primitives/Touchable';
-import { MediaBorderRadiusProvider } from '@components/Primitives/Image';
-import { isAndroid } from '@utils/platform';
-import { sprinkles } from '@utils/sprinkles.css';
-import type { DataAttributes } from '@utils/types';
-import { useDocumentVisibility } from '@utils/document-visibility';
-import { getPrefixedDataAttributes, listenResize } from '@utils/dom';
-import { useIsInverseVariant, ThemeVariant } from '@utils/theme-variant-context';
-import { DesktopContainerType, useDesktopContainerType } from '@utils/desktop-container-type-context';
-
-
-
-
+import IconChevronLeftRegular from '../../generated/kenos-icons/icon-chevron-left-regular';
+import IconChevronRightRegular from '../../generated/kenos-icons/icon-chevron-right-regular';
+import {useIsInViewport, useIsomorphicLayoutEffect, useScreenSize, useTheme} from '@hooks/hooks';
+import {BaseTouchable} from '@components/Primitives/Touchable';
+import {MediaBorderRadiusProvider} from '@components/Primitives/Image';
+import {isAndroid} from '@utils/platform';
+import {sprinkles} from '@utils/sprinkles.css';
+import type {DataAttributes} from '@utils/types';
+import {useDocumentVisibility} from '@utils/document-visibility';
+import {getPrefixedDataAttributes, listenResize} from '@utils/dom';
+import {useIsInverseVariant, ThemeVariant} from '@utils/theme-variant-context';
+import {DesktopContainerType, useDesktopContainerType} from '@utils/desktop-container-type-context';
 
 const useShouldAutoplay = (autoplay: boolean, ref: React.RefObject<HTMLElement>): boolean => {
     const isDocumentVisible = useDocumentVisibility();

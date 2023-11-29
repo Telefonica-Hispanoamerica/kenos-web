@@ -1,13 +1,13 @@
 import * as React from 'react';
 import * as classes from './index.css';
 import classnames from 'classnames';
-import type { Location } from 'history';
-import { useTheme } from '@hooks/hooks';
-import { ENTER, SPACE } from '@utils/key-codes';
-import { getPrefixedDataAttributes } from '@utils/dom';
+import type {Location} from 'history';
+import {useTheme} from '@hooks/hooks';
+import {ENTER, SPACE} from '@utils/key-codes';
+import {getPrefixedDataAttributes} from '@utils/dom';
 import ScreenReaderOnly from '@utils/screen-reader-only';
-import { isInsideNovumNativeApp } from '@utils/platform';
-import type { DataAttributes, TrackingEvent } from '@utils/types';
+import {isInsideNovumNativeApp} from '@utils/platform';
+import type {DataAttributes, TrackingEvent} from '@utils/types';
 
 const redirect = (url: string, external = false, loadOnTop = false): void => {
     if (external) {
@@ -266,7 +266,7 @@ const Touchable = React.forwardRef<TouchableElement, Props>((props, ref) => {
     return <RawTouchable {...props} className={classnames(classes.touchable, props.className)} ref={ref} />;
 });
 
-// Used internally by Mistica's components to avoid styles collisions
+// Used internally by Kenos components to avoid styles collisions
 export const BaseTouchable = React.forwardRef<TouchableElement, Props>((props, ref) => {
     return <RawTouchable {...props} className={classnames(classes.base, props.className)} ref={ref} />;
 });

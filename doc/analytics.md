@@ -1,6 +1,6 @@
 # Analytics
 
-`@telefonica/mistica` comes with built in support for tracking to any analytics system (for example Google
+`@telefonica/kenos` comes with built in support for tracking to any analytics system (for example Google
 Analytics).
 
 Some components, like buttons, come with a special `trackingEvent` prop. Every time that the button is
@@ -33,8 +33,8 @@ And here is an axample of a button with a tracking event:
 </ButtonPrimary>
 ```
 
-By default `@telefonica/mistica` won't do anything with that `trackingEvent`, but you setup the lib to call
-your analytics system by setting up the `analytics` field in the [`theme` prop](./theme-config.md):
+By default `@telefonica/kenos` won't do anything with that `trackingEvent`, but you setup the lib to call your
+analytics system by setting up the `analytics` field in the [`theme` prop](./theme-config.md):
 
 ```js
 <ThemeContextProvider
@@ -98,7 +98,7 @@ Firebase and the new Google Analytics 4 events have a different shape. Instead o
 }
 ```
 
-You can use this event format with mistica components too, but you need to change the
+You can use this event format with kenos components too, but you need to change the
 `theme.analytics.eventFormat` config:
 
 ```ts

@@ -4,17 +4,17 @@ import classNames from 'classnames';
 import Box from '@layout/Box/box';
 import Stack from '@layout/Stack/stack';
 import Inline from '@layout/Inline/inline';
-import { useTheme } from '@hooks/hooks';
-import { vars } from '@skins/skin-contract.css';
-import { Text2, Text3 } from '@components/Text';
+import {useTheme} from '@hooks/hooks';
+import {vars} from '@skins/skin-contract.css';
+import {Text2, Text3} from '@components/Text';
 import IconButton from '@components/Buttons/IconButton';
 import ButtonGroup from '@components/Buttons/ButtonGroup';
-import { ButtonLink, ButtonPrimary, ButtonSecondary } from '@components/Buttons/Button';
-import IconCloseRegular from '@iconsgenerated/mistica-icons/icon-close-regular';
-import { sprinkles } from '@utils/sprinkles.css';
-import { getPrefixedDataAttributes } from '@utils/dom';
-import type { DataAttributes, RendersNullableElement } from '@utils/types';
-import { ThemeVariant, useIsInverseVariant } from '@utils/theme-variant-context';
+import {ButtonLink, ButtonPrimary, ButtonSecondary} from '@components/Buttons/Button';
+import IconCloseRegular from '../../generated/kenos-icons/icon-close-regular';
+import {sprinkles} from '@utils/sprinkles.css';
+import {getPrefixedDataAttributes} from '@utils/dom';
+import type {DataAttributes, RendersNullableElement} from '@utils/types';
+import {ThemeVariant, useIsInverseVariant} from '@utils/theme-variant-context';
 
 type Props = {
     title?: string;

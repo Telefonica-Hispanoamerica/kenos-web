@@ -1,18 +1,17 @@
 import * as React from 'react';
 import * as styles from './index.css';
 import classnames from 'classnames';
-import { useAriaId, useTheme } from '@hooks/hooks';
-import { useForm } from '@patterns/Forms/form-context';
-import { assignInlineVars } from '@vanilla-extract/dynamic';
-import ChevronDownRegular from '@iconsgenerated/mistica-icons/icon-chevron-down-regular';
-import { Text3 } from '@components/Text';
+import {useAriaId, useTheme} from '@hooks/hooks';
+import {useForm} from '@patterns/Forms/form-context';
+import {assignInlineVars} from '@vanilla-extract/dynamic';
+import ChevronDownRegular from '../../generated/kenos-icons/icon-chevron-down-regular';
+import {Text3} from '@components/Text';
 import Overlay from '@components/Overlay';
-import { TextFieldBaseAutosuggest } from '@components/Input/TextFields/TextFieldBase';
-import { FieldContainer, HelperText, Label } from '@components/Input/TextFields/TextFieldComponent';
-import { cancelEvent } from '@utils/dom';
-import { isAndroid, isIos } from '@utils/platform';
-import { DOWN, ENTER, ESC, SPACE, TAB, UP } from '@utils/key-codes';
-
+import {TextFieldBaseAutosuggest} from '@components/Input/TextFields/TextFieldBase';
+import {FieldContainer, HelperText, Label} from '@components/Input/TextFields/TextFieldComponent';
+import {cancelEvent} from '@utils/dom';
+import {isAndroid, isIos} from '@utils/platform';
+import {DOWN, ENTER, ESC, SPACE, TAB, UP} from '@utils/key-codes';
 
 export type SelectProps = {
     disabled?: boolean;

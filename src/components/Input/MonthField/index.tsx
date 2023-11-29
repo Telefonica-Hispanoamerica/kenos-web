@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { useTheme } from '@hooks/hooks';
-import { useFieldProps } from '@patterns/Forms/form-context';
-import IconCalendarRegular from '@iconsgenerated/mistica-icons/icon-calendar-regular';
-import { TextFieldBaseAutosuggest } from '@components/Input/TextFields/TextFieldBase';
-import type { CommonFormFieldProps } from '@components/Input/TextFields/TextFieldBase';
-import { isInputTypeSupported } from '@utils/dom';
-import { isServerSide } from '@utils/environment';
-import { getLocalYearMonthString } from '@utils/time';
+import {useTheme} from '@hooks/hooks';
+import {useFieldProps} from '@patterns/Forms/form-context';
+import IconCalendarRegular from '../../../generated/kenos-icons/icon-calendar-regular';
+import {TextFieldBaseAutosuggest} from '@components/Input/TextFields/TextFieldBase';
+import type {CommonFormFieldProps} from '@components/Input/TextFields/TextFieldBase';
+import {isInputTypeSupported} from '@utils/dom';
+import {isServerSide} from '@utils/environment';
+import {getLocalYearMonthString} from '@utils/time';
 
 export interface DateFieldProps extends CommonFormFieldProps {
     onChangeValue?: (value: string, rawValue: string) => void;

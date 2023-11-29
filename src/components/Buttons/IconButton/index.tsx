@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as styles from './index.css';
 import classnames from 'classnames';
-import { BaseTouchable } from '@components/Primitives/Touchable';
-import type { DataAttributes, TrackingEvent } from '@utils/types';
+import {BaseTouchable} from '@components/Primitives/Touchable';
+import type {DataAttributes, TrackingEvent} from '@utils/types';
 
 const ICON_SIZE_1 = 24;
 
@@ -147,7 +147,7 @@ const IconButton = (props: Props): JSX.Element => {
     );
 };
 
-// Used internally by Mistica's components to avoid styles collisions
+// Used internally by Kenos components to avoid styles collisions
 export const BaseIconButton = (props: Props): JSX.Element => {
     const {size = ICON_SIZE_1, disabled} = props;
     return (

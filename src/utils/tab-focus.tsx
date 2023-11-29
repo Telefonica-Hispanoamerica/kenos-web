@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {TAB} from './key-codes';
 
-const TAB_NAVIGATION_CLASS = 'mistica-tab-navigation';
+const TAB_NAVIGATION_CLASS = 'kenos-tab-navigation';
 
 const css = `
     body:not(.${TAB_NAVIGATION_CLASS}) *:focus,

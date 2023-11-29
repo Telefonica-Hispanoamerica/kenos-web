@@ -3,9 +3,6 @@ import {TELEFONICA_SKIN} from './constants';
 
 import type {GetKnownSkin} from './types';
 
-// https://github.com/Telefonica/mistica-design/blob/production/tokens/telefonica-skin-schema.json
-// https://github.com/Telefonica/mistica-design/blob/production/tokens/telefonica-constants.json
-
 export const palette = {
     telefonicaBlue: '#0066FF',
     telefonicaBlue10: '#E5F0FF',

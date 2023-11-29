@@ -1,6 +1,6 @@
 import {create} from '@storybook/theming/create';
 import {getColors} from './colors';
-import logo from '../img/mistica-logo.svg';
+import logo from '../img/logo-uxhispam.svg';
 
 /**
  * @param {import('../src').SkinName} skinName
@@ -11,8 +11,8 @@ export const createStorybookTheme = (skinName) => {
     return create({
         base: 'light',
 
-        brandTitle: 'Mistica',
-        brandUrl: 'https://github.com/Telefonica/mistica',
+        brandTitle: 'Kenos',
+        brandUrl: 'https://github.com/Telefonica-Hispanoamerica/kenos-web',
         brandImage: logo,
 
         colorSecondary: colors.primary,

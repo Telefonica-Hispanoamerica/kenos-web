@@ -7,7 +7,7 @@ const run = (command) => {
 
 const compile = () => {
     run(`yarn vite build`);
-    run(`cp dist-es/style.css css/mistica.css`);
+    run(`cp dist-es/style.css css/kenos.css`);
 
     // transpile to es5 (see .swcrc targets and package.json browserslist)
     // Copy/paste from package.json "browserslist" as SWC has a bug and cannot read that config

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import * as styles from './index.css';
-import { useTheme } from '@hooks/hooks';
-import { useFieldProps } from '@patterns/Forms/form-context';
-import IconEyeRegular from '@iconsgenerated/mistica-icons/icon-eye-regular';
-import IconEyeOffRegular from '@iconsgenerated/mistica-icons/icon-eye-off-regular';
-import { BaseIconButton } from '@components/Buttons/IconButton';
-import { TextFieldBaseAutosuggest } from '@components/Input/TextFields/TextFieldBase';
-import type { CommonFormFieldProps } from '@components/Input/TextFields/TextFieldBase';
+import {useTheme} from '@hooks/hooks';
+import {useFieldProps} from '@patterns/Forms/form-context';
+import IconEyeRegular from '../../../generated/kenos-icons/icon-eye-regular';
+import IconEyeOffRegular from '../../../generated/kenos-icons/icon-eye-off-regular';
+import {BaseIconButton} from '@components/Buttons/IconButton';
+import {TextFieldBaseAutosuggest} from '@components/Input/TextFields/TextFieldBase';
+import type {CommonFormFieldProps} from '@components/Input/TextFields/TextFieldBase';
 
 export interface PasswordFieldProps extends CommonFormFieldProps {
     onChangeValue?: (value: string, rawValue: string) => void;
