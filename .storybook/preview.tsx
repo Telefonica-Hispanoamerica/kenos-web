@@ -2,6 +2,7 @@ import './css/roboto.css';
 import './css/main.css';
 import * as React from 'react';
 import {ThemeContextProvider, MOVISTAR_SKIN, TELEFONICA_SKIN, skinVars} from '../src';
+import {MI_MOVISTAR_SKIN} from '../src/skins/constants';
 import {AVAILABLE_THEMES, Movistar} from './themes';
 import {addons} from '@storybook/addons';
 
@@ -11,7 +12,7 @@ type Platform = 'android' | 'desktop' | 'ios';
 
 const getSkin = (searchParams: URLSearchParams) => {
     const qsSkin = searchParams.get('skin');
-    return [MOVISTAR_SKIN, TELEFONICA_SKIN].find((skin) => skin === qsSkin);
+    return [MOVISTAR_SKIN, TELEFONICA_SKIN, MI_MOVISTAR_SKIN].find((skin) => skin === qsSkin);
 };
 
 const getPlatform = (searchParams: URLSearchParams): Platform => {

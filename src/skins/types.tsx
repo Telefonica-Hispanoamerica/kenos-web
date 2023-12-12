@@ -1,6 +1,6 @@
 export type SkinVariant = 'prominent';
 
-export type KnownSkinName = 'Movistar' | 'Telefonica' | 'MiMovistar';
+export type KnownSkinName = 'Movistar' | 'Telefonica' | 'AppMiMovistar';
 export type SkinName = KnownSkinName | string;
 
 export type GetKnownSkin = (variant?: SkinVariant) => KnownSkin;
@@ -55,22 +55,25 @@ export type Colors = {
     borderLow: string;
     borderHigh: string;
     borderSelected: string;
+    borderLight: string; // ?
+    borderDark: string; // ?
 
     // BUTTONS
     buttonDangerBackground: string;
     buttonDangerBackgroundSelected: string;
     buttonDangerBackgroundHover: string;
     buttonLinkBackgroundSelected: string;
-    buttonLinkBackgroundInverseSelected: string;
+    buttonLinkBackgroundSelectedInverse: string; // IS -> SI
     buttonPrimaryBackground: string;
     buttonPrimaryBackgroundInverse: string;
     buttonPrimaryBackgroundSelected: string;
-    buttonPrimaryBackgroundInverseSelected: string;
+    buttonPrimaryBackgroundSelectedInverse: string; // IS -> SI
     buttonPrimaryBackgroundHover: string;
     buttonSecondaryBorder: string;
     buttonSecondaryBorderSelected: string;
     buttonSecondaryBorderInverse: string;
-    buttonSecondaryBorderInverseSelected: string;
+    buttonSecondaryBorderSelectedInverse: string;
+    buttonSecondaryBackground: string; // +
     buttonSecondaryBackgroundHover: string;
     buttonSecondaryBackgroundSelected: string;
     buttonSecondaryBackgroundInverseHover: string;
@@ -82,6 +85,7 @@ export type Colors = {
     controlError: string;
     loadingBar: string;
     loadingBarBackground: string;
+    ProgressBarBackground: string; // +
 
     toggleAndroidInactive: string;
     toggleAndroidBackgroundActive: string;

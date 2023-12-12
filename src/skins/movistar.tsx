@@ -94,18 +94,18 @@ export const getMovistarSkin: GetKnownSkin = () => {
             buttonDangerBackgroundHover: palette.pepper55, // web only
 
             buttonLinkBackgroundSelected: palette.movistarBlue10,
-            buttonLinkBackgroundInverseSelected: applyAlpha(palette.white, 0.2),
+            buttonLinkBackgroundSelectedInverse: applyAlpha(palette.white, 0.2),
 
             buttonPrimaryBackground: palette.movistarBlue,
             buttonPrimaryBackgroundInverse: palette.white,
             buttonPrimaryBackgroundSelected: palette.movistarBlue55,
             buttonPrimaryBackgroundHover: palette.movistarBlue55, // web only
-            buttonPrimaryBackgroundInverseSelected: palette.movistarBlue30,
+            buttonPrimaryBackgroundSelectedInverse: palette.movistarBlue30,
 
             buttonSecondaryBorder: palette.movistarBlue,
             buttonSecondaryBorderSelected: palette.movistarBlue55,
             buttonSecondaryBorderInverse: palette.white,
-            buttonSecondaryBorderInverseSelected: palette.white,
+            buttonSecondaryBorderSelectedInverse: palette.white,
             buttonSecondaryBackgroundHover: palette.movistarBlue10,
             buttonSecondaryBackgroundSelected: palette.movistarBlue10,
             buttonSecondaryBackgroundInverseHover: applyAlpha(palette.white, 0.2),
@@ -209,16 +209,16 @@ export const getMovistarSkin: GetKnownSkin = () => {
             borderLow: palette.darkModeBlack,
             border: palette.darkModeGrey,
             buttonLinkBackgroundSelected: applyAlpha(palette.white, 0.05),
-            buttonLinkBackgroundInverseSelected: applyAlpha(palette.white, 0.05),
+            buttonLinkBackgroundSelectedInverse: applyAlpha(palette.white, 0.05),
             buttonPrimaryBackground: palette.movistarBlue,
             buttonPrimaryBackgroundInverse: palette.movistarBlue,
             buttonPrimaryBackgroundSelected: palette.movistarBlue55,
             buttonPrimaryBackgroundHover: palette.movistarBlue55, // web only
-            buttonPrimaryBackgroundInverseSelected: palette.movistarBlue55,
+            buttonPrimaryBackgroundSelectedInverse: palette.movistarBlue55,
             buttonSecondaryBorder: palette.white,
             buttonSecondaryBorderSelected: palette.white,
             buttonSecondaryBorderInverse: palette.white,
-            buttonSecondaryBorderInverseSelected: palette.white,
+            buttonSecondaryBorderSelectedInverse: palette.white,
             buttonSecondaryBackgroundHover: applyAlpha(palette.white, 0.15),
             buttonSecondaryBackgroundSelected: applyAlpha(palette.white, 0.15),
             buttonSecondaryBackgroundInverseHover: applyAlpha(palette.white, 0.15),

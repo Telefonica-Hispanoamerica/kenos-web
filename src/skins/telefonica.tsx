@@ -79,18 +79,18 @@ export const getTelefonicaSkin: GetKnownSkin = () => {
             buttonDangerBackgroundHover: palette.coral80, // web only
 
             buttonLinkBackgroundSelected: palette.grey1,
-            buttonLinkBackgroundInverseSelected: applyAlpha(palette.white, 0.2),
+            buttonLinkBackgroundSelectedInverse: applyAlpha(palette.white, 0.2),
 
             buttonPrimaryBackground: palette.telefonicaBlue,
             buttonPrimaryBackgroundInverse: palette.white,
             buttonPrimaryBackgroundSelected: palette.telefonicaBlue70,
             buttonPrimaryBackgroundHover: palette.telefonicaBlue70, // web only
-            buttonPrimaryBackgroundInverseSelected: palette.telefonicaBlue30,
+            buttonPrimaryBackgroundSelectedInverse: palette.telefonicaBlue30,
 
             buttonSecondaryBorder: palette.telefonicaBlue,
             buttonSecondaryBorderSelected: palette.telefonicaBlue70,
             buttonSecondaryBorderInverse: palette.white,
-            buttonSecondaryBorderInverseSelected: palette.white,
+            buttonSecondaryBorderSelectedInverse: palette.white,
             buttonSecondaryBackgroundHover: palette.telefonicaBlue10,
             buttonSecondaryBackgroundSelected: palette.telefonicaBlue10,
             buttonSecondaryBackgroundInverseHover: applyAlpha(palette.white, 0.1),
@@ -191,17 +191,17 @@ export const getTelefonicaSkin: GetKnownSkin = () => {
             borderLow: palette.darkModeBlack,
             border: palette.darkModeGrey,
             buttonLinkBackgroundSelected: applyAlpha(palette.white, 0.05),
-            buttonLinkBackgroundInverseSelected: applyAlpha(palette.white, 0.05),
+            buttonLinkBackgroundSelectedInverse: applyAlpha(palette.white, 0.05),
             buttonPrimaryBackground: palette.telefonicaBlue,
             buttonPrimaryBackgroundInverse: palette.telefonicaBlue,
             buttonPrimaryBackgroundSelected: palette.telefonicaBlue70,
             buttonPrimaryBackgroundHover: palette.telefonicaBlue70, // web only
-            buttonPrimaryBackgroundInverseSelected: palette.telefonicaBlue70,
+            buttonPrimaryBackgroundSelectedInverse: palette.telefonicaBlue70,
 
             buttonSecondaryBorder: palette.white,
             buttonSecondaryBorderSelected: palette.white,
             buttonSecondaryBorderInverse: palette.white,
-            buttonSecondaryBorderInverseSelected: palette.white,
+            buttonSecondaryBorderSelectedInverse: palette.white,
             buttonSecondaryBackgroundHover: applyAlpha(palette.white, 0.15),
             buttonSecondaryBackgroundSelected: applyAlpha(palette.white, 0.15),
             buttonSecondaryBackgroundInverseHover: applyAlpha(palette.white, 0.15),

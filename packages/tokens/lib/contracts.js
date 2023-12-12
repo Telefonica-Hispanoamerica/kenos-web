@@ -1,8 +1,7 @@
-import {createThemeContract} from '@vanilla-extract/css';
+// Este objeto debe corresponderse con el mismo que se encuentra en src\skins\skin-contract.css.ts
+// En caso de cambiar el archivo mencionado, debe modificarse este objecto colors
 
-import type {Colors} from './types';
-
-const colors: Colors = {
+const colors = {
     // BACKGROUNDS
     appBarBackground: '',
     background: '',
@@ -130,12 +129,26 @@ const colors: Colors = {
     promoHighInverse: '',
 };
 
-export const vars = createThemeContract({
-    colors,
-    /**
-     * Raw colors are defined as rgb components to allow applying alpha channel when using the css var
-     * See ThemeContextProvider, where the colors provided in the themeConfig are transformed into rgb components
-     * See utils/color.tsx applyAlha, where the alpha channel is applied to the css var
-     */
-    rawColors: colors,
-});
+const sections = {
+    BACKGROUNDS: ['background', 'skeletons', 'appBarBackground', 'navigationBarBackground', ''],
+    BRODERS: ['border'],
+    BUTTONS: ['button', 'textButton', 'textLink'],
+    CONTROLS: ['control', 'loadingBar', 'toggleAndroid'],
+    DIVIDERS: ['divider', 'navigationBarDivider'],
+    FEEDBACKS: ['badge', 'feedback'],
+    STATES: ['error', 'success', 'warning'],
+    BARS_TEXTS: ['textNavigation', 'textAppBar'],
+    TAGS: [
+        ['successLow', 'warningLow', 'errorLow', 'promoLow', 'brandLow'],
+        ['successHigh', 'warningHigh', 'errorHigh', 'promoHigh'],
+        [
+            'successHighInverse',
+            'warningHighInverse',
+            'errorHighInverse',
+            'promoHighInverse',
+            'neutralMediumInverse',
+        ],
+    ],
+};
+
+module.exports = {colors, sections};

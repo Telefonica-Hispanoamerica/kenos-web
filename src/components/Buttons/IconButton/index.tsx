@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as styles from './index.css';
 import classnames from 'classnames';
-import { BaseTouchable } from '@components/Primitives/Touchable';
-import type { DataAttributes, TrackingEvent } from '@utils/types';
+import {BaseTouchable} from '@components/Primitives/Touchable';
+import type {DataAttributes, TrackingEvent} from '@utils/types';
 
 const ICON_SIZE_1 = 24;
 

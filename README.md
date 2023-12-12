@@ -1,30 +1,40 @@
 Biblioteca de componentes de React para Telefónica Hispam ([Kénos](https://github.com/TelefonicaAR/kenos-ui))
 
-
 ## ¿Qué es Kénos?
-Esta es una colección de componentes gráficos para React que te permiten construir aplicaciones web modernas y atractivas con facilidad destinado para [Telefonica Hispam](https://www.linkedin.com/company/movistar-telefonica-hispam/about/). 
+
+Esta es una colección de componentes gráficos para React que te permiten construir aplicaciones web modernas y
+atractivas con facilidad destinado para
+[Telefonica Hispam](https://www.linkedin.com/company/movistar-telefonica-hispam/about/).
 
 ## ¿Qué puedes encontrar en Kénos?
-Desde botones hasta gráficos y tablas, la librería Kénos ofrece una amplia variedad de componentes altamente personalizables y fáciles de usar que te ayudarán a mejorar la usabilidad y el atractivo visual de tus proyectos de React.
+
+Desde botones hasta gráficos y tablas, la librería Kénos ofrece una amplia variedad de componentes altamente
+personalizables y fáciles de usar que te ayudarán a mejorar la usabilidad y el atractivo visual de tus
+proyectos de React.
 
 ![Telefónica Hispam](img/mapa-hispam.png)
 
 ## Para comenzar a trabajar
+
 Solamente con los comandos de instalación en tu proyecto React podrás utilizar esta librería.
+
 ### Instalación
 
 ```terminal
 yarn add @telefonica/kenos
 ```
 
-o si utilizas npm 
+o si utilizas npm
 
 ```terminal
 npm install @telefonica/kenos
 ```
 
-## Para utilizar el storybook 
-Para explorar todos los componentes, Kénos tiene un storybook que presenta de manera detallada sus diversas formas y comportamientos.
+## Para utilizar el storybook
+
+Para explorar todos los componentes, Kénos tiene un storybook que presenta de manera detallada sus diversas
+formas y comportamientos.
+
 ### Instalación
 
 ```terminal
@@ -37,8 +47,8 @@ Para explorar todos los componentes, Kénos tiene un storybook que presenta de m
 
 ## Para incorporar componentes
 
-Antes de usar cualquiera de nuestros componentes, debes agregar `<ThemeContextProvider>` en la raíz de su aplicación React.
-Aquí hay un ejemplo completo de un formulario con dos campos de texto y un botón de envío:
+Antes de usar cualquiera de nuestros componentes, debes agregar `<ThemeContextProvider>` en la raíz de su
+aplicación React. Aquí hay un ejemplo completo de un formulario con dos campos de texto y un botón de envío:
 
 ```javascript
 import {createRoot} from 'react-dom/client';
@@ -94,15 +104,14 @@ root.render(
 );
 ```
 
-El prop `theme` en `ThemeContextProvider` es **obligatorio**, y puedes usarlo para configurar algunos aspectos de
-la biblioteca. Hay múltiples configuraciones, pero los únicos dos campos obligatorios son `skin` e `i18n`. Leer el [theme config doc](doc/theme-config.md) para más información.
+El prop `theme` en `ThemeContextProvider` es **obligatorio**, y puedes usarlo para configurar algunos aspectos
+de la biblioteca. Hay múltiples configuraciones, pero los únicos dos campos obligatorios son `skin` e `i18n`.
+Leer el [theme config doc](doc/theme-config.md) para más información.
 
-:advertencia: Por lo general, el objeto `theme` es constante y no necesitará cambiar dinámicamente en su aplicación, en
-ese caso recomendamos extraerlo a una variable `const` externa fuera del componente, de esta manera en
-la referencia del objeto será la misma en cada renderizado. Si por alguna razón el `theme` debe ser dinámico en su
-app, considera memorizarla (por ejemplo, con el hook `React.useMemo`).
-
-
+:advertencia: Por lo general, el objeto `theme` es constante y no necesitará cambiar dinámicamente en su
+aplicación, en ese caso recomendamos extraerlo a una variable `const` externa fuera del componente, de esta
+manera en la referencia del objeto será la misma en cada renderizado. Si por alguna razón el `theme` debe ser
+dinámico en su app, considera memorizarla (por ejemplo, con el hook `React.useMemo`).
 
 ## Desarrollo
 

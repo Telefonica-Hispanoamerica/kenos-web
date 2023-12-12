@@ -21,6 +21,7 @@
         "prettier-check": "prettier --check \"**/*.js\" \"**/*.tsx\" \"**/*.ts\" \"**/*.json\"",
         "lint": "eslint --report-unused-disable-directives .",
         "ts-check": "tsc --project tsconfig.json --noEmit",
+        "tokens": "node tokens.js",
         "build": "yarn clean && node scripts/build.js",
         "compile": "node scripts/compile.js",
         "clean": "rimraf dist && rimraf dist-es && rimraf dist-ts && rimraf node_modules/.cache",
@@ -36,7 +37,8 @@
         "detect-circular-dependencies": "npx dpdm --circular src/index.tsx",
         "audit-accessibility": "node .github/actions/audit-accessibility/main.js",
         "circular-dependencies": "yarn dpdm src/index.tsx --tree=false --warning=false --exit-code circular:1",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "import-tokens": "node packages/tokens/index.js"
     },
     "browserslist": [
         "chrome >= 51",
@@ -145,6 +147,7 @@
         "@vanilla-extract/dynamic": "^2.0.3",
         "@vanilla-extract/sprinkles": "^1.5.1",
         "classnames": "^2.3.1",
+        "dotenv": "^16.3.1",
         "lodash": "^4.17.21",
         "moment": "^2.29.1",
         "react-autosuggest": "^10.1.0",

@@ -40,9 +40,9 @@ Here is a description of every attribute:
   - `phoneNumberFormattingRegionCode`: region code used to format phone numbers (for example in
     `PhoneNumberField`).
 - `platformOverrides?`:
-  - `platform?`: the lib applies some style differences depending on the current platform.
-    `@telefonica/kenos` will try to automatically detect the platform, but you can manually set this setting
-    to `'ios'` or `'android'`
+  - `platform?`: the lib applies some style differences depending on the current platform. `@telefonica/kenos`
+    will try to automatically detect the platform, but you can manually set this setting to `'ios'` or
+    `'android'`
   - `insideNovumNativeApp?:` some components have different behavior if the web is running inside a webview in
     the native Novum App. The lib can autodetect it, but you can force it by setting this to `true`.
   - `userAgent:` **IMPORTANT** In case you are using SSR, you should set this value with the user-agent header
@@ -59,8 +59,8 @@ Here is a description of every attribute:
 
 ## Create a custom skin
 
-If your app doesn't follow the branding of kenos builtin skins (Movistar, Vivo, O2, Telefonica, etc.), you
-can still use kenos with your custom skin. Just import the `Skin` type and create a new skin config that
+If your app doesn't follow the branding of kenos builtin skins (Movistar, Vivo, O2, Telefonica, etc.), you can
+still use kenos with your custom skin. Just import the `Skin` type and create a new skin config that
 implements the `Skin` interface (you need to define all the required color constants):
 
 ```ts
