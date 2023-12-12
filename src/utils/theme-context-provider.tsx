@@ -20,7 +20,6 @@ import type {Theme, ThemeConfig} from './theme';
 const darkModeMedia = '(prefers-color-scheme: dark)';
 export const useIsOsDarkModeEnabled = (): boolean => {
     const [isDarkMode, setIsDarkMode] = React.useState(false);
-
     useIsomorphicLayoutEffect(() => {
         if (!window.matchMedia) {
             return;

@@ -3,6 +3,7 @@ import ScreenSizeContext from './screen-size-context';
 import {useIsomorphicLayoutEffect} from '@hooks/hooks';
 import * as mq from '@layout/MediaQueries/media-queries.css';
 
+
 type Props = {
     children: React.ReactNode;
 };
@@ -18,6 +19,7 @@ const ScreenSizeContextProvider: React.FC<Props> = ({children}) => {
     useIsomorphicLayoutEffect(() => {
         setIsServerSide(false);
     }, []);
+
 
     const [isMobile, setIsMobile] = React.useState(
         () => !isServerSide && window.matchMedia(mq.mobile).matches

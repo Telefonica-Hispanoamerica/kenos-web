@@ -1,5 +1,8 @@
 import './src/test-utils/fail-test-on-console-error';
 
+
+    
+
 const getMediaQuerySize = (mediaFeature: string, mediaQuery: string, defaultSize: number): number => {
     const regExp = new RegExp(`\\(${mediaFeature}: (\\d+)px\\)`);
     const [, size = defaultSize] = mediaQuery.match(regExp) || [];
@@ -25,4 +28,18 @@ window.matchMedia =
             media: query,
             onchange: null,
         };
+    });
+
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: jest.fn().mockImplementation(query => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addListener: jest.fn(),
+        removeListener: jest.fn(),
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      })),
     });
