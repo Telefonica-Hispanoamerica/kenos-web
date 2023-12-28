@@ -2,7 +2,6 @@ import * as React from 'react';
 import {StorySection} from './helpers';
 import {
     Box,
-    Inline,
     ButtonDanger,
     ButtonLink,
     ButtonPrimary,
@@ -14,13 +13,84 @@ import {
     Checkbox,
     Text2,
     IconPhotoCameraRegular,
+    ResponsiveLayout,
 } from '..';
-import DoubleField from '@layout/DoubleField/double-field';
-import {Title1} from '@components/Title';
 
 export default {
     title: 'Components/Buttons',
 };
+
+const defaultArgs = {
+    text: 'Example',
+    loadingText: '',
+    icon: false,
+    iconPosition: 'none',
+    inverse: false,
+    small: false,
+    disabled: false,
+    showSpinner: false,
+    rounded: false,
+    newTab: false,
+    action: 'href',
+};
+
+const defaultArgTypes = {
+    icon: {
+        control: {type: 'boolean'},
+    },
+    iconPosition: {
+        if: {arg: 'icon'},
+        options: ['none', 'left', 'right'],
+        control: {type: 'select'},
+    },
+    action: {
+        options: ['onPress', 'href', 'to'],
+        control: {type: 'select'},
+    },
+    newTab: {if: {arg: 'action', eq: 'href'}},
+};
+
+type Args = {
+    text: string;
+    loadingText: string;
+    inverse: boolean;
+    disabled: boolean;
+    showSpinner: boolean;
+    small: boolean;
+    rounded: boolean;
+    action: string;
+    newTab: boolean;
+    icon: boolean;
+    iconPosition: string;
+};
+
+const getButtonActionProps = (action: string, newTab: boolean) => {
+    return action === 'onPress'
+        ? {
+              onPress: () => {
+                  window.alert('pressed!');
+              },
+          }
+        : action === 'href'
+        ? {
+              href: 'https://www.google.com',
+              newTab,
+          }
+        : {
+              to: '#',
+          };
+};
+
+type Props = {
+    inverse: boolean;
+    children: React.ReactNode;
+};
+
+const ButtonBackgroundContainer: React.FC<Props> = ({inverse, children}) => (
+    <ResponsiveLayout fullWidth dataAttributes={{testid: 'content'}} isInverse={inverse}>
+        <Box padding={16}>{children}</Box>
+    </ResponsiveLayout>
+);
 
 const BackgroundTheme: StoryComponent = ({children}) => {
     const [isInverse, setIsInverse] = React.useState(false);
@@ -45,293 +115,92 @@ const BackgroundTheme: StoryComponent = ({children}) => {
     );
 };
 
-const handleOnPress = () => window.alert('pressed!');
-
-export const TypeOfButtons: StoryComponent = () => {
-    const [disabled, setDisabled] = React.useState(false);
-    const [showSpinner, setShowSpinner] = React.useState(false);
-    const [small, setSmall] = React.useState(false);
-    const [newTab, setNewTab] = React.useState(false);
-    const [text, setTextInput] = React.useState('Example');
-    const [loadingText, setLoadingText] = React.useState('Loading Text');
-    const href = 'https://example.com';
-
-    const props = {disabled, showSpinner, small, loadingText};
-
+export const buttonPrimary: StoryComponent<Args> = ({
+    inverse,
+    text,
+    action,
+    icon,
+    iconPosition,
+    newTab,
+    ...props
+}) => {
     return (
-        <BackgroundTheme>
-            <Box padding={8}>
-                <Stack space={16}>
-                    <Inline space={32}>
-                        <Checkbox name="Disabled" checked={disabled} onChange={setDisabled}>
-                            Disabled
-                        </Checkbox>
-                        <Checkbox name="ShowSpinner" checked={showSpinner} onChange={setShowSpinner}>
-                            Show Spinner
-                        </Checkbox>
-                    </Inline>
-                    <Inline space={32}>
-                        <Checkbox name="Small" checked={small} onChange={setSmall}>
-                            Small
-                        </Checkbox>
-                        <Checkbox name="newTab" checked={newTab} onChange={setNewTab}>
-                            newTab
-                        </Checkbox>
-                    </Inline>
-                    <Inline space={16}>
-                        <DoubleField>
-                            <TextField
-                                name="btn-text"
-                                label="Text"
-                                value={text}
-                                onChangeValue={setTextInput}
-                            />
-                            <TextField
-                                name="btn-loading"
-                                label="Loading Text"
-                                value={loadingText}
-                                onChangeValue={setLoadingText}
-                            />
-                        </DoubleField>
-                    </Inline>
-                </Stack>
-            </Box>
-
-            <div data-testid="content">
-                <Stack space={8}>
-                    <Title1>ButtonPrimary</Title1>
-
-                    <Text2 regular as="p">
-                        Button:
-                    </Text2>
-                    <ButtonPrimary onPress={handleOnPress} {...props}>
-                        {text}
-                    </ButtonPrimary>
-
-                    <Text2 regular as="p">
-                        Link:
-                    </Text2>
-                    <ButtonPrimary href={href} newTab={newTab} {...props}>
-                        {text}
-                    </ButtonPrimary>
-
-                    <Text2 regular as="p">
-                        Fake:
-                    </Text2>
-                    <ButtonPrimary fake {...props}>
-                        {text}
-                    </ButtonPrimary>
-
-                    <Title1>ButtonSecondary</Title1>
-                    <Text2 regular as="p">
-                        Button:
-                    </Text2>
-                    <ButtonSecondary onPress={handleOnPress} {...props}>
-                        {text}
-                    </ButtonSecondary>
-
-                    <Text2 regular as="p">
-                        Link:
-                    </Text2>
-                    <ButtonSecondary href={href} newTab={newTab} {...props}>
-                        {text}
-                    </ButtonSecondary>
-
-                    <Text2 regular as="p">
-                        Fake:
-                    </Text2>
-                    <ButtonSecondary fake {...props}>
-                        {text}
-                    </ButtonSecondary>
-
-                    <Title1>ButtonDanger</Title1>
-
-                    <Text2 regular as="p">
-                        Button:
-                    </Text2>
-                    <ButtonDanger onPress={handleOnPress} {...props}>
-                        {text}
-                    </ButtonDanger>
-
-                    <Text2 regular as="p">
-                        Link:
-                    </Text2>
-                    <ButtonDanger href={href} newTab={newTab} {...props}>
-                        {text}
-                    </ButtonDanger>
-
-                    <Text2 regular as="p">
-                        Fake:
-                    </Text2>
-                    <ButtonDanger fake {...props}>
-                        {text}
-                    </ButtonDanger>
-
-                    <Title1>ButtonLink</Title1>
-                    <Text2 regular as="p">
-                        Button (onPress):
-                    </Text2>
-                    <ButtonLink onPress={handleOnPress} disabled={disabled}>
-                        {text}
-                    </ButtonLink>
-                    <Text2 regular as="p">
-                        Link (href):
-                    </Text2>
-                    <ButtonLink href={href} newTab={newTab} disabled={disabled}>
-                        {text}
-                    </ButtonLink>
-                </Stack>
-            </div>
-        </BackgroundTheme>
+        <ButtonBackgroundContainer inverse={inverse}>
+            <ButtonPrimary
+                {...getButtonActionProps(action, newTab)}
+                {...props}
+                icon={icon ? IconPhotoCameraRegular : undefined}
+                iconPosition={iconPosition === 'left' || iconPosition === 'right' ? iconPosition : 'none'}
+            >
+                {text}
+            </ButtonPrimary>
+        </ButtonBackgroundContainer>
     );
 };
-
-export const EllipsisInButtons: StoryComponent = () => {
-    const text = 'Ellipsis text example example';
-    const href = 'https://example.com';
-
+export const buttonSecondary: StoryComponent<Args> = ({
+    inverse,
+    text,
+    action,
+    icon,
+    iconPosition,
+    newTab,
+    ...props
+}) => {
     return (
-        <div data-testid="content" style={{width: 160, border: `1px solid ${skinVars.colors.border}`}}>
-            <Stack space={8}>
-                <Title1>ButtonPrimary</Title1>
-                <ButtonPrimary onPress={handleOnPress}>{text}</ButtonPrimary>
-
-                <Title1>ButtonSecondary</Title1>
-
-                <ButtonSecondary onPress={handleOnPress}>{text}</ButtonSecondary>
-
-                <Title1>ButtonDanger</Title1>
-
-                <ButtonDanger onPress={handleOnPress}>{text}</ButtonDanger>
-
-                <Title1>ButtonLink</Title1>
-                <Text2 as="p" regular>
-                    Button (onPress):
-                </Text2>
-                <ButtonLink onPress={handleOnPress}>{text}</ButtonLink>
-                <Text2 as="p" regular>
-                    Link (href):
-                </Text2>
-                <ButtonLink href={href}>{text}</ButtonLink>
-            </Stack>
-        </div>
+        <ButtonBackgroundContainer inverse={inverse}>
+            <ButtonSecondary
+                {...getButtonActionProps(action, newTab)}
+                {...props}
+                icon={icon ? IconPhotoCameraRegular : undefined}
+                iconPosition={iconPosition === 'left' || iconPosition === 'right' ? iconPosition : 'none'}
+            >
+                {text}
+            </ButtonSecondary>
+        </ButtonBackgroundContainer>
     );
 };
-
-export const withIcon: StoryComponent = () => (
-    <StorySection title="Buttons can have an icon">
-        <Stack space={16}>
-            <ButtonPrimary onPress={() => window.alert('photo!')}>
-                <IconPhotoCameraRegular color="currentColor" />
-                Take a photo
-            </ButtonPrimary>
-            <ButtonPrimary small onPress={() => window.alert('photo!')}>
-                <IconPhotoCameraRegular color="currentColor" />
-                Take a photo
-            </ButtonPrimary>
-            <ButtonLink onPress={() => window.alert('photo!')}>
-                <IconPhotoCameraRegular color="currentColor" />
-                Take a photo
-            </ButtonLink>
-            <ButtonPrimary onPress={() => window.alert('photo!')}>
-                Take a photo
-                <IconPhotoCameraRegular color="currentColor" />
-            </ButtonPrimary>
-            <ButtonPrimary small onPress={() => window.alert('photo!')}>
-                Take a photo
-                <IconPhotoCameraRegular color="currentColor" />
-            </ButtonPrimary>
-            <ButtonLink onPress={() => window.alert('photo!')}>
-                Take a photo
-                <IconPhotoCameraRegular color="currentColor" />
-            </ButtonLink>
-        </Stack>
-    </StorySection>
-);
-
-export const LoadingState: StoryComponent = () => {
-    const [isLoading, setIsLoading] = React.useState(false);
-    const handlePress = () => {
-        setIsLoading(true);
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 2000);
-    };
+export const buttonDanger: StoryComponent<Args> = ({
+    inverse,
+    text,
+    action,
+    icon,
+    iconPosition,
+    newTab,
+    ...props
+}) => {
     return (
-        <BackgroundTheme>
-            <Box padding={8}>
-                <Checkbox checked={isLoading} onChange={setIsLoading} name="isLoading">
-                    isLoading
-                </Checkbox>
-            </Box>
-            <StorySection title="With loading text">
-                <Inline space={16}>
-                    <ButtonPrimary loadingText="Sending file" showSpinner={isLoading} onPress={handlePress}>
-                        Send
-                    </ButtonPrimary>
-                    <ButtonSecondary loadingText="Sending file" showSpinner={isLoading} onPress={handlePress}>
-                        Send
-                    </ButtonSecondary>
-                    <ButtonDanger loadingText="Sending file" showSpinner={isLoading} onPress={handlePress}>
-                        Send
-                    </ButtonDanger>
-                </Inline>
-            </StorySection>
-            <StorySection title="Without loading text">
-                <Inline space={16}>
-                    <ButtonPrimary showSpinner={isLoading} onPress={handlePress}>
-                        Send
-                    </ButtonPrimary>
-                    <ButtonSecondary showSpinner={isLoading} onPress={handlePress}>
-                        Send
-                    </ButtonSecondary>
-                    <ButtonDanger showSpinner={isLoading} onPress={handlePress}>
-                        Send
-                    </ButtonDanger>
-                </Inline>
-            </StorySection>
-            <StorySection title="Small with loading text">
-                <Inline space={16}>
-                    <ButtonPrimary
-                        small
-                        loadingText="Sending file"
-                        showSpinner={isLoading}
-                        onPress={handlePress}
-                    >
-                        Send
-                    </ButtonPrimary>
-                    <ButtonSecondary
-                        small
-                        loadingText="Sending file"
-                        showSpinner={isLoading}
-                        onPress={handlePress}
-                    >
-                        Send
-                    </ButtonSecondary>
-                    <ButtonDanger
-                        small
-                        loadingText="Sending file"
-                        showSpinner={isLoading}
-                        onPress={handlePress}
-                    >
-                        Send
-                    </ButtonDanger>
-                </Inline>
-            </StorySection>
-            <StorySection title="Small without loading text">
-                <Inline space={16}>
-                    <ButtonPrimary small showSpinner={isLoading} onPress={handlePress}>
-                        Send
-                    </ButtonPrimary>
-                    <ButtonSecondary small showSpinner={isLoading} onPress={handlePress}>
-                        Send
-                    </ButtonSecondary>
-                    <ButtonDanger small showSpinner={isLoading} onPress={handlePress}>
-                        Send
-                    </ButtonDanger>
-                </Inline>
-            </StorySection>
-        </BackgroundTheme>
+        <ButtonBackgroundContainer inverse={inverse}>
+            <ButtonDanger
+                {...getButtonActionProps(action, newTab)}
+                {...props}
+                icon={icon ? IconPhotoCameraRegular : undefined}
+                iconPosition={iconPosition === 'left' || iconPosition === 'right' ? iconPosition : 'none'}
+            >
+                {text}
+            </ButtonDanger>
+        </ButtonBackgroundContainer>
+    );
+};
+export const buttonLink: StoryComponent<Omit<Args, 'small'>> = ({
+    inverse,
+    text,
+    icon,
+    iconPosition,
+    action,
+    newTab,
+    ...props
+}) => {
+    return (
+        <ButtonBackgroundContainer inverse={inverse}>
+            <ButtonLink
+                {...getButtonActionProps(action, newTab)}
+                {...props}
+                icon={icon ? IconPhotoCameraRegular : undefined}
+                iconPosition={iconPosition === 'left' || iconPosition === 'right' ? iconPosition : 'none'}
+            >
+                {text}
+            </ButtonLink>
+        </ButtonBackgroundContainer>
     );
 };
 
@@ -352,8 +221,22 @@ export const SubmitButton: StoryComponent = () => (
     </StorySection>
 );
 
-TypeOfButtons.storyName = 'Type of buttons';
-EllipsisInButtons.storyName = 'Ellipsis in buttons';
-withIcon.storyName = 'Button with icon';
-LoadingState.storyName = 'Loading state';
+buttonPrimary.storyName = 'Button Primary';
+buttonSecondary.storyName = 'Button Secondary';
+buttonDanger.storyName = 'Button Danger';
+buttonLink.storyName = 'Button Link';
 SubmitButton.storyName = 'Submit button';
+
+buttonPrimary.args = defaultArgs;
+buttonSecondary.args = defaultArgs;
+buttonDanger.args = defaultArgs;
+buttonLink.args = {
+    ...(({small, ...o}) => o)(defaultArgs),
+};
+
+buttonPrimary.argTypes = defaultArgTypes;
+buttonSecondary.argTypes = defaultArgTypes;
+buttonDanger.argTypes = defaultArgTypes;
+buttonLink.argTypes = {
+    ...defaultArgTypes,
+};
