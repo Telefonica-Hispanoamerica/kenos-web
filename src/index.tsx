@@ -154,15 +154,12 @@ export {useDocumentVisibility} from './utils/document-visibility';
 export {ThemeVariant, useIsInverseVariant} from './utils/theme-variant-context';
 
 export type {Skin, KnownSkinName, SkinName} from './skins/types';
-export {MOVISTAR_SKIN, TELEFONICA_SKIN, MI_MOVISTAR_SKIN} from './skins/constants';
+export {MOVISTAR_SKIN, MI_MOVISTAR_SKIN} from './skins/constants';
 export {getSkinByName} from './skins/utils';
 export {getMovistarSkin} from './skins/movistar';
-export {getMovistarLegacySkin} from './skins/movistar-legacy';
-export {getTelefonicaSkin} from './skins/telefonica';
-export {getMiMovistarSkin} from './skins/mimovistar-skin';
-export {palette as mimovistarPalette} from './skins/mimovistar-skin';
+export {getAppMiMovistarSkin} from './skins/mi-movistar-skin';
+export {palette as mimovistarPalette} from './skins/mi-movistar-skin';
 export {palette as movistarPalette} from './skins/movistar';
-export {palette as telefonicaPalette} from './skins/telefonica';
 
 export type {Locale} from './utils/locale';
 export type {TrackingEvent, IconProps} from './utils/types';

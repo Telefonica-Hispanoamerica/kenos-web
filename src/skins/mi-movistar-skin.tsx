@@ -2,7 +2,7 @@ import {MI_MOVISTAR_SKIN} from '@skins/constants';
 
 import type {GetKnownSkin, KnownSkin} from '@skins/types';
 
-const palette = {
+export const palette = {
     egg: '#f28d15',
     egg10: '#fef4e8',
     egg80: '#6d3f09',

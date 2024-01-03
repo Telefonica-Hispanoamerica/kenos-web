@@ -1,6 +1,6 @@
 export type SkinVariant = 'prominent';
 
-export type KnownSkinName = 'Movistar' | 'Telefonica' | 'AppMiMovistar';
+export type KnownSkinName = 'Movistar' | 'AppMiMovistar';
 export type SkinName = KnownSkinName | string;
 
 export type GetKnownSkin = (variant?: SkinVariant) => KnownSkin;

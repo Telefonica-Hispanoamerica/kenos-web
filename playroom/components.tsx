@@ -12,7 +12,7 @@ import {
     ThemeContextProvider,
     skinVars,
 } from '../src';
-import {Movistar, Telefonica} from './themes';
+import {Movistar, AppMiMovistar} from './themes';
 import {useOverrideTheme} from './frame-component';
 import IconSun from './icons/icon-sun';
 import IconMoon from './icons/icon-moon';
@@ -23,16 +23,16 @@ import * as styles from './preview-tools.css';
 import type {ThemeConfig, ColorScheme, SkinName} from '../src';
 
 export * from '../src';
-export {default as ButtonGroup} from '@components/Buttons/ButtonGroup';
+export {default as ButtonGroup} from '../src/components/Buttons/ButtonGroup';
 
 const themesMap: {[skinName: string]: {themeConfig: ThemeConfig; text: string}} = {
     Movistar: {
         text: 'Movistar',
         themeConfig: Movistar,
     },
-    Telefonica: {
-        text: 'Telefónica',
-        themeConfig: Telefonica,
+    AppMiMovistar: {
+        text: 'AppMiMovistar',
+        themeConfig: AppMiMovistar,
     },
 };
 

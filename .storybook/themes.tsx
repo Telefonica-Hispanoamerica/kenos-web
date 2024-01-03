@@ -1,19 +1,8 @@
-import {getMovistarSkin, getTelefonicaSkin} from '../src';
-import {getAppMiMovistarSkin} from '../src/skins/mi-movistar-skin';
+import {getMovistarSkin, getAppMiMovistarSkin} from '../src';
 
 export const Movistar = {
     i18n: {locale: 'es-ES', phoneNumberFormattingRegionCode: 'ES'},
     skin: getMovistarSkin(),
-} as const;
-
-export const Movistar_Prominent = {
-    i18n: {locale: 'es-ES', phoneNumberFormattingRegionCode: 'ES'},
-    skin: getMovistarSkin('prominent'),
-} as const;
-
-export const Telefonica = {
-    i18n: {locale: 'es-ES', phoneNumberFormattingRegionCode: 'ES'},
-    skin: getTelefonicaSkin(),
 } as const;
 
 export const AppMiMovistar = {
@@ -21,4 +10,4 @@ export const AppMiMovistar = {
     skin: getAppMiMovistarSkin(),
 } as const;
 
-export const AVAILABLE_THEMES = [Movistar, Telefonica, AppMiMovistar];
+export const AVAILABLE_THEMES = [Movistar, AppMiMovistar];

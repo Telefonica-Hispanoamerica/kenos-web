@@ -79,6 +79,7 @@ export const getMovistarSkin: GetKnownSkin = () => {
             navigationBarBackground: palette.movistarBlue,
             backgroundAlternative: palette.grey1,
             backgroundFeedbackBottom: palette.movistarBlue,
+            ProgressBarBackground: '',
 
             skeletonWave: palette.grey2,
 
@@ -87,6 +88,8 @@ export const getMovistarSkin: GetKnownSkin = () => {
             border: palette.grey3,
             borderHigh: palette.grey5,
             borderSelected: palette.movistarBlue,
+            borderLight: palette.grey1,
+            borderDark: palette.grey5,
 
             // BUTTONS
             buttonDangerBackground: palette.pepper,
@@ -106,6 +109,7 @@ export const getMovistarSkin: GetKnownSkin = () => {
             buttonSecondaryBorderSelected: palette.movistarBlue55,
             buttonSecondaryBorderInverse: palette.white,
             buttonSecondaryBorderSelectedInverse: palette.white,
+            buttonSecondaryBackground: palette.white,
             buttonSecondaryBackgroundHover: palette.movistarBlue10,
             buttonSecondaryBackgroundSelected: palette.movistarBlue10,
             buttonSecondaryBackgroundInverseHover: applyAlpha(palette.white, 0.2),
@@ -275,6 +279,7 @@ export const getMovistarSkin: GetKnownSkin = () => {
             errorHighInverse: palette.pepper70,
             promoHighInverse: palette.purple70,
             neutralMediumInverse: palette.grey5,
+            
         },
         textPresets: {
             text5: {weight: 'bold'},

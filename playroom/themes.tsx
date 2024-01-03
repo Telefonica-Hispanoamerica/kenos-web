@@ -11,8 +11,4 @@ const common: Partial<ThemeConfig> = {
 } as const;
 
 export const Movistar: ThemeConfig = {...themes.Movistar, ...common};
-export const Movistar_Prominent: ThemeConfig = {...themes.Movistar_Prominent, ...common};
-export const Telefonica: ThemeConfig = {...themes.Telefonica, ...common};
-
-export const Movistar_iOS: ThemeConfig = {...Movistar, platformOverrides: {platform: 'ios'}};
-export const Telefonica_iOS: ThemeConfig = {...Telefonica, platformOverrides: {platform: 'ios'}};
+export const AppMiMovistar: ThemeConfig = {...themes.AppMiMovistar, ...common};

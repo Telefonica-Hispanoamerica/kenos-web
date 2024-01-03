@@ -22,6 +22,61 @@ import type {
 } from '@utils/types';
 import type { Location } from 'history';
 
+const renderButtonElement = ({
+    content,
+    defaultIconSize,
+    renderText,
+}: {
+    content: React.ReactNode;
+    defaultIconSize: number;
+    renderText: (text: React.ReactNode) => React.ReactNode;
+}): React.ReactNode => {
+    const childrenArr = flattenChildren(content);
+    const length = childrenArr.length;
+    const resultChildrenArr: Array<React.ReactNode> = [];
+    let accText: Array<React.ReactNode> = [];
+    const flushAccText = () => {
+        resultChildrenArr.push(
+            <React.Fragment key={resultChildrenArr.length}>{renderText(accText)}</React.Fragment>
+        );
+        accText = [];
+    };
+
+    childrenArr.forEach((element, idx) => {
+        const isFirstChild = idx === 0;
+        const isLastChild = idx === length - 1;
+
+        const isIconElement = React.isValidElement(element);
+
+        if (isIconElement) {
+            if (accText.length) {
+                flushAccText();
+            }
+            const sizeInPx = element.props.size ?? defaultIconSize;
+            resultChildrenArr.push(
+                <div
+                    key={resultChildrenArr.length}
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        marginLeft: isFirstChild ? 0 : styles.ICON_MARGIN_PX,
+                        marginRight: isLastChild ? 0 : styles.ICON_MARGIN_PX,
+                    }}
+                >
+                    {React.cloneElement(element as React.ReactElement<IconProps>, {
+                        size: pxToRem(sizeInPx),
+                    })}
+                </div>
+            );
+        } else {
+            accText.push(element);
+            if (isLastChild) {
+                flushAccText();
+            }
+        }
+    });
+    return resultChildrenArr;
+};
 const renderButtonContent = ({
     content,
     defaultIconSize,
@@ -88,6 +143,7 @@ interface CommonProps {
     showSpinner?: boolean;
     loadingText?: string;
     disabled?: boolean;
+    rounded?: boolean;
     trackingEvent?: TrackingEvent | ReadonlyArray<TrackingEvent>;
     trackEvent?: boolean;
     /** "data-" prefix is automatically added. For example, use "testid" instead of "data-testid" */
@@ -95,6 +151,8 @@ interface CommonProps {
     'aria-controls'?: string;
     'aria-expanded'?: 'true' | 'false';
     tabIndex?: number;
+    icon?: React.FC<IconProps>;
+    iconPosition?: 'none' | 'left' | 'right';
 }
 
 export interface ToButtonProps extends CommonProps {
@@ -150,6 +208,8 @@ const Button = React.forwardRef<TouchableElement, ButtonProps & {type: ButtonTyp
     const {loadingText} = props;
     const isSubmitButton = !!props.submit;
     const isFormSending = formStatus === 'sending';
+    const Icon = props.icon;
+    const IconPosition = props.iconPosition;
 
     const showSpinner = props.showSpinner || (isFormSending && isSubmitButton);
 
@@ -203,6 +263,7 @@ const Button = React.forwardRef<TouchableElement, ButtonProps & {type: ButtonTyp
             {
                 [styles.small]: props.small,
                 [styles.isLoading]: showSpinner,
+                [styles.buttonRounded]: props.rounded,
             }
         ),
         style: {cursor: props.fake ? 'pointer' : undefined, ...props.style},
@@ -213,16 +274,35 @@ const Button = React.forwardRef<TouchableElement, ButtonProps & {type: ButtonTyp
         tabIndex: props.tabIndex,
         children: (
             <>
-                {/* text content */}
                 <div aria-hidden={showSpinner ? true : undefined} className={styles.textContent}>
+                    {Icon && IconPosition === 'left' && (
+                        <div
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                marginRight: styles.ICON_MARGIN_PX,
+                            }}
+                        >
+                            <Icon size={defaultIconSize} color="currentColor" />
+                        </div>
+                    )}
                     {renderButtonContent({
                         content: props.children,
                         defaultIconSize,
                         renderText,
                     })}
+                    {Icon && IconPosition === 'right' && (
+                        <div
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                marginLeft: styles.ICON_MARGIN_PX,
+                            }}
+                        >
+                            <Icon size={defaultIconSize} color="currentColor" />
+                        </div>
+                    )}
                 </div>
-
-                {/* the following div won't be visible (see loadingFiller class), this is used to force the button width */}
                 <div
                     className={styles.loadingFiller}
                     aria-hidden
@@ -235,8 +315,6 @@ const Button = React.forwardRef<TouchableElement, ButtonProps & {type: ButtonTyp
                 >
                     {renderButtonContent({content: loadingText, defaultIconSize, renderText})}
                 </div>
-
-                {/* loading content */}
                 <div
                     aria-hidden={showSpinner ? undefined : true}
                     className={styles.loadingContent}
@@ -324,6 +402,11 @@ interface ButtonLinkCommonProps {
     /** "data-" prefix is automatically added. For example, use "testid" instead of "data-testid" */
     dataAttributes?: DataAttributes;
     aligned?: boolean;
+    rounded?: boolean;
+    loadingText?: string;
+    showSpinner?: boolean;
+    icon?: React.FC<IconProps>;
+    iconPosition?: 'none' | 'left' | 'right';
 }
 interface ButtonLinkOnPressProps extends ButtonLinkCommonProps {
     onPress: (event: React.MouseEvent<HTMLElement>) => void;
@@ -349,6 +432,19 @@ export const ButtonLink = React.forwardRef<TouchableElement, ButtonLinkProps>((p
     const {formStatus} = useForm();
     const isInverse = useIsInverseVariant();
     const {analytics} = useTheme();
+    const {loadingText} = props;
+    const Icon = props.icon;
+    const IconPosition = props.iconPosition;
+    const isFormSending = formStatus === 'sending';
+    const [isOnPressPromiseResolving, setIsOnPressPromiseResolving] = React.useState(false);
+    const showSpinner = props.showSpinner || isOnPressPromiseResolving;
+    const [shouldRenderSpinner, setShouldRenderSpinner] = React.useState(!!showSpinner);
+
+    React.useEffect(() => {
+        if (showSpinner && !shouldRenderSpinner) {
+            setShouldRenderSpinner(true);
+        }
+    }, [showSpinner, shouldRenderSpinner, formStatus]);
 
     const createDefaultTrackingEvent = (): TrackingEvent => {
         if (analytics.eventFormat === 'google-analytics-4') {
@@ -366,6 +462,9 @@ export const ButtonLink = React.forwardRef<TouchableElement, ButtonLinkProps>((p
         }
     };
 
+    const defaultIconSize = styles.SMALL_ICON_SIZE;
+    const spinnerSizeRem = pxToRem(styles.SMALL_SPINNER_SIZE);
+
     const renderText = (element: React.ReactNode) => (
         <Text2 medium truncate={1} color="inherit">
             {element}
@@ -376,19 +475,95 @@ export const ButtonLink = React.forwardRef<TouchableElement, ButtonLinkProps>((p
         className: classnames(styles.link, {
             [styles.inverseLink]: isInverse,
             [styles.alignedLink]: props.aligned,
+            [styles.buttonRounded]: props.rounded,
+            [styles.isLoading]: showSpinner,
         }),
         trackingEvent: props.trackingEvent ?? (props.trackEvent ? createDefaultTrackingEvent() : undefined),
         dataAttributes: {'component-name': 'ButtonLink', ...props.dataAttributes},
         children: (
-            <div className={styles.textContentLink}>
-                {renderButtonContent({
-                    content: props.children,
-                    defaultIconSize: styles.SMALL_ICON_SIZE,
-                    renderText,
-                })}
-            </div>
+            <>
+                <div aria-hidden={showSpinner ? true : undefined} className={styles.textContentLink}>
+                    {Icon && IconPosition === 'left' && (
+                        <div
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                marginRight: styles.ICON_MARGIN_PX,
+                            }}
+                        >
+                            <Icon size={defaultIconSize} color="currentColor" />
+                        </div>
+                    )}
+                    {renderButtonContent({
+                        content: props.children,
+                        defaultIconSize: styles.SMALL_ICON_SIZE, // Ajusta según tus necesidades
+                        renderText,
+                    })}
+
+                    {Icon && IconPosition === 'right' && (
+                        <div
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                marginLeft: styles.ICON_MARGIN_PX,
+                            }}
+                        >
+                            <Icon size={defaultIconSize} color="currentColor" />
+                        </div>
+                    )}
+                </div>
+                <div
+                    className={styles.loadingFiller}
+                    aria-hidden
+                    style={
+                        loadingText
+                            ? {
+                                  paddingLeft: spinnerSizeRem,
+                                  paddingRight: styles.ICON_MARGIN_PX + 2 * styles.X_SMALL_PADDING_PX,
+                              }
+                            : undefined
+                    }
+                >
+                    {renderButtonElement({content: loadingText, defaultIconSize, renderText})}
+                </div>
+                <div
+                    aria-hidden={showSpinner ? undefined : true}
+                    className={styles.loadingContent}
+                    onTransitionEnd={() => {
+                        if (showSpinner !== shouldRenderSpinner) {
+                            setShouldRenderSpinner(showSpinner);
+                        }
+                    }}
+                >
+                    {shouldRenderSpinner ? (
+                        <Spinner
+                            rolePresentation={!!loadingText}
+                            color="currentcolor"
+                            delay="0s"
+                            size={styles.SMALL_SPINNER_SIZE}
+                        />
+                    ) : (
+                        <div
+                            style={{
+                                display: 'inline-block',
+                                width: styles.SMALL_SPINNER_SIZE,
+                                height: styles.SMALL_SPINNER_SIZE,
+                            }}
+                        />
+                    )}
+                    {loadingText ? (
+                        <Box paddingLeft={8} className={styles.loadingContentLink}>
+                            {renderButtonContent({
+                                content: loadingText,
+                                defaultIconSize: styles.SMALL_ICON_SIZE,
+                                renderText,
+                            })}
+                        </Box>
+                    ) : null}
+                </div>
+            </>
         ),
-        disabled: props.disabled || formStatus === 'sending',
+        disabled: props.disabled || showSpinner || isFormSending,
     };
 
     if (process.env.NODE_ENV !== 'production') {
