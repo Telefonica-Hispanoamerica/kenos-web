@@ -26,7 +26,7 @@ test('nativeMessage should be called once, even if the component re-renders', as
     jest.spyOn(bridge, 'isWebViewBridgeAvailable').mockReturnValue(true);
 
     const onCloseMock = jest.fn();
-    const nativeMessageMock = jest.spyOn(bridge, 'nativeMessage').mockResolvedValue();
+    const nativeMessageMock = jest.spyOn(bridge, 'nativeAlert').mockResolvedValue();
 
     render(
         <ThemeContextProvider theme={makeTheme()}>

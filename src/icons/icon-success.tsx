@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {O2_SKIN, O2_CLASSIC_SKIN} from '../skins/constants';
 import {
     getAnimateDrawLineProps,
     getAnimateFadeInProps,
@@ -99,9 +98,6 @@ const IconSuccess: React.FC<Props> = ({size, color, skipAnimation}) => {
     const {skinName} = useTheme();
 
     switch (skinName) {
-        case O2_CLASSIC_SKIN:
-        case O2_SKIN:
-            return <IconSuccessO2 size={size} color={color} skipAnimation={skipAnimation} />;
         default:
             return <IconSuccessDefault size={size} color={color} skipAnimation={skipAnimation} />;
     }

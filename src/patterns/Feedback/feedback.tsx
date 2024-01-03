@@ -3,7 +3,6 @@ import {useTheme, useScreenSize, useWindowHeight, useIsomorphicLayoutEffect} fro
 import {ThemeVariant, useIsInverseVariant} from '@utils/theme-variant-context';
 import ButtonFixedFooterLayout from '@layout/FixedFooterLayout/button-fixed-footer-layout';
 import OverscrollColor from '@utils/overscroll-color-context';
-import {O2_CLASSIC_SKIN, VIVO_SKIN} from '@skins/constants';
 import IcnSuccess from '@icons/icon-success';
 import IconSuccessVivo from '@icons/icon-success-vivo';
 import IcnError from '@icons/icon-error';
@@ -268,23 +267,9 @@ export const FeedbackScreen: React.FC<FeedbackScreenProps> = ({
                     {feedbackContent}
                 </ButtonFixedFooterLayout>
             </div>
-            {skinName === O2_CLASSIC_SKIN && (
-                <div
-                    style={{
-                        position: 'absolute',
-                        bottom: footerHeight,
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        // This extra height is a workaround to make sure the background div is displayed *under* the fixed footer.
-                        // Otherwise in some devices (Galaxy S20+) the background and the fixed footer are rendered with some distance between them
-                        height: hasButtons ? `calc(${contentHeight} + 1px)` : `calc(${contentHeight})`,
-                        background: isInverse ? vars.colors.backgroundBrand : vars.colors.background,
-                    }}
-                />
-            )}
+           
             {/* Bug: https://jira.tid.es/browse/CHECKOUT-3340. Solution for all brands but o2-classic (gradient background) is setting body color. */}
-            {skinName !== O2_CLASSIC_SKIN && <BackgroundColor />}
+            <BackgroundColor />
         </>
     ) : (
         <ResponsiveLayout>
@@ -304,7 +289,7 @@ export const SuccessFeedbackScreen: React.FC<AssetFeedbackProps> = ({dataAttribu
             <FeedbackScreen
                 {...props}
                 hapticFeedback="success"
-                icon={skinName === VIVO_SKIN ? <IconSuccessVivo /> : <IcnSuccess />}
+                icon={ <IcnSuccess />}
                 animateText
                 imageUrl={props.imageUrl}
                 imageFit={props.imageFit}
@@ -365,11 +350,11 @@ export const SuccessFeedback: React.FC<AssetFeedbackProps> = ({
 }) => {
     useHapticFeedback('success');
     const {isTabletOrSmaller} = useScreenSize();
-    const {skinName, platformOverrides} = useTheme();
+    const {platformOverrides} = useTheme();
 
     const appear = useAppearStatus();
 
-    const icon = skinName === VIVO_SKIN ? <IconSuccessVivo /> : <IcnSuccess />;
+    const icon = <IcnSuccess />;
     const feedbackBody = renderFeedbackBody(
         {icon, title, description, children},
         areAnimationsSupported(platformOverrides),
