@@ -4,7 +4,7 @@ import {sprinkles} from '@utils/sprinkles.css';
 import {style, globalStyle, styleVariants} from '@vanilla-extract/css';
 import type {ComplexStyleRule} from '@vanilla-extract/css';
 
-const transitionTiming = '0.3s cubic-bezier(0.77, 0, 0.175, 1)';
+const transitionTiming = '0.1s ease-in-out';
 
 export const BUTTON_MIN_WIDTH = 136;
 const BORDER_PX = 1.5;
@@ -19,6 +19,7 @@ export const SPINNER_SIZE = 20;
 export const SMALL_SPINNER_SIZE = 16;
 export const PADDING_Y_LINK = 6;
 const PADDING_X_LINK = 12;
+export const BORDER_RADIUS_ROUNDED = 60;
 
 const disabledStyle = {opacity: 0.5};
 
@@ -45,6 +46,12 @@ const button = style([
             [`&[disabled]:not(${isLoading})`]: disabledStyle,
         },
     },
+]);
+
+export const buttonRounded = style([
+    sprinkles({
+        borderRadius: BORDER_RADIUS_ROUNDED,
+    }),
 ]);
 
 export const loadingFiller = style([
@@ -281,19 +288,20 @@ export const link = style([
         color: vars.colors.textLink,
         background: 'transparent',
         overflow: 'hidden',
+        position: 'relative'
     }),
     {
         paddingTop: PADDING_Y_LINK,
         paddingBottom: PADDING_Y_LINK,
         fontWeight: 500,
-        transition: `background-color ${transitionTiming}, color ${transitionTiming}`,
+        transition: `background-color ${transitionTiming}`,
 
         selectors: {
             '&:enabled:active': {
                 backgroundColor: vars.colors.buttonLinkBackgroundSelected,
             },
 
-            '&[disabled]': disabledStyle,
+            [`&[disabled]:not(${isLoading})`]: disabledStyle,
 
             '&:hover:not([disabled])': {
                 backgroundColor: vars.colors.buttonLinkBackgroundSelected,
@@ -331,11 +339,38 @@ export const inverseLink = style([
     },
 ]);
 
-export const textContentLink = sprinkles({
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-});
+const underlineStyles = {
+    textDecoration: 'underline',
+    textUnderlineOffset: 5,
+  };
+
+export const textContentLink = style([
+    sprinkles({
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }), {
+        ...underlineStyles
+    },
+    {
+        opacity: 1,
+        transition: `opacity ${transitionTiming}, transform ${transitionTiming}`,
+        
+
+        selectors: {
+            [`${isLoading} &`]: {
+                transform: 'translateY(-2rem)',
+                opacity: 0,
+            },
+        },
+    },
+]);
+
+export const loadingContentLink = style ([
+   {
+        ...underlineStyles
+    }
+]);
 
 globalStyle(`${textContent} svg`, {
     display: 'block',
