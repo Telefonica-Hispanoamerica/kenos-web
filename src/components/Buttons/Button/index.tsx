@@ -2,17 +2,17 @@ import * as React from 'react';
 import * as styles from './index.css';
 import classnames from 'classnames';
 import Box from '@layout/Box/box';
-import { useTheme } from '@hooks/hooks';
-import { flattenChildren } from '@skins/utils';
-import { useForm } from '@patterns/Forms/form-context';
+import {useTheme} from '@hooks/hooks';
+import {flattenChildren} from '@skins/utils';
+import {useForm} from '@patterns/Forms/form-context';
 import Spinner from '@components/Spinner/';
-import { Text, Text2, Text3 } from '@components/Text';
-import { BaseTouchable } from '@components/Primitives/Touchable';
-import type { TouchableElement } from '@components/Primitives';
-import { pxToRem } from '@utils/css';
-import { getTextFromChildren } from '@utils/common';
-import { useIsInverseVariant } from '@utils/theme-variant-context';
-import { eventActions, eventCategories, eventNames, useTrackingConfig } from '@utils/analytics';
+import {Text, Text2, Text3} from '@components/Text';
+import {BaseTouchable} from '@components/Primitives/Touchable';
+import type {TouchableElement} from '@components/Primitives';
+import {pxToRem} from '@utils/css';
+import {getTextFromChildren} from '@utils/common';
+import {useIsInverseVariant} from '@utils/theme-variant-context';
+import {eventActions, eventCategories, eventNames, useTrackingConfig} from '@utils/analytics';
 import type {
     DataAttributes,
     IconProps,
@@ -20,7 +20,7 @@ import type {
     RendersNullableElement,
     TrackingEvent,
 } from '@utils/types';
-import type { Location } from 'history';
+import type {Location} from 'history';
 
 const renderButtonElement = ({
     content,
@@ -436,7 +436,7 @@ export const ButtonLink = React.forwardRef<TouchableElement, ButtonLinkProps>((p
     const Icon = props.icon;
     const IconPosition = props.iconPosition;
     const isFormSending = formStatus === 'sending';
-    const [isOnPressPromiseResolving, setIsOnPressPromiseResolving] = React.useState(false);
+    const [isOnPressPromiseResolving] = React.useState(false);
     const showSpinner = props.showSpinner || isOnPressPromiseResolving;
     const [shouldRenderSpinner, setShouldRenderSpinner] = React.useState(!!showSpinner);
 

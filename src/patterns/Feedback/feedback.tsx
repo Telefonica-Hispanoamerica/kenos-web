@@ -4,7 +4,6 @@ import {ThemeVariant, useIsInverseVariant} from '@utils/theme-variant-context';
 import ButtonFixedFooterLayout from '@layout/FixedFooterLayout/button-fixed-footer-layout';
 import OverscrollColor from '@utils/overscroll-color-context';
 import IcnSuccess from '@icons/icon-success';
-import IconSuccessVivo from '@icons/icon-success-vivo';
 import IcnError from '@icons/icon-error';
 import IcnInfo from '@icons/icon-info';
 import {
@@ -206,7 +205,7 @@ export const FeedbackScreen: React.FC<FeedbackScreenProps> = ({
 }) => {
     useHapticFeedback(hapticFeedback);
     const isInverse = useIsInverseVariant();
-    const {platformOverrides, isDarkMode, skinName} = useTheme();
+    const {platformOverrides, isDarkMode} = useTheme();
     const windowHeight = useWindowHeight();
     const {isTabletOrSmaller} = useScreenSize();
     const [isServerSide, setIsServerSide] = React.useState(typeof self !== 'undefined');
@@ -222,6 +221,7 @@ export const FeedbackScreen: React.FC<FeedbackScreenProps> = ({
     // if there were no OS buttons on bottom): https://bugs.webkit.org/show_bug.cgi?id=141832
     useIsomorphicLayoutEffect(() => {
         setIsServerSide(false);
+        contentHeight;
     }, []);
 
     const feedbackBody = renderFeedbackBody(
@@ -267,7 +267,7 @@ export const FeedbackScreen: React.FC<FeedbackScreenProps> = ({
                     {feedbackContent}
                 </ButtonFixedFooterLayout>
             </div>
-           
+
             {/* Bug: https://jira.tid.es/browse/CHECKOUT-3340. Solution for all brands but o2-classic (gradient background) is setting body color. */}
             <BackgroundColor />
         </>
@@ -282,14 +282,13 @@ export const FeedbackScreen: React.FC<FeedbackScreenProps> = ({
 
 export const SuccessFeedbackScreen: React.FC<AssetFeedbackProps> = ({dataAttributes, ...props}) => {
     const {isTabletOrSmaller} = useScreenSize();
-    const {skinName} = useTheme();
 
     return (
         <ThemeVariant isInverse={!props.unstable_inlineInDesktop || isTabletOrSmaller}>
             <FeedbackScreen
                 {...props}
                 hapticFeedback="success"
-                icon={ <IcnSuccess />}
+                icon={<IcnSuccess />}
                 animateText
                 imageUrl={props.imageUrl}
                 imageFit={props.imageFit}
