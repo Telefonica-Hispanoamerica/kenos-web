@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Snackbar from '../snackbar';
+import Snackbar from '@components/Snackbar';
 import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import ThemeContextProvider from '../theme-context-provider';
+import ThemeContextProvider from '@utils/theme-context-provider';
 import {makeTheme} from './test-utils';
 import * as bridge from '@tef-novum/webview-bridge';
 
@@ -26,7 +26,7 @@ test('nativeMessage should be called once, even if the component re-renders', as
     jest.spyOn(bridge, 'isWebViewBridgeAvailable').mockReturnValue(true);
 
     const onCloseMock = jest.fn();
-    const nativeMessageMock = jest.spyOn(bridge, 'nativeMessage').mockResolvedValue();
+    const nativeMessageMock = jest.spyOn(bridge, 'nativeAlert').mockResolvedValue();
 
     render(
         <ThemeContextProvider theme={makeTheme()}>

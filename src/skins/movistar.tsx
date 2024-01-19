@@ -3,11 +3,8 @@ import {MOVISTAR_SKIN} from './constants';
 
 import type {GetKnownSkin, KnownSkin} from './types';
 
-// https://github.com/Telefonica/mistica-design/blob/production/tokens/movistar-skin-schema.json
-// https://github.com/Telefonica/mistica-design/blob/production/tokens/movistar-constants.json
-
 export const palette = {
-    movistarBlue: '#019DF4',
+    movistarBlue: '#00A9E0',
     movistarBlue10: '#E6F5FD',
     movistarBlue20: '#B3E1FB',
     movistarBlue30: '#80CEF9',
@@ -82,6 +79,7 @@ export const getMovistarSkin: GetKnownSkin = () => {
             navigationBarBackground: palette.movistarBlue,
             backgroundAlternative: palette.grey1,
             backgroundFeedbackBottom: palette.movistarBlue,
+            ProgressBarBackground: '',
 
             skeletonWave: palette.grey2,
 
@@ -90,6 +88,8 @@ export const getMovistarSkin: GetKnownSkin = () => {
             border: palette.grey3,
             borderHigh: palette.grey5,
             borderSelected: palette.movistarBlue,
+            borderLight: palette.grey1,
+            borderDark: palette.grey5,
 
             // BUTTONS
             buttonDangerBackground: palette.pepper,
@@ -97,18 +97,19 @@ export const getMovistarSkin: GetKnownSkin = () => {
             buttonDangerBackgroundHover: palette.pepper55, // web only
 
             buttonLinkBackgroundSelected: palette.movistarBlue10,
-            buttonLinkBackgroundInverseSelected: applyAlpha(palette.white, 0.2),
+            buttonLinkBackgroundSelectedInverse: applyAlpha(palette.white, 0.2),
 
             buttonPrimaryBackground: palette.movistarBlue,
             buttonPrimaryBackgroundInverse: palette.white,
             buttonPrimaryBackgroundSelected: palette.movistarBlue55,
             buttonPrimaryBackgroundHover: palette.movistarBlue55, // web only
-            buttonPrimaryBackgroundInverseSelected: palette.movistarBlue30,
+            buttonPrimaryBackgroundSelectedInverse: palette.movistarBlue30,
 
             buttonSecondaryBorder: palette.movistarBlue,
             buttonSecondaryBorderSelected: palette.movistarBlue55,
             buttonSecondaryBorderInverse: palette.white,
-            buttonSecondaryBorderInverseSelected: palette.white,
+            buttonSecondaryBorderSelectedInverse: palette.white,
+            buttonSecondaryBackground: palette.white,
             buttonSecondaryBackgroundHover: palette.movistarBlue10,
             buttonSecondaryBackgroundSelected: palette.movistarBlue10,
             buttonSecondaryBackgroundInverseHover: applyAlpha(palette.white, 0.2),
@@ -212,16 +213,16 @@ export const getMovistarSkin: GetKnownSkin = () => {
             borderLow: palette.darkModeBlack,
             border: palette.darkModeGrey,
             buttonLinkBackgroundSelected: applyAlpha(palette.white, 0.05),
-            buttonLinkBackgroundInverseSelected: applyAlpha(palette.white, 0.05),
+            buttonLinkBackgroundSelectedInverse: applyAlpha(palette.white, 0.05),
             buttonPrimaryBackground: palette.movistarBlue,
             buttonPrimaryBackgroundInverse: palette.movistarBlue,
             buttonPrimaryBackgroundSelected: palette.movistarBlue55,
             buttonPrimaryBackgroundHover: palette.movistarBlue55, // web only
-            buttonPrimaryBackgroundInverseSelected: palette.movistarBlue55,
+            buttonPrimaryBackgroundSelectedInverse: palette.movistarBlue55,
             buttonSecondaryBorder: palette.white,
             buttonSecondaryBorderSelected: palette.white,
             buttonSecondaryBorderInverse: palette.white,
-            buttonSecondaryBorderInverseSelected: palette.white,
+            buttonSecondaryBorderSelectedInverse: palette.white,
             buttonSecondaryBackgroundHover: applyAlpha(palette.white, 0.15),
             buttonSecondaryBackgroundSelected: applyAlpha(palette.white, 0.15),
             buttonSecondaryBackgroundInverseHover: applyAlpha(palette.white, 0.15),
@@ -278,6 +279,7 @@ export const getMovistarSkin: GetKnownSkin = () => {
             errorHighInverse: palette.pepper70,
             promoHighInverse: palette.purple70,
             neutralMediumInverse: palette.grey5,
+            
         },
         textPresets: {
             text5: {weight: 'bold'},

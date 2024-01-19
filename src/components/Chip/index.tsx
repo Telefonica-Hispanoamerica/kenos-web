@@ -1,0 +1,91 @@
+import * as React from 'react';
+import * as styles from './index.css';
+import classnames from 'classnames';
+import Box from '@layout/Box/box';
+import {useTheme} from '@hooks/hooks';
+import {vars} from '@skins/skin-contract.css';
+import {Text2} from '@components/Text';
+import {IconButton} from '@components/Buttons';
+import IconCloseRegular from '../../generated/kenos-icons/icon-close-regular';
+import {pxToRem} from '@utils/css';
+import {getPrefixedDataAttributes} from '@utils/dom';
+import type {ExclusifyUnion} from '@utils/utility-types';
+import type {DataAttributes, IconProps} from '@utils/types';
+
+interface SimpleChipProps {
+    children: string;
+    Icon?: React.FC<IconProps>;
+    id?: string;
+    dataAttributes?: DataAttributes;
+}
+
+interface ClosableChipProps extends SimpleChipProps {
+    onClose: () => void;
+}
+
+interface ToggleChipProps extends SimpleChipProps {
+    active: boolean;
+}
+
+type ChipProps = ExclusifyUnion<SimpleChipProps | ClosableChipProps | ToggleChipProps>;
+
+const Chip: React.FC<ChipProps> = ({Icon, children, id, dataAttributes, active, onClose}: ChipProps) => {
+    const {texts, isDarkMode} = useTheme();
+
+    const body = (
+        <>
+            {Icon && (
+                <Box paddingRight={4} className={active ? styles.iconActive : styles.icon}>
+                    <Icon color="currentColor" size={pxToRem(16)} />
+                </Box>
+            )}
+            <Text2 id={id} medium truncate={1} color="currentColor">
+                {children}
+            </Text2>
+        </>
+    );
+
+    const paddingLeft = Icon ? 8 : 12;
+
+    if (onClose) {
+        return (
+            <Box
+                className={styles.chipVariants.default}
+                paddingLeft={paddingLeft}
+                {...getPrefixedDataAttributes(dataAttributes, 'Chip')}
+            >
+                {body}
+                <Box paddingLeft={4}>
+                    <IconButton
+                        size={24}
+                        style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                        aria-label={texts.closeButtonLabel}
+                        onPress={() => onClose()}
+                    >
+                        <IconCloseRegular size={16} color={vars.colors.neutralMedium} />
+                    </IconButton>
+                </Box>
+            </Box>
+        );
+    } else {
+        const isInteractive = active !== undefined;
+        return (
+            <Box
+                className={classnames(styles.chipVariants[active ? 'active' : 'default'], {
+                    [styles.chipInteractiveVariants[isDarkMode ? 'dark' : 'light']]: isInteractive,
+                })}
+                paddingLeft={paddingLeft}
+                paddingRight={12}
+                {...getPrefixedDataAttributes(dataAttributes, 'Chip')}
+            >
+                {body}
+            </Box>
+        );
+    }
+};
+
+export default Chip;

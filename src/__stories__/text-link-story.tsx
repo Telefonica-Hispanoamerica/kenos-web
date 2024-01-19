@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {TextLink, Stack, Text3, Title1, Divider, skinVars, Text1, Text5, alert} from '..';
-import {ThemeVariant} from '../theme-variant-context';
+import {ThemeVariant} from '@utils/theme-variant-context';
 
 export default {
     title: 'Components/Text link',

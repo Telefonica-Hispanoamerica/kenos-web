@@ -3,6 +3,7 @@ import {createThemeContract} from '@vanilla-extract/css';
 import type {Colors} from './types';
 
 const colors: Colors = {
+    // BACKGROUNDS
     appBarBackground: '',
     background: '',
     backgroundContainer: '',
@@ -22,22 +23,25 @@ const colors: Colors = {
     borderLow: '',
     borderHigh: '',
     borderSelected: '',
+    borderLight: '', // ?
+    borderDark: '', // ?
 
     // BUTTONS
     buttonDangerBackground: '',
     buttonDangerBackgroundSelected: '',
     buttonDangerBackgroundHover: '',
     buttonLinkBackgroundSelected: '',
-    buttonLinkBackgroundInverseSelected: '',
+    buttonLinkBackgroundSelectedInverse: '', // IS -> SI
     buttonPrimaryBackground: '',
     buttonPrimaryBackgroundInverse: '',
     buttonPrimaryBackgroundSelected: '',
-    buttonPrimaryBackgroundInverseSelected: '',
+    buttonPrimaryBackgroundSelectedInverse: '', // IS -> SI
     buttonPrimaryBackgroundHover: '',
     buttonSecondaryBorder: '',
     buttonSecondaryBorderSelected: '',
     buttonSecondaryBorderInverse: '',
-    buttonSecondaryBorderInverseSelected: '',
+    buttonSecondaryBorderSelectedInverse: '',
+    buttonSecondaryBackground: '', // +
     buttonSecondaryBackgroundHover: '',
     buttonSecondaryBackgroundSelected: '',
     buttonSecondaryBackgroundInverseHover: '',
@@ -49,6 +53,7 @@ const colors: Colors = {
     controlError: '',
     loadingBar: '',
     loadingBarBackground: '',
+    ProgressBarBackground: '', // +
 
     toggleAndroidInactive: '',
     toggleAndroidBackgroundActive: '',

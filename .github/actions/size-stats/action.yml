@@ -1,6 +1,6 @@
 # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
 name: 'Size stats'
-description: 'Calculates mistica lib size overhead'
+description: 'Calculates kenos lib size overhead'
 inputs:
     github-token:
         description: 'GitHub token, required to comment on PRs'
@@ -11,9 +11,9 @@ outputs:
     js-without-icons:
         description: 'JS size without icons'
     lib-overhead:
-        description: 'Mistica lib size overhead'
+        description: 'Kenos lib size overhead'
     lib-overhead-gzip:
-        description: 'Mistica lib size overhead (gzip)'
+        description: 'Kenos lib size overhead (gzip)'
 runs:
     using: 'node16'
     main: 'main.js'

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {ButtonPrimary, HighlightedCard} from '../../..';
+import {ButtonPrimary} from '@components/Buttons';
+import {HighlightedCard} from '@components/Cards'
 
 const HighlightedCardTest = (): JSX.Element => (
     <HighlightedCard

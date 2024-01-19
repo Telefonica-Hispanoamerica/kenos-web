@@ -5,7 +5,10 @@ import path from 'path';
 import webpack from 'webpack';
 import http from 'http';
 import fs from 'fs';
-import {ThemeContextProvider, MOVISTAR_SKIN, getSkinByName, type KnownSkinName} from '../..';
+import ThemeContextProvider from '@utils/theme-context-provider';
+import {MOVISTAR_SKIN} from '@skins/constants';
+import {getSkinByName} from '@skins/utils';
+import {KnownSkinName} from '@skins/types';
 import {execSync} from 'child_process';
 
 const createWebpackEntries = (): {[entryName: string]: string} => {
@@ -177,7 +180,7 @@ export const createServer = (): http.Server => {
                     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
                     <link rel="stylesheet" href="reset.css">
                     <link rel="stylesheet" href="roboto.css">
-                    <link rel="stylesheet" href="mistica.css">
+                    <link rel="stylesheet" href="kenos.css">
                 </head>
                 <body>
                     <div id="root">${renderedComponent}</div>

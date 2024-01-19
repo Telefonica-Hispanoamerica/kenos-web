@@ -1,5 +1,5 @@
 import * as React from 'react';
-import LoadingBarComponent from '../loading-bar';
+import LoadingBarComponent from '@components/LoadingBar';
 import {StorySection} from './helpers';
 
 export default {

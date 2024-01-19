@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useTheme} from '../hooks';
+import {useTheme} from '@hooks/hooks';
 import {isAndroid} from './platform';
 
 const isDocumentVisible = () => typeof document !== 'undefined' && document.visibilityState === 'visible';

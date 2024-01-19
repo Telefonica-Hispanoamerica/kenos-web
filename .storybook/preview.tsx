@@ -1,16 +1,8 @@
 import './css/roboto.css';
 import './css/main.css';
 import * as React from 'react';
-import {
-    ThemeContextProvider,
-    MOVISTAR_SKIN,
-    VIVO_SKIN,
-    O2_SKIN,
-    O2_CLASSIC_SKIN,
-    TELEFONICA_SKIN,
-    BLAU_SKIN,
-    skinVars,
-} from '../src';
+import {ThemeContextProvider, MOVISTAR_SKIN, MI_MOVISTAR_SKIN, skinVars} from '../src';
+
 import {AVAILABLE_THEMES, Movistar} from './themes';
 import {addons} from '@storybook/addons';
 
@@ -20,9 +12,7 @@ type Platform = 'android' | 'desktop' | 'ios';
 
 const getSkin = (searchParams: URLSearchParams) => {
     const qsSkin = searchParams.get('skin');
-    return [MOVISTAR_SKIN, O2_SKIN, O2_CLASSIC_SKIN, VIVO_SKIN, TELEFONICA_SKIN, BLAU_SKIN].find(
-        (skin) => skin === qsSkin
-    );
+    return [MOVISTAR_SKIN, MI_MOVISTAR_SKIN].find((skin) => skin === qsSkin);
 };
 
 const getPlatform = (searchParams: URLSearchParams): Platform => {
@@ -46,7 +36,7 @@ const getTheme = (selectedSkin: string, platform: Platform, colorScheme: ColorSc
     };
 };
 
-const MisticaThemeProvider = ({Story, context}): React.ReactElement => {
+const KenosThemeProvider = ({Story, context}): React.ReactElement => {
     const searchParams = new URLSearchParams(location.search);
     const [skin, setSkin] = React.useState(getSkin(searchParams));
     const [platform, setPlatform] = React.useState<Platform>(getPlatform(searchParams));
@@ -74,7 +64,7 @@ const MisticaThemeProvider = ({Story, context}): React.ReactElement => {
 };
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-const withMisticaThemeProvider = (Story, context) => <MisticaThemeProvider Story={Story} context={context} />;
+const withKenosThemeProvider = (Story, context) => <KenosThemeProvider Story={Story} context={context} />;
 
 const Styles = () => {
     const [fontSize, setFontSize] = React.useState(16);
@@ -109,7 +99,7 @@ const withLayoutDecorator = (Story, context): React.ReactElement => {
     );
 };
 
-export const decorators = [withLayoutDecorator, withMisticaThemeProvider];
+export const decorators = [withLayoutDecorator, withKenosThemeProvider];
 
 export const parameters = {
     // https://storybook.js.org/docs/react/configure/story-layout

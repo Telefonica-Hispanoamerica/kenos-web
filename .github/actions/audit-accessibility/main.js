@@ -19,7 +19,7 @@ const PATH_REPO_ROOT = path.join(__dirname, '../../..');
 const PATH_REPORTS = path.join(PATH_REPO_ROOT, 'reports/accessibility');
 
 const STORIES_BLACKLIST = new Set([
-    'welcome-welcome--mistica',
+    'welcome-welcome--kenos',
     'icons-catalog--catalog', // takes a lot of time to parse and it is not very relevant for a11y
 ]);
 

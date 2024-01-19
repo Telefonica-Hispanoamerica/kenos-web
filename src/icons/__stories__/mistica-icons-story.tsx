@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useCheckbox} from '../../__stories__/helpers';
 import {ThemeVariant, Box, Stack, SearchField, Inline, DoubleField, Text, skinVars} from '../..';
-import IntegerField from '../../integer-field';
+import IntegerField from '../../components/Input/IntegerField';
 import {kebabCase, camelCase, upperFirst} from 'lodash';
 
 /**
@@ -13,13 +13,13 @@ const fileNameToComponentName = (fileName: string) => {
 };
 
 // require all icons
-const misticaIcons = ((requireContext) => {
+const kenosIcons = ((requireContext) => {
     return requireContext.keys().map((id: string) => {
         const component = requireContext(id).default;
         component.componentName = fileNameToComponentName(id);
         return component;
     });
-})(require.context('../../generated/mistica-icons/', true, /\.tsx$/));
+})(require.context('../../generated/kenos-icons/', true, /\.tsx$/));
 
 export default {
     title: 'Icons/Catalog',
@@ -120,7 +120,7 @@ export const Catalog = (): JSX.Element => {
 
             <ThemeVariant isInverse={isInverse}>
                 <div style={{background: backgroundColor}}>
-                    {misticaIcons
+                    {kenosIcons
                         .filter(({componentName}) => filterIcon(componentName))
                         .sort((a, b) => compareNames(a.componentName, b.componentName))
                         .map((Icon) => (

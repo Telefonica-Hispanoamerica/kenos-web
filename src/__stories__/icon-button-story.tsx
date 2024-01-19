@@ -1,6 +1,6 @@
 import * as React from 'react';
-import IconButton from '../icon-button';
-import IcnCloseRegular from '../generated/mistica-icons/icon-close-regular';
+import IconButton from '@components/Buttons/IconButton';
+import IcnCloseRegular from '../generated/kenos-icons/icon-close-regular';
 import {StorySection} from './helpers';
 
 export default {

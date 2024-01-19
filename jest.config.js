@@ -4,5 +4,5 @@ module.exports = {
         '<rootDir>/jest.unit.config.js',
         '<rootDir>/jest.ssr.config.js',
         '<rootDir>/jest.acceptance.config.js',
-    ],
+    ]
 };

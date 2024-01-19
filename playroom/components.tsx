@@ -12,7 +12,7 @@ import {
     ThemeContextProvider,
     skinVars,
 } from '../src';
-import {Movistar, Vivo, O2, Telefonica, Blau} from './themes';
+import {Movistar, AppMiMovistar} from './themes';
 import {useOverrideTheme} from './frame-component';
 import IconSun from './icons/icon-sun';
 import IconMoon from './icons/icon-moon';
@@ -23,28 +23,16 @@ import * as styles from './preview-tools.css';
 import type {ThemeConfig, ColorScheme, SkinName} from '../src';
 
 export * from '../src';
-export {default as ButtonGroup} from '../src/button-group';
+export {default as ButtonGroup} from '../src/components/Buttons/ButtonGroup';
 
 const themesMap: {[skinName: string]: {themeConfig: ThemeConfig; text: string}} = {
     Movistar: {
         text: 'Movistar',
         themeConfig: Movistar,
     },
-    Vivo: {
-        text: 'Vivo',
-        themeConfig: Vivo,
-    },
-    O2: {
-        text: 'O2',
-        themeConfig: O2,
-    },
-    Telefonica: {
-        text: 'Telefónica',
-        themeConfig: Telefonica,
-    },
-    Blau: {
-        text: 'Blau',
-        themeConfig: Blau,
+    AppMiMovistar: {
+        text: 'AppMiMovistar',
+        themeConfig: AppMiMovistar,
     },
 };
 

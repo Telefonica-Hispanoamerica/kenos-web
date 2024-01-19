@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Text10, Text9, Text8, Text7, Text6, Text5, Text4, Text3, Text2, Text1, Stack, Title1} from '..';
-import {isSafari} from '../utils/platform';
+import {isSafari} from '@utils/platform';
 
 export default {
     title: 'Components/Text',

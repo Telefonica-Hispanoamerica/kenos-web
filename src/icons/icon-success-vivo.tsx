@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {useTheme} from '../hooks';
+import {useTheme} from '../hooks/hooks';
 import {getAnimateSweepInProps} from '../utils/animation';
-import {useIsInverseVariant} from '../theme-variant-context';
+import {useIsInverseVariant} from '../utils/theme-variant-context';
 import {vars} from '../skins/skin-contract.css';
 
 type Props = {

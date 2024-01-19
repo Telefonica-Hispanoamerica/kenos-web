@@ -1,10 +1,9 @@
 import {getMovistarSkin} from '..';
-import {ThemeTexts, getTexts} from '../theme';
-
-import type {EventFormat, ThemeConfig} from '../theme';
-import type {Locale} from '../utils/locale';
-import type {RegionCode} from '../utils/region-code';
-import type {TrackingEvent} from '../utils/types';
+import {ThemeTexts, getTexts} from '@utils/theme';
+import type {EventFormat, ThemeConfig} from '@utils/theme';
+import type {Locale} from '@utils/locale';
+import type {RegionCode} from '@utils/region-code';
+import type {TrackingEvent} from '@utils/types';
 import type {Skin} from '..';
 
 if (process.env.NODE_ENV !== 'test') {

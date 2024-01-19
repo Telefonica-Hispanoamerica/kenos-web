@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {render} from '@testing-library/react';
-import ScreenReaderOnly from '../screen-reader-only';
+import ScreenReaderOnly from '@utils/screen-reader-only';
 
 test('Renders no wrapper if it has one single child', () => {
     const {asFragment} = render(

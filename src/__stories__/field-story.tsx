@@ -24,9 +24,9 @@ import {
     Stack,
 } from '..';
 import {inspect} from 'util';
-import IconMusicRegular from '../generated/mistica-icons/icon-music-regular';
+import IconMusicRegular from '../generated/kenos-icons/icon-music-regular';
 import {StorySection, countriesList, phoneNumbersList} from './helpers';
-import {getLocalDateString, getLocalDateTimeString} from '../utils/time';
+import {getLocalDateString, getLocalDateTimeString} from '@utils/time';
 
 export default {
     title: 'Components/Input fields',

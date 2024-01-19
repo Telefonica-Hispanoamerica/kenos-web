@@ -13,7 +13,7 @@ import {
     Tag,
     TagType,
 } from '..';
-import {Placeholder} from '../placeholder';
+import {Placeholder} from '@components/Primitives/Placeholder';
 
 export default {
     title: 'Components/Cards/Data card',

@@ -1,12 +1,7 @@
 import * as React from 'react';
-import {
-    HeaderLayout,
-    Header,
-    MainSectionHeaderLayout,
-    MainSectionHeader,
-    ButtonPrimary,
-    Stack,
-} from '../../..';
+import Stack from '@layout/Stack/stack';
+import {ButtonPrimary,} from '@components/Buttons';
+import {Header, HeaderLayout, MainSectionHeader, MainSectionHeaderLayout} from '@components/Headers';
 
 const HeaderTest = (): JSX.Element => (
     <Stack space={8}>

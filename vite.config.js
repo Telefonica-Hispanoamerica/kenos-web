@@ -10,7 +10,7 @@ export default defineConfig({
         vanillaExtractPlugin(),
         noBundlePlugin({
             // Change .css.js files to something else so that they don't get re-processed by consumer apps using vanilla extract too
-            fileNames: ({name}) => `${name.replace(/\.css$/, '.css-mistica')}.js`,
+            fileNames: ({name}) => `${name.replace(/\.css$/, '.css-kenos')}.js`,
         }),
     ],
     publicDir: false,
@@ -20,5 +20,16 @@ export default defineConfig({
             formats: ['es'],
         },
         outDir: 'dist-es',
+    },
+    resolve: {
+        alias: {
+            '@utils': path.resolve(__dirname, 'src', 'utils'),
+            '@hooks': path.resolve(__dirname, 'src', 'hooks'),
+            '@components': path.resolve(__dirname, 'src', 'components'),
+            '@layout': path.resolve(__dirname, 'src', 'layout'),
+            '@patterns': path.resolve(__dirname, 'src', 'patterns'),
+            '@skins': path.resolve(__dirname, 'src', 'skins'),
+            '@icons': path.resolve(__dirname, 'src', 'icons'),
+        },
     },
 });

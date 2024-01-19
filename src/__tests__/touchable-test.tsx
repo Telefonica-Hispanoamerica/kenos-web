@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {MemoryRouter, Route, Routes, Link as ReactRouterLink} from 'react-router-dom';
-import Touchable from '../touchable';
+import Touchable from '@components/Primitives/Touchable';
 import {waitFor, fireEvent, render, screen} from '@testing-library/react';
-import ThemeContextProvider from '../theme-context-provider';
+import ThemeContextProvider from '@utils/theme-context-provider';
 import {makeTheme} from './test-utils';
-import {type ThemeConfig} from '../theme';
+import {type ThemeConfig} from '@utils/theme';
 
 const trackingEvent = {
     category: 'test',

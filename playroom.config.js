@@ -118,9 +118,20 @@ const config = {
                 },
             ],
         },
+        resolve: {
+            alias: {
+                '@utils': path.resolve(__dirname, 'src/utils'),
+                '@components': path.resolve(__dirname, 'src/components'),
+                '@layout': path.resolve(__dirname, 'src/layout'),
+                '@skins': path.resolve(__dirname, 'src/skins'),
+                '@hooks': path.resolve(__dirname, 'src/hooks'),
+                '@patterns': path.resolve(__dirname, 'src/patterns'),
+                '@icons': path.resolve(__dirname, 'src/icons'),
+            },
+        },
         plugins: [
             new webpack.DefinePlugin({
-                'process.env.MISTICA_MEDIA_QUERIES_CONFIG': JSON.stringify(
+                'process.env.KENOS_MEDIA_QUERIES_CONFIG': JSON.stringify(
                     JSON.stringify(getMediaQueriesConfig())
                 ),
             }),

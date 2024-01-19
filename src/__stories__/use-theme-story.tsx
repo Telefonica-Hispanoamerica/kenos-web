@@ -13,7 +13,7 @@ export const UseTheme: StoryComponent = () => {
     return (
         <Stack space={16}>
             <Text2 regular color={skinVars.colors.textSecondary}>
-                You can use the <CodeText>useTheme()</CodeText> hook to read values from mistica theme.
+                You can use the <CodeText>useTheme()</CodeText> hook to read values from kenos theme.
             </Text2>
             <Text2 regular color={skinVars.colors.textSecondary}>
                 Here is a dump of the <CodeText>theme</CodeText> object:

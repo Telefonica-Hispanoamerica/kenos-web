@@ -15,9 +15,9 @@ import {
     useFieldProps,
     ButtonPrimary,
 } from '..';
-import {DOWN, ENTER, SPACE, UP} from '../utils/key-codes';
-import {cancelEvent} from '../utils/dom';
-import {combineRefs} from '../utils/common';
+import {DOWN, ENTER, SPACE, UP} from '@utils/key-codes';
+import {cancelEvent} from '@utils/dom';
+import {combineRefs} from '@utils/common';
 
 export default {
     title: 'Mística Lab/Autocomplete',
@@ -283,7 +283,7 @@ export const Default: StoryComponent = () => {
         <StorySection title="Autocomplete">
             <Stack space={32}>
                 <Text2 regular>
-                    This is an example of how to create a custom form field based on Mistica's pieces. This
+                    This is an example of how to create a custom form field based on Kenos pieces. This
                     component is like a select with autocomplete feature.
                 </Text2>
                 <Form
