@@ -12,7 +12,9 @@ Desde botones hasta gráficos y tablas, la librería Kénos ofrece una amplia va
 personalizables y fáciles de usar que te ayudarán a mejorar la usabilidad y el atractivo visual de tus
 proyectos de React.
 
-![Telefónica Hispam](img/mapa-hispam.png)
+#
+
+<img src="img/mapa-hispam.png" alt="Telefónica Hispam" width="350">
 
 ## Para comenzar a trabajar
 
