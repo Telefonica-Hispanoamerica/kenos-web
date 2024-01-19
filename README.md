@@ -12,7 +12,9 @@ Desde botones hasta gráficos y tablas, la librería Kénos ofrece una amplia va
 personalizables y fáciles de usar que te ayudarán a mejorar la usabilidad y el atractivo visual de tus
 proyectos de React.
 
-![Telefónica Hispam](img/mapa-hispam.png)
+#
+
+<img src="img/mapa-hispam.png" alt="Telefónica Hispam" width="400">
 
 ## Para comenzar a trabajar
 
@@ -21,13 +23,13 @@ Solamente con los comandos de instalación en tu proyecto React podrás utilizar
 ### Instalación
 
 ```terminal
-yarn add @telefonica/kenos
+yarn add @uxhispam/kenos
 ```
 
 o si utilizas npm
 
 ```terminal
-npm install @telefonica/kenos
+npm install @uxhispam/kenos
 ```
 
 ## Para utilizar el storybook
@@ -53,7 +55,7 @@ aplicación React. Aquí hay un ejemplo completo de un formulario con dos campos
 ```javascript
 import {createRoot} from 'react-dom/client';
 // Import Kenos styles. Depending on the bundler you use, you may need to import it in a different way.
-import '@telefonica/kenos/css/kenos.css';
+import '@uxhispam/kenos/css/kenos.css';
 
 // Use kenos components
 import {
@@ -67,7 +69,7 @@ import {
   ButtonPrimary,
   alert,
   getMovistarSkin,
-} from '@telefonica/kenos';
+} from '@uxhispam/kenos';
 
 const App = () => (
   <Form

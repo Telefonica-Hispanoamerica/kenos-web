@@ -147,7 +147,7 @@ export default function transformer(file, api) {
 
     // Adds the skinVars import if needed and removes the useTheme import if no longer needed
     const handleImports = (path) => {
-        path.find(j.ImportDeclaration, {source: {value: '@telefonica/kenos'}, importKind: 'value'}).forEach(
+        path.find(j.ImportDeclaration, {source: {value: '@uxhispam/kenos'}, importKind: 'value'}).forEach(
             (path) => {
                 const addSkinVarsImport = () => {
                     if (!path.value.specifiers.map((s) => s.local.name).includes('skinVars')) {
