@@ -14,7 +14,7 @@ proyectos de React.
 
 #
 
-<img src="img/mapa-hispam.png" alt="Telefónica Hispam" width="350">
+<img src="img/mapa-hispam.png" alt="Telefónica Hispam" width="400">
 
 ## Para comenzar a trabajar
 
