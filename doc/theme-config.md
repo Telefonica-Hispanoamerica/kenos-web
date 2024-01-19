@@ -40,7 +40,7 @@ Here is a description of every attribute:
   - `phoneNumberFormattingRegionCode`: region code used to format phone numbers (for example in
     `PhoneNumberField`).
 - `platformOverrides?`:
-  - `platform?`: the lib applies some style differences depending on the current platform. `@telefonica/kenos`
+  - `platform?`: the lib applies some style differences depending on the current platform. `@uxhispam/kenos`
     will try to automatically detect the platform, but you can manually set this setting to `'ios'` or
     `'android'`
   - `insideNovumNativeApp?:` some components have different behavior if the web is running inside a webview in
@@ -64,7 +64,7 @@ still use kenos with your custom skin. Just import the `Skin` type and create a 
 implements the `Skin` interface (you need to define all the required color constants):
 
 ```ts
-import type {Skin} from '@telefonica/kenos';
+import type {Skin} from '@uxhispam/kenos';
 
 const skin: Skin = {
   name: 'your skin name',

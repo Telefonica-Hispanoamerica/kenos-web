@@ -237,7 +237,7 @@ const ModalDialog = (props: ModalDialogProps) => {
 
     if (!context) {
         throw Error(
-            `To use @telefonica/kenos components you must instantiate <ThemeContextProvider> as their parent.`
+            `To use @uxhispam/kenos components you must instantiate <ThemeContextProvider> as their parent.`
         );
     }
     const renderNative = !props.forceWeb && isWebViewBridgeAvailable();

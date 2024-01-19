@@ -169,7 +169,7 @@ export type {RegionCode} from './utils/region-code';
 if (process.env.NODE_ENV !== 'production' && typeof window !== 'undefined') {
     // @ts-expect-error __kenos_version__ does not exist in window
     if (window['__kenos_version__'] && window['__kenos_version__'] !== PACKAGE_VERSION) {
-        throw new Error(`There is more than one version of @telefonica/kenos running on the same page`);
+        throw new Error(`There is more than one version of @uxhispam/kenos running on the same page`);
     } else {
         // @ts-expect-error __kenos_version__ does not exist in window
         window['__kenos_version__'] = PACKAGE_VERSION;

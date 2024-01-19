@@ -23,10 +23,10 @@
     still need in your app if you have decided to keep using `jss`. In that case, take a look at kenos
     [`jss` setup in v12]() because you may need some similar setup.
 - From version 13, kenos ships with a css file that your app must serve. You can find it in
-  `@telefonica/kenos/css/kenos.css`. The way of serve this css may be different depending on your bundler
-  setup, but the most common way is importing it like this:
+  `@uxhispam/kenos/css/kenos.css`. The way of serve this css may be different depending on your bundler setup,
+  but the most common way is importing it like this:
   ```js
-  import '@telefonica/kenos/css/kenos.css';
+  import '@uxhispam/kenos/css/kenos.css';
   ```
 - If you were using the `extra` prop in `DataCard`, `MediaCard` and/or `SnapCard` components, you may need to
   adjust some paddings, because previous versions of kenos were adding a top padding of 16px.
