@@ -21,13 +21,13 @@ Solamente con los comandos de instalación en tu proyecto React podrás utilizar
 ### Instalación
 
 ```terminal
-yarn add @telefonica/kenos
+yarn add @uxhispam/kenos
 ```
 
 o si utilizas npm
 
 ```terminal
-npm install @telefonica/kenos
+npm install @uxhispam/kenos
 ```
 
 ## Para utilizar el storybook
@@ -53,7 +53,7 @@ aplicación React. Aquí hay un ejemplo completo de un formulario con dos campos
 ```javascript
 import {createRoot} from 'react-dom/client';
 // Import Kenos styles. Depending on the bundler you use, you may need to import it in a different way.
-import '@telefonica/kenos/css/kenos.css';
+import '@uxhispam/kenos/css/kenos.css';
 
 // Use kenos components
 import {
@@ -67,7 +67,7 @@ import {
   ButtonPrimary,
   alert,
   getMovistarSkin,
-} from '@telefonica/kenos';
+} from '@uxhispam/kenos';
 
 const App = () => (
   <Form

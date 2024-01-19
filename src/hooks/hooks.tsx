@@ -10,7 +10,7 @@ export const useTheme = (): Theme => {
     const theme = React.useContext(ThemeContext);
     if (!theme) {
         throw Error(
-            `To use @telefonica/kenos components you must instantiate <ThemeContextProvider> as their parent.`
+            `To use @uxhispam/kenos components you must instantiate <ThemeContextProvider> as their parent.`
         );
     }
     return theme;
