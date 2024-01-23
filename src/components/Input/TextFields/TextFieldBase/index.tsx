@@ -244,7 +244,9 @@ export const TextFieldBase = React.forwardRef<any, TextFieldBaseProps>(
                 multiline={multiline}
                 fullWidth={fullWidth}
                 fieldRef={fieldRef}
+                inputState={inputState}
                 readOnly={rest.readOnly}
+                error={error}
             >
                 {startIcon && <div className={styles.startIcon}>{startIcon}</div>}
 

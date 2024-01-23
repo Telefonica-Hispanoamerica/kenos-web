@@ -212,6 +212,7 @@ export const getMovistarSkin: GetKnownSkin = () => {
             borderHigh: palette.darkModeGrey4,
             borderLow: palette.darkModeBlack,
             border: palette.darkModeGrey,
+            borderDark: palette.darkModeGrey,
             buttonLinkBackgroundSelected: applyAlpha(palette.white, 0.05),
             buttonLinkBackgroundSelectedInverse: applyAlpha(palette.white, 0.05),
             buttonPrimaryBackground: palette.movistarBlue,

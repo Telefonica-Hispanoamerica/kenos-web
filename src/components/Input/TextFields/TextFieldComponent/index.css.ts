@@ -95,13 +95,15 @@ export const fullWidth = sprinkles({
     width: '100%',
 });
 
-export const field = sprinkles({
+export const field = style ([sprinkles({
     overflow: 'hidden',
-    border: 'regular',
+    border: 'dark',
     display: 'flex',
     borderRadius: 8,
     position: 'relative',
-});
+}), {
+    // transition: 'border 150ms cubic-bezier(0.0, 0, 0.2, 1) 0ms',
+}]);
 
 export const fieldSingle = style([
     sprinkles({height: 56}),

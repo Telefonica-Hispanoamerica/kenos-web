@@ -15,7 +15,7 @@ const commonInputStyles = style([
         outline: 0,
         fontSize: 'inherit',
         lineHeight: 'inherit',
-        caretColor: vars.colors.controlActivated,
+        caretColor: vars.colors.textPrimary,
         // Seems like 'display: flex' is causing issues on firefox and the input takes over the whole space https://stackoverflow.com/questions/43314921/strange-input-widths-in-firefox-vs-chrome
         textOverflow: 'ellipsis',
         selectors: {
