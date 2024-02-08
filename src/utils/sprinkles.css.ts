@@ -41,6 +41,9 @@ const commonProperties = defineProperties({
         maxHeight: ['100%'],
         border: {
             regular: `1px solid ${vars.colors.border}`,
+            dark: `1px solid ${vars.colors.borderDark}`,
+            selected: `2px solid ${vars.colors.borderSelected}`,
+            error: `2px solid ${vars.colors.error}`,
             none: 'none',
         },
         borderRadius: ['50%', 2, 4, 8, 16, 20, 60],

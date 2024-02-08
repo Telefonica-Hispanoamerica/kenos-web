@@ -47,9 +47,9 @@ export const Label: React.FC<LabelProps> = ({
 
     let color = vars.colors.textSecondary;
     if (error && inputState !== 'default') {
-        color = vars.colors.error;
+        color = vars.colors.errorHigh;
     } else if (inputState === 'focused') {
-        color = vars.colors.controlActivated;
+        color = vars.colors.textPrimary;
     }
 
     return (
@@ -76,8 +76,8 @@ export const HelperText: React.FC<HelperTextProps> = ({leftText, rightText, erro
     const leftColor = isInverse
         ? vars.colors.textPrimaryInverse
         : error
-        ? vars.colors.error
-        : vars.colors.textSecondary;
+        ? vars.colors.errorHigh
+        : vars.colors.textPrimary;
     const rightColor = isInverse ? vars.colors.textPrimaryInverse : vars.colors.textSecondary;
 
     return (
@@ -109,6 +109,8 @@ type FieldContainerProps = {
     fieldRef?: React.RefObject<HTMLDivElement>;
     fullWidth?: boolean;
     readOnly?: boolean;
+    inputState: InputState;
+    error?: boolean;
 };
 
 export const FieldContainer: React.FC<FieldContainerProps> = ({
@@ -120,6 +122,8 @@ export const FieldContainer: React.FC<FieldContainerProps> = ({
     fieldRef,
     fullWidth,
     readOnly,
+    inputState,
+    error,
 }) => {
     return (
         <div
@@ -134,7 +138,10 @@ export const FieldContainer: React.FC<FieldContainerProps> = ({
                     sprinkles({
                         background: readOnly ? vars.colors.neutralLow : vars.colors.backgroundContainer,
                     }),
-                    className
+                    className,
+                    sprinkles({
+                        border: error && inputState !== 'default' ? 'error': inputState === 'focused' ? 'selected': 'dark',
+                    })
                 )}
                 ref={fieldRef}
             >

@@ -127,8 +127,8 @@ export const getAppMiMovistarSkin: GetKnownSkin = () => {
 
             // Missing properties
 
-            borderLow: '',
-            borderHigh: '',
+            borderLow: palette.grey1,
+            borderHigh: palette.grey5,
             buttonSecondaryBorder: '',
             buttonSecondaryBorderSelected: '',
             buttonSecondaryBackgroundHover: '',
