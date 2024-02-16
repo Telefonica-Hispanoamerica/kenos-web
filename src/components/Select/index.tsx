@@ -293,6 +293,7 @@ const Select: React.FC<SelectProps> = ({
             helperText={<HelperText error={error} leftText={helperText} />}
             fieldRef={fieldRef}
             fullWidth={fullWidth}
+            inputState="default"
         >
             {label && (
                 <Label
