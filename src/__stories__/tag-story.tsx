@@ -44,12 +44,37 @@ export const Default: StoryComponent<Args> = ({label: labelFromArgs}) => {
     return (
         <Inline space={48} dataAttributes={{testid: 'tags'}}>
             <Container>
+                <Text3 medium>Without icon light</Text3>
+                <Tag type="active">{getLabel('Active')}</Tag>
+                <Tag type="promo_1">{getLabel('Promo 1')}</Tag>
+                <Tag type="promo_2">{getLabel('Promo 2')}</Tag>
+                <Tag type="inactive">{getLabel('Inactive')}</Tag>
+                <Tag type="success">{getLabel('Success')}</Tag>
+                <Tag type="warning">{getLabel('Warning')}</Tag>
+                <Tag type="error">{getLabel('Error')}</Tag>
+            </Container>
+
+            <Container>
+                <Text3 medium>Without icon regular</Text3>
+                <Tag type="active_high">{getLabel('Active')}</Tag>
+                <Tag type="promo_1_high">{getLabel('Promo 1')}</Tag>
+                <Tag type="promo_2_high">{getLabel('Promo 2')}</Tag>
+                <Tag type="inactive_high">{getLabel('Inactive')}</Tag>
+                <Tag type="success_high">{getLabel('Success')}</Tag>
+                <Tag type="warning_high">{getLabel('Warning')}</Tag>
+                <Tag type="error_high">{getLabel('Error')}</Tag>
+            </Container>
+
+            <Container>
                 <Text3 medium>Example</Text3>
-                <Tag Icon={IconOfferPercentFilled} type="promo" dataAttributes={{qsysid: 'promo'}}>
-                    {getLabel('Promo')}
-                </Tag>
                 <Tag Icon={IconStarFilled} type="active">
                     {getLabel('Active')}
+                </Tag>
+                <Tag Icon={IconOfferPercentFilled} type="promo_1" dataAttributes={{qsysid: 'promo_1'}}>
+                    {getLabel('Promo')}
+                </Tag>
+                <Tag Icon={IconOfferPercentFilled} type="promo_2" dataAttributes={{qsysid: 'promo_2'}}>
+                    {getLabel('Promo')}
                 </Tag>
                 <Tag Icon={IconTimeFilled} type="inactive">
                     {getLabel('Inactive')}
@@ -65,19 +90,9 @@ export const Default: StoryComponent<Args> = ({label: labelFromArgs}) => {
                 </Tag>
             </Container>
 
-            <Container>
-                <Text3 medium>Without icon</Text3>
-                <Tag type="promo">{getLabel('Promo')}</Tag>
-                <Tag type="active">{getLabel('Active')}</Tag>
-                <Tag type="inactive">{getLabel('Inactive')}</Tag>
-                <Tag type="success">{getLabel('Success')}</Tag>
-                <Tag type="warning">{getLabel('Warning')}</Tag>
-                <Tag type="error">{getLabel('Error')}</Tag>
-            </Container>
-
             <Container inverse>
                 <Text3 medium>Inverse</Text3>
-                <Tag Icon={IconOfferPercentFilled} type="promo">
+                <Tag Icon={IconOfferPercentFilled} type="promo_1">
                     {getLabel('Promo')}
                 </Tag>
                 <Tag Icon={IconStarFilled} type="active">

@@ -52,6 +52,9 @@ export const palette = {
     movistarProminentBlueLight50: '#85939C',
     movistarProminentBlueLight70: '#546874',
 
+    highligtLow: '#FFF0F7',
+    highlightHigh: '#BF2E6A',
+
     // specific for dark mode:
     darkModeBlack: '#061824',
     darkModeGrey: '#081F2E',
@@ -195,6 +198,8 @@ export const getMovistarSkin: GetKnownSkin = () => {
             errorHighInverse: palette.pepper70,
             promoHighInverse: palette.purple70,
             neutralMediumInverse: palette.grey5,
+            highligtLow: palette.highligtLow,
+            highlightHigh: palette.highlightHigh,
         },
         darkModeColors: {
             appBarBackground: palette.darkModeGrey,
@@ -280,7 +285,6 @@ export const getMovistarSkin: GetKnownSkin = () => {
             errorHighInverse: palette.pepper70,
             promoHighInverse: palette.purple70,
             neutralMediumInverse: palette.grey5,
-            
         },
         textPresets: {
             text5: {weight: 'bold'},

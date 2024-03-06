@@ -167,7 +167,7 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
         <ListComponent dataAttributes={{testid: 'list'}}>
             <RowComponent
                 asset={<IconLightningRegular size={24} />}
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                headline={headline && <Tag type="promo_1">{headline}</Tag>}
                 title={title}
                 subtitle={subtitle}
                 description={description}
@@ -181,7 +181,7 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
             />
             <RowComponent
                 asset={<IconLightningRegular color={skinVars.colors.brand} size={24} />}
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                headline={headline && <Tag type="promo_1">{headline}</Tag>}
                 title={title}
                 subtitle={subtitle}
                 description={description}
@@ -199,7 +199,7 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
                         <IconLightningRegular color={skinVars.colors.background} size={24} />
                     </Circle>
                 }
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                headline={headline && <Tag type="promo_1">{headline}</Tag>}
                 title={title}
                 subtitle={subtitle}
                 description={description}
@@ -245,7 +245,7 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
         <ListComponent dataAttributes={{testid: 'list'}}>
             <RowComponent
                 asset={<IconLightningRegular size={24} />}
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                headline={headline && <Tag type="promo_1">{headline}</Tag>}
                 title={title}
                 subtitle={subtitle}
                 description={description}
@@ -259,7 +259,7 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
             />
             <RowComponent
                 asset={<IconLightningRegular color={skinVars.colors.brand} size={24} />}
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                headline={headline && <Tag type="promo_1">{headline}</Tag>}
                 title={title}
                 subtitle={subtitle}
                 description={description}

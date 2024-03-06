@@ -110,7 +110,7 @@ export const Default: StoryComponent<DisplayDataCardArgs> = ({
 Default.storyName = 'Display Data card';
 Default.args = {
     asset: 'icon',
-    headlineType: 'promo',
+    headlineType: 'promo_1',
     headline: 'Priority',
     pretitle: 'Pretitle',
     title: 'Title',
@@ -127,7 +127,7 @@ Default.argTypes = {
         control: {type: 'select'},
     },
     headlineType: {
-        options: ['promo', 'active', 'inactive', 'success', 'warning', 'error'],
+        options: ['promo_1', 'promo_2', 'active', 'inactive', 'success', 'warning', 'error'],
         control: {type: 'select'},
     },
     actions: {
@@ -147,7 +147,7 @@ export const Group: StoryComponent = () => {
                 <style>{`.group > * {width: 300px}`}</style>
                 <Inline space={16} className="group">
                     <DisplayDataCard
-                        headline={<Tag type="promo">Headline</Tag>}
+                        headline={<Tag type="promo_1">Headline</Tag>}
                         pretitle="Pretitle"
                         title="Title"
                         description="Description"

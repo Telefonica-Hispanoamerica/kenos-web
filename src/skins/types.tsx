@@ -160,4 +160,6 @@ export type Colors = {
     warningHighInverse: string;
     errorHighInverse: string;
     promoHighInverse: string;
+    highligtLow: string;
+    highlightHigh: string;
 };

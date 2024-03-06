@@ -128,6 +128,8 @@ const colors: Colors = {
     warningHighInverse: '',
     errorHighInverse: '',
     promoHighInverse: '',
+    highligtLow: '',
+    highlightHigh: '',
 };
 
 export const vars = createThemeContract({
