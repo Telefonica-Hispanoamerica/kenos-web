@@ -9,15 +9,10 @@ import {
     skinVars,
     Placeholder,
     Tag,
-    IconMobileDeviceRegular,
     IconLightningRegular,
-    Image,
     Text3,
     Inline,
-    Avatar,
 } from '..';
-
-import {useIsInverseVariant} from '@utils/theme-variant-context';
 
 export default {
     title: 'Components/Lists',
@@ -54,7 +49,6 @@ type Args = {
     extraContent: boolean;
     disabled: boolean;
 };
-
 
 const defaultArgs = {
     headline: 'Tag label',
@@ -94,12 +88,10 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
 }) => {
     const extra = extraContent ? <Placeholder height={56} /> : undefined;
 
-    // const [ list, setList ] = useState<any>()
-
     const getControlProps = (index: number) => {
         let controlProps: any = {};
         const onPress = () => alert('Pressed');
-        switch (control) {            
+        switch (control) {
             case 'chevron':
                 controlProps = {href: 'https://example.org', newTab: true};
                 break;
@@ -171,8 +163,7 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
     const RowComponent = boxed ? BoxedRow : Row;
 
     let row = 1;
-    const list = boxed ? 
-    (
+    const list = boxed ? (
         <ListComponent dataAttributes={{testid: 'list'}}>
             <RowComponent
                 asset={<IconLightningRegular size={24} />}
@@ -206,8 +197,8 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
                 asset={
                     <Circle size={40} backgroundColor={skinVars.colors.backgroundBrand}>
                         <IconLightningRegular color={skinVars.colors.background} size={24} />
-                    </Circle>                    
-                }                
+                    </Circle>
+                }
                 headline={headline && <Tag type="promo">{headline}</Tag>}
                 title={title}
                 subtitle={subtitle}
@@ -240,7 +231,7 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
                 asset={
                     <Circle size={40} backgroundColor={skinVars.colors.backgroundBrand}>
                         <IconLightningRegular color={skinVars.colors.background} size={24} />
-                    </Circle>                    
+                    </Circle>
                 }
                 title={title}
                 badge={withBadge ? 2 : undefined}
@@ -294,9 +285,8 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
                 extra={extra}
                 {...getControlProps(row++)}
             />
-                
         </ListComponent>
-    );    
+    );
 
     return control === 'radio' ? (
         <RadioGroup disabled={disabled} name="radio-group" defaultValue="apple" data-testid="radio-row-list">
