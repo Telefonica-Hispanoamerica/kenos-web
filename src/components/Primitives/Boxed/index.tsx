@@ -7,6 +7,7 @@ import { sprinkles } from '@utils/sprinkles.css';
 import type { DataAttributes } from '@utils/types';
 import { getPrefixedDataAttributes } from '@utils/dom';
 import { ThemeVariant, useIsInverseVariant } from '@utils/theme-variant-context';
+import { skinVars } from 'src';
 
 type Props = {
     children: React.ReactNode;
@@ -19,6 +20,7 @@ type Props = {
     width?: number | string;
     height?: number | string;
     minHeight?: number | string;
+    background?: string;
 };
 
 type InternalProps = {
@@ -86,5 +88,5 @@ export const InternalBoxed = React.forwardRef<HTMLDivElement, Props & InternalPr
 );
 
 export const Boxed = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
-    return <InternalBoxed {...props} ref={ref} borderRadius={8} />;
+    return <InternalBoxed {...props} ref={ref} borderRadius={8} background={props.background}/>;
 });
