@@ -25,6 +25,7 @@ import { getPrefixedDataAttributes } from '@utils/dom';
 import type { ExclusifyUnion } from '@utils/utility-types';
 import type { DataAttributes, TrackingEvent } from '@utils/types';
 import { useIsInverseVariant } from '@utils/theme-variant-context';
+import { skinVars } from 'src';
 
 interface CommonProps {
     children?: void; // no children allowed
@@ -545,6 +546,7 @@ export const RowList: React.FC<RowListProps> = ({
 
 interface CommonBoxedRowProps {
     isInverse?: boolean;
+    background?: string;
 }
 interface BasicBoxedRowProps extends BasicRowContentProps, CommonBoxedRowProps {}
 interface SwitchBoxedRowProps extends SwitchRowContentProps, CommonBoxedRowProps {}
@@ -564,11 +566,12 @@ type BoxedRowProps = ExclusifyUnion<
     | OnPressBoxedRowProps
 >;
 
-export const BoxedRow = React.forwardRef<HTMLDivElement, BoxedRowProps>(({dataAttributes, ...props}, ref) => (
+export const BoxedRow = React.forwardRef<HTMLDivElement, BoxedRowProps>(({dataAttributes, ...props}, ref) => (    
     <Boxed
         isInverse={props.isInverse}
         ref={ref}
         dataAttributes={{'component-name': 'BoxedRow', ...dataAttributes}}
+        background={props.background}
     >
         <RowContent {...props} />
     </Boxed>

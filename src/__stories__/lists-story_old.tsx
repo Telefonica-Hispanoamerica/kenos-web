@@ -9,9 +9,12 @@ import {
     skinVars,
     Placeholder,
     Tag,
-    IconLightningRegular,
+    IconLikeFilled,
+    IconMobileDeviceRegular,
+    Image,
     Text3,
     Inline,
+    Avatar,
 } from '..';
 
 export default {
@@ -49,28 +52,6 @@ type Args = {
     extraContent: boolean;
     disabled: boolean;
 };
-
-const defaultArgs = {
-    headline: 'Tag label',
-    title: 'Title',
-    subtitle: 'Subtitle',
-    description: 'Description',
-    control: 'radio',
-    withBadge: false,
-    oneLineTitle: false,
-    oneLineSubtitle: false,
-    oneLineDescription: false,
-    extraContent: false,
-    disabled: false,
-};
-
-export const RowListStory: StoryComponent<Args> = (args) => <Template {...args} />;
-RowListStory.storyName = 'Row list';
-RowListStory.args = defaultArgs;
-
-export const BoxedRowListStory: StoryComponent<Args> = (args) => <Template boxed {...args} />;
-BoxedRowListStory.storyName = 'Boxed row list';
-BoxedRowListStory.args = defaultArgs;
 
 const Template: StoryComponent<Args & {boxed?: boolean}> = ({
     boxed,
@@ -163,15 +144,14 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
     const RowComponent = boxed ? BoxedRow : Row;
 
     let row = 1;
-    const list = boxed ? (
+    const list = (
         <ListComponent dataAttributes={{testid: 'list'}}>
             <RowComponent
-                asset={<IconLightningRegular size={24} />}
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                headline={headline}
                 title={title}
                 subtitle={subtitle}
                 description={description}
-                badge={withBadge ? 2 : undefined}
+                badge={withBadge}
                 titleLinesMax={oneLineTitle ? 1 : 2}
                 subtitleLinesMax={oneLineSubtitle ? 1 : 2}
                 descriptionLinesMax={oneLineDescription ? 1 : 2}
@@ -180,7 +160,7 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
                 {...getControlProps(row++)}
             />
             <RowComponent
-                asset={<IconLightningRegular color={skinVars.colors.brand} size={24} />}
+                asset={<IconLikeFilled size={24} />}
                 headline={headline && <Tag type="promo">{headline}</Tag>}
                 title={title}
                 subtitle={subtitle}
@@ -195,61 +175,49 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
             />
             <RowComponent
                 asset={
-                    <Circle size={40} backgroundColor={skinVars.colors.backgroundBrand}>
-                        <IconLightningRegular color={skinVars.colors.background} size={24} />
+                    <Circle backgroundColor={skinVars.colors.brandLow} size={40}>
+                        <IconMobileDeviceRegular color={skinVars.colors.brand} />
                     </Circle>
                 }
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                headline={headline}
                 title={title}
                 subtitle={subtitle}
                 description={description}
-                badge={withBadge ? 2 : undefined}
+                badge={withBadge ? 22 : undefined}
                 titleLinesMax={oneLineTitle ? 1 : 2}
                 subtitleLinesMax={oneLineSubtitle ? 1 : 2}
                 descriptionLinesMax={oneLineDescription ? 1 : 2}
                 extra={extra}
                 disabled={disabled}
-                background={skinVars.colors.backgroundBrandSecondary}
-                isInverse={true}
                 {...getControlProps(row++)}
             />
             <RowComponent
-                asset={<IconLightningRegular size={24} />}
+                asset={<Circle size={40} backgroundImage="https://i.imgur.com/QwNlo5s.png" />}
+                headline={headline}
                 title={title}
-                badge={withBadge ? 2 : undefined}
+                subtitle={subtitle}
+                description={description}
+                badge={withBadge ? 22 : undefined}
+                titleLinesMax={oneLineTitle ? 1 : 2}
+                subtitleLinesMax={oneLineSubtitle ? 1 : 2}
+                descriptionLinesMax={oneLineDescription ? 1 : 2}
                 extra={extra}
-                {...getControlProps(row++)}
-            />
-            <RowComponent
-                asset={<IconLightningRegular color={skinVars.colors.brand} size={24} />}
-                title={title}
-                badge={withBadge ? 2 : undefined}
-                extra={extra}
+                disabled={disabled}
                 {...getControlProps(row++)}
             />
             <RowComponent
                 asset={
-                    <Circle size={40} backgroundColor={skinVars.colors.backgroundBrand}>
-                        <IconLightningRegular color={skinVars.colors.background} size={24} />
-                    </Circle>
+                    <Image
+                        src="https://images.unsplash.com/photo-1622819584099-e04ccb14e8a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+                        height={80}
+                        aspectRatio="16:9"
+                    />
                 }
-                title={title}
-                badge={withBadge ? 2 : undefined}
-                background={skinVars.colors.backgroundBrandSecondary}
-                isInverse={true}
-                extra={extra}
-                {...getControlProps(row++)}
-            />
-        </ListComponent>
-    ) : (
-        <ListComponent dataAttributes={{testid: 'list'}}>
-            <RowComponent
-                asset={<IconLightningRegular size={24} />}
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                headline={headline}
                 title={title}
                 subtitle={subtitle}
                 description={description}
-                badge={withBadge ? 2 : undefined}
+                badge={withBadge ? 22 : undefined}
                 titleLinesMax={oneLineTitle ? 1 : 2}
                 subtitleLinesMax={oneLineSubtitle ? 1 : 2}
                 descriptionLinesMax={oneLineDescription ? 1 : 2}
@@ -258,12 +226,18 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
                 {...getControlProps(row++)}
             />
             <RowComponent
-                asset={<IconLightningRegular color={skinVars.colors.brand} size={24} />}
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                asset={
+                    <Image
+                        src="https://images.unsplash.com/photo-1570158268183-d296b2892211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                        width={80}
+                        aspectRatio="7:10"
+                    />
+                }
+                headline={headline}
                 title={title}
                 subtitle={subtitle}
                 description={description}
-                badge={withBadge ? 2 : undefined}
+                badge={withBadge ? 22 : undefined}
                 titleLinesMax={oneLineTitle ? 1 : 2}
                 subtitleLinesMax={oneLineSubtitle ? 1 : 2}
                 descriptionLinesMax={oneLineDescription ? 1 : 2}
@@ -272,17 +246,55 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
                 {...getControlProps(row++)}
             />
             <RowComponent
-                asset={<IconLightningRegular size={24} />}
+                asset={
+                    <Image
+                        src="https://images.unsplash.com/photo-1548446388-f35145b5a0c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+                        width={80}
+                    />
+                }
+                headline={headline}
                 title={title}
-                badge={withBadge ? 2 : undefined}
+                subtitle={subtitle}
+                description={description}
+                badge={withBadge ? 22 : undefined}
+                titleLinesMax={oneLineTitle ? 1 : 2}
+                subtitleLinesMax={oneLineSubtitle ? 1 : 2}
+                descriptionLinesMax={oneLineDescription ? 1 : 2}
                 extra={extra}
+                disabled={disabled}
                 {...getControlProps(row++)}
             />
             <RowComponent
-                asset={<IconLightningRegular color={skinVars.colors.brand} size={24} />}
+                asset={
+                    <Avatar
+                        size={40}
+                        src="https://images.unsplash.com/photo-1640951613773-54706e06851d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+                    />
+                }
+                headline={headline}
                 title={title}
-                badge={withBadge ? 2 : undefined}
+                subtitle={subtitle}
+                description={description}
+                badge={withBadge ? 22 : undefined}
+                titleLinesMax={oneLineTitle ? 1 : 2}
+                subtitleLinesMax={oneLineSubtitle ? 1 : 2}
+                descriptionLinesMax={oneLineDescription ? 1 : 2}
                 extra={extra}
+                disabled={disabled}
+                {...getControlProps(row++)}
+            />
+            <RowComponent
+                asset={<Avatar size={40} initials="MS" />}
+                headline={headline}
+                title={title}
+                subtitle={subtitle}
+                description={description}
+                badge={withBadge ? 22 : undefined}
+                titleLinesMax={oneLineTitle ? 1 : 2}
+                subtitleLinesMax={oneLineSubtitle ? 1 : 2}
+                descriptionLinesMax={oneLineDescription ? 1 : 2}
+                extra={extra}
+                disabled={disabled}
                 {...getControlProps(row++)}
             />
         </ListComponent>
@@ -296,3 +308,25 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
         list
     );
 };
+
+const defaultArgs = {
+    headline: '',
+    title: 'Title',
+    subtitle: '',
+    description: 'Description',
+    control: 'chevron',
+    withBadge: false,
+    oneLineTitle: false,
+    oneLineSubtitle: false,
+    oneLineDescription: false,
+    extraContent: false,
+    disabled: false,
+};
+
+export const RowListStory: StoryComponent<Args> = (args) => <Template {...args} />;
+RowListStory.storyName = 'Row list';
+RowListStory.args = defaultArgs;
+
+export const BoxedRowListStory: StoryComponent<Args> = (args) => <Template boxed {...args} />;
+BoxedRowListStory.storyName = 'Boxed row list';
+BoxedRowListStory.args = defaultArgs;
