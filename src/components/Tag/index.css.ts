@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css';
-import { sprinkles } from '@utils/sprinkles.css';
+import {style} from '@vanilla-extract/css';
+import {sprinkles} from '@utils/sprinkles.css';
 
 export const tag = style([
     sprinkles({
@@ -13,6 +13,6 @@ export const tag = style([
     }),
     {
         verticalAlign: 'middle',
-        borderRadius: 50,
+        borderRadius: 4,
     },
 ]);

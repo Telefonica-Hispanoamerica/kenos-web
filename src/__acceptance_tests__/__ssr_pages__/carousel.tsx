@@ -12,7 +12,7 @@ const CarouselTest = (): JSX.Element => (
             withBullets
             items={Array.from({length: 3}, (_, idx) => (
                 <MediaCard
-                    headline={<Tag type="promo">Headline</Tag>}
+                    headline={<Tag type="promo_1">Headline</Tag>}
                     title={'Card ' + idx}
                     description="Description"
                     media={

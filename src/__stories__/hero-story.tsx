@@ -75,7 +75,7 @@ Default.storyName = 'Component';
 
 Default.args = {
     media: 'image',
-    headlineType: 'promo',
+    headlineType: 'promo_1',
     headline: 'Hero',
     pretitle: 'Pretitle',
     title: 'Title',
@@ -94,7 +94,7 @@ Default.argTypes = {
         control: {type: 'select'},
     },
     headlineType: {
-        options: ['promo', 'active', 'inactive', 'success', 'warning', 'error'],
+        options: ['promo_1', 'promo_2', 'active', 'inactive', 'success', 'warning', 'error'],
         control: {type: 'select'},
     },
     actions: {

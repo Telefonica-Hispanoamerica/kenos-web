@@ -33,6 +33,8 @@ export const palette = {
     purple10: '#f6ecf6',
     purple70: '#712b71',
     white: '#ffffff',
+    highligtLow: '#FFF0F7',
+    highlightHigh: '#BF2E6A',
 };
 
 export const getAppMiMovistarSkin: GetKnownSkin = () => {
@@ -92,6 +94,8 @@ export const getAppMiMovistarSkin: GetKnownSkin = () => {
             promo: palette.purple,
             error: palette.pepper,
             highlight: palette.pink,
+            highligtLow: palette.highligtLow,
+            highlightHigh: palette.highlightHigh,
             success: palette.movistarGreenArg,
             warning: palette.egg,
             textPrimary: palette.grey6,

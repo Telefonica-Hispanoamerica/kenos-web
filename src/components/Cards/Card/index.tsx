@@ -61,7 +61,7 @@ const CardContent: React.FC<CardContentProps> = ({
             return null;
         }
         if (typeof headline === 'string') {
-            return <Tag type="promo">{headline}</Tag>;
+            return <Tag type="promo_1">{headline}</Tag>;
         }
         return headline;
     };

@@ -10,6 +10,7 @@ import {
     Placeholder,
     Tag,
     IconLightningRegular,
+    Text2,
     Text3,
     Inline,
 } from '..';
@@ -35,6 +36,8 @@ export default {
         },
     },
 };
+
+import {useAriaId} from '@hooks/hooks';
 
 type Args = {
     headline: string;
@@ -167,7 +170,7 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
         <ListComponent dataAttributes={{testid: 'list'}}>
             <RowComponent
                 asset={<IconLightningRegular size={24} />}
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                headline={headline && <Tag type="promo_1">{headline}</Tag>}
                 title={title}
                 subtitle={subtitle}
                 description={description}
@@ -181,7 +184,7 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
             />
             <RowComponent
                 asset={<IconLightningRegular color={skinVars.colors.brand} size={24} />}
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                headline={headline && <Tag type="promo_1">{headline}</Tag>}
                 title={title}
                 subtitle={subtitle}
                 description={description}
@@ -199,10 +202,27 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
                         <IconLightningRegular color={skinVars.colors.background} size={24} />
                     </Circle>
                 }
-                headline={headline && <Tag type="promo">{headline}</Tag>}
-                title={title}
-                subtitle={subtitle}
-                description={description}
+                headline={headline && <Tag type="promo_1_high">{headline}</Tag>}
+                title={
+                    <Text3
+                        regular
+                        color={skinVars.colors.inverse}
+                        truncate={oneLineTitle ? 1 : 2}
+                        id={useAriaId()}
+                    >
+                        {title}
+                    </Text3>
+                }
+                subtitle={
+                    <Text2 regular color={skinVars.colors.inverse} truncate={oneLineSubtitle ? 1 : 2}>
+                        {subtitle}
+                    </Text2>
+                }
+                description={
+                    <Text2 regular color={skinVars.colors.inverse} truncate={oneLineDescription ? 1 : 2}>
+                        {description}
+                    </Text2>
+                }
                 badge={withBadge ? 2 : undefined}
                 titleLinesMax={oneLineTitle ? 1 : 2}
                 subtitleLinesMax={oneLineSubtitle ? 1 : 2}
@@ -210,7 +230,6 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
                 extra={extra}
                 disabled={disabled}
                 background={skinVars.colors.backgroundBrandSecondary}
-                isInverse={true}
                 {...getControlProps(row++)}
             />
             <RowComponent
@@ -245,7 +264,7 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
         <ListComponent dataAttributes={{testid: 'list'}}>
             <RowComponent
                 asset={<IconLightningRegular size={24} />}
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                headline={headline && <Tag type="promo_1">{headline}</Tag>}
                 title={title}
                 subtitle={subtitle}
                 description={description}
@@ -259,7 +278,7 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
             />
             <RowComponent
                 asset={<IconLightningRegular color={skinVars.colors.brand} size={24} />}
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                headline={headline && <Tag type="promo_1">{headline}</Tag>}
                 title={title}
                 subtitle={subtitle}
                 description={description}

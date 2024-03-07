@@ -161,7 +161,7 @@ const Template: StoryComponent<Args & {boxed?: boolean}> = ({
             />
             <RowComponent
                 asset={<IconLikeFilled size={24} />}
-                headline={headline && <Tag type="promo">{headline}</Tag>}
+                headline={headline && <Tag type="promo_1">{headline}</Tag>}
                 title={title}
                 subtitle={subtitle}
                 description={description}
