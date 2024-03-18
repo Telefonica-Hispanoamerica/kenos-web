@@ -12,6 +12,7 @@ type Args = {
     image: 'fit' | 'fill' | 'none';
     inverse: boolean;
     closable: boolean;
+    rounded: boolean;
 };
 
 export const Default: StoryComponent<Args> = ({
@@ -26,19 +27,19 @@ export const Default: StoryComponent<Args> = ({
         switch (action) {
             case 'ButtonPrimary':
                 return (
-                    <ButtonPrimary href="#" small>
+                    <ButtonPrimary href="#" small rounded>
                         ButtonPrimary
                     </ButtonPrimary>
                 );
             case 'ButtonSecondary':
                 return (
-                    <ButtonSecondary href="#" small>
+                    <ButtonSecondary href="#" small rounded>
                         ButtonSecondary
                     </ButtonSecondary>
                 );
             case 'ButtonLink':
                 return (
-                    <ButtonLink href="#" aligned>
+                    <ButtonLink href="#" aligned rounded>
                         TextLink
                     </ButtonLink>
                 );
@@ -75,6 +76,7 @@ Default.args = {
     image: 'fit',
     inverse: false,
     closable: false,
+    rounded: false,
 };
 
 Default.argTypes = {

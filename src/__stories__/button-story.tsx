@@ -126,11 +126,11 @@ export const buttonPrimary: StoryComponent<Args> = ({
 }) => {
     return (
         <ButtonBackgroundContainer inverse={inverse}>
-            <ButtonPrimary {...getButtonActionProps(action, newTab)}
+            <ButtonPrimary
+                {...getButtonActionProps(action, newTab)}
                 {...props}
-                rounded
-                icon= {IconPhotoCameraRegular}
-                iconPosition= 'right'
+                icon={IconPhotoCameraRegular}
+                iconPosition="right"
             >
                 {text}
             </ButtonPrimary>
