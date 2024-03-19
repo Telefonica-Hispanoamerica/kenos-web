@@ -1,12 +1,14 @@
 {
-    "name": "@uxhispam/kenos",
+    "name": "@uxhispam/kenos-web",
+    "displayName": "Kénos Design System for React",
     "version": "1.0.0",
+    "author": "Telefónica Hispanoamérica",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Telefonica-Hispam/kenos-ui"
+        "url": "https://github.com/Telefonica-Hispanoamerica/kenos-web"
     },
-    "homepage": "https://github.com/Telefonica-Hispam/kenos-ui",
+    "homepage": "https://github.com/Telefonica-Hispanoamerica/kenos-web",
     "main": "dist/index.js",
     "module": "dist-es/index.js",
     "files": [
